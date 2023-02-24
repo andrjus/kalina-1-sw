@@ -939,6 +939,7 @@ namespace kalina1_drive {
 			});
 		#endif
 
+		static int power_button_status = 0;
 		static ::mexo::machine::slot::simple run_(
 			::mexo::machine::slot::kind::backend
 			, [] {
@@ -950,6 +951,21 @@ namespace kalina1_drive {
 					controller_.run();
 					last = now;
 				}
+				if (periphery::power_button_state()) {
+					//todo типа 50 ms. Проверить!
+					power_button_status = power_button_status *1023 + 1000*32;
+				} else{
+					power_button_status = power_button_status * 1023;
+				}
+				power_button_status = power_button_status >> 10;
+				int score = power_button_status >> 5;
+				if (score > 700) {
+					controller_.speed_mode(1000, 1000);
+				}
+				else {
+					controller_.stop();
+				}
+
 			}
 		);
 		static struct manual {
@@ -1047,4 +1063,7 @@ namespace kalina1_drive {
 		, KALINA1_NET_FLOW_GOAL0_SUBA
 		, KALINA1_NET_FLOW_SNAPSHOT0_SUBA_ANSV
 	);
+
+
+
 }

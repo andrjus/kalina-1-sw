@@ -67,6 +67,7 @@ namespace kalina1_drive {
 			float  C;
 		} ph_voltage;
 	public:
+		bool power_button_state = false;
 
 		uint32_t motorPosition; // pp
 		uint32_t sence_current(float _value) {
@@ -110,6 +111,9 @@ namespace kalina1_drive {
 
 		}
 		
+		virtual void perform_command(int _command) {
+			power_button_state = _command > 0;
+		}
 
 		virtual void do_priotitet_run(double _time){
 			static bool odd = false;
@@ -411,6 +415,9 @@ namespace kalina1_drive {
 	void periphery::pwm::shutdown_complete(void) {
 	}
 
+	bool periphery::power_button_state(void) {
+		return agent_.power_button_state;
+	}
 	#if KALINA1_BRAKE_ENABLED == 1
 	void periphery::br_pwm::boot_complete(const inverter::duty_t& _duty) {
 		agent_.br_.pwm_boot_complete(_duty);

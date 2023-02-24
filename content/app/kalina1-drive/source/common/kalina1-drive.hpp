@@ -145,6 +145,7 @@ namespace kalina1_drive{
 			static void on(void);
 			static void off(void);
 		};
+		bool power_button_state(void);
 	}
 
 	//силовой преобразователь для мотора

@@ -136,7 +136,7 @@ pmsm.act.lat.v  2       ffffe86c
 pmsm.act.lat.c  2       ffffe86e
 pmsm.angle_req  4       ffffeabc
 pmsm.freq_req   4       ffffeac0
-im.tm   2       4700
+im.tm   2       4708
 im.pwm.A        2       46a0
 im.pwm.B        2       46a4
 im.pwm.C        2       46a8

@@ -20,13 +20,10 @@ namespace kalina1_model {
 		robo::system::shared shared_;
 		kalina1_shared::content  * content_;
 		
+		robo::edev::agent* drills[kalina1_shared::drill::count] = {};
 
-		::robo::edev::joint::iload motor1;
-		::robo::edev::joint::iload motor2;
-		::robo::edev::joint::iload* loads[kalina1_shared::drill::count] = {
-			&motor1
-			, & motor2
-		};
+
+		::robo::edev::joint::iload loads[kalina1_shared::drill::count];
 
 	protected:
 
@@ -41,13 +38,12 @@ namespace kalina1_model {
 			if (_time - last > sample_time) {
 				auto begin = std::chrono::steady_clock::now();
 				last += sample_time;
-				::robo::edev::joint::iload** ld = loads;
+				::robo::edev::joint::iload* ld = loads;
 				for (int i = 0; i < kalina1_shared::drill::count; ++i, ++ld) {
-					::robo::edev::joint::iload* l = *ld;
-					l->speed =
-						l->driveng_speed;
-					l->position =
-						l->driveng_position;
+					ld->speed =
+						ld->driveng_speed;
+					ld->position =
+						ld->driveng_position;
 				}
 
 				switch (content_->side) {
@@ -59,12 +55,14 @@ namespace kalina1_model {
 				case kalina1_shared::eside::digitwin:
 				content_->vrep.time = _time;
 				{
-					::robo::edev::joint::iload** ld = loads;
+					::robo::edev::joint::iload* ld = loads;
 					kalina1_shared::drill* a = content_->drills;
-					for (int i = 0; i < kalina1_shared::drill::count; ++i, ++ld, ++a) {
-						a->rotator = (*ld)->position;
+					robo::edev::agent** fm = drills;
+					for (int i = 0; i < kalina1_shared::drill::count; ++i, ++ld, ++a, ++fm) {
+						a->rotator = ld->position;
 						a->supply = 0.;
 						a->power = 0.;
+						(*fm)->perform_command(a->mode);
 					}
 				}
 				content_->side = kalina1_shared::eside::vrep;
@@ -88,12 +86,16 @@ namespace kalina1_model {
 
 
 		virtual void do_reconfig(void) {
-			for (int i = 0; i < kalina1_shared::drill::count; ++i) {
-				robo::edev::joint::gearbox::elastic::friction* ld =
+			::robo::edev::joint::iload* ld = loads;
+			robo::edev::agent** fm = drills;
+			for (int i = 0; i < kalina1_shared::drill::count; ++i,++ld, ++fm) {
+				robo::edev::joint::gearbox::elastic::friction* fric =
 					dynamic_cast<robo::edev::joint::gearbox::elastic::friction*>(::robo::edev::joint::link::find(kalina1_shared::link_names[i]));
 				ROBO_VBREAKN(ld != nullptr);
-				ld->connect_to_load(loads[i]);
-				loads[i]->position = ld->actuator->position / ld->driver.gear_ratio;
+				fric->connect_to_load( ld );
+				ld->position = fric->actuator->position / fric->driver.gear_ratio;
+				(*fm) = agent::find(kalina1_shared::drill_names[i]);
+				ROBO_VBREAKN((*fm) != nullptr);
 			}
 		};
 

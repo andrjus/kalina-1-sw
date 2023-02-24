@@ -1,5 +1,6 @@
 #include "core/robosd_system.hpp"
 #include "core/robosd_log.hpp"
+#include "core/robosd_string.hpp"
 #include "kalina1_shared.hpp"
 
 namespace kalina1_shared {
@@ -37,9 +38,18 @@ extern "C"{
 	}
 
 	int set_mode(lua_State* L) {
-		kalina1_shared::content_->drill1.mode = (int)lua_tonumber(L, 1);
-		kalina1_shared::content_->drill2.mode = (int)lua_tonumber(L, 2);
-		return 1;
+		int index = (int)lua_tonumber(L, 1);
+		if ((index >= 0) && (index < kalina1_shared::drill::count)) {
+			int mode = (int)lua_tonumber(L, 2);
+			kalina1_shared::content_->drills[index].mode = mode;
+			::robo::string s; s.format("print \"drill  %d set mode %d!\"", index, mode);
+			luaL_dostring(L, s.c_str());
+			return 1;
+		} else  {
+			::robo::string s; s.format("print \"eroor set mode %d!\"", index);
+			luaL_dostring(L, s.c_str());
+			return 0;
+		}
 	}
 
 	int actuation(lua_State* L) {
@@ -62,7 +72,7 @@ extern "C"{
 		lua_pushnumber(L, kalina1_shared::content_->drill1.supply);
 		lua_settable(L, -3);
 		lua_pushliteral(L, "w");
-		lua_pushnumber(L, kalina1_shared::content_->drill2.power);
+		lua_pushnumber(L, kalina1_shared::content_->drill1.power);
 		lua_settable(L, -3);
 		lua_settable(L, -3);
 

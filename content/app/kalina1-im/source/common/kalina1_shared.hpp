@@ -28,5 +28,9 @@ namespace kalina1_shared{
 		RT("drill1.load")
 		, RT("drill2.load")
 	};
+	constexpr ::robo::cstr drill_names[drill::count] = {
+		RT("drill1")
+		, RT("drill2")
+	};
 }
 #endif

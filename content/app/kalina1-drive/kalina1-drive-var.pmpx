@@ -3653,7 +3653,7 @@
 			<member name="yblock3_info" type="CPrjItemRS_YBlockInfo">ObjId1512</member>
 			<member name="yblock4_info" type="CPrjItemRS_YBlockInfo">ObjId1513</member>
 			<member name="yblock5_info" type="CPrjItemRS_YBlockInfo">ObjId1514</member>
-			<member name="rec_time_base" type="sint32">31</member>
+			<member name="rec_time_base" type="sint32">0</member>
 			<member name="rec_total_samples" type="sint32">1000</member>
 			<member name="trig_variable" type="CObject_ptr">NULL</member>
 			<member name="trig_pretrigger" type="sint32">20</member>
