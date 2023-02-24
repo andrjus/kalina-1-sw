@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="robosd++">
+      <UniqueIdentifier>{1ce01c36-e263-4929-8496-962af706df24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{c6931d0c-1756-46e0-8030-db1b70051fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\common">
+      <UniqueIdentifier>{c9d9443d-e229-468e-b0c4-5ddf34c93fda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\platform/im">
+      <UniqueIdentifier>{3b817c16-1bdb-495c-aa99-ee1159f7097b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mexo">
+      <UniqueIdentifier>{792f4b3d-6ed5-46e8-b24e-85ed1bfec0cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd++\net">
+      <UniqueIdentifier>{94c608be-a0b1-4d24-8c52-1d8ef929f28b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd++\freemaster">
+      <UniqueIdentifier>{5342c06f-5910-4f3a-a861-4aa1e5092569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd++\termo">
+      <UniqueIdentifier>{119f988b-5b41-440e-829a-25d0d5e69ab5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd++\core">
+      <UniqueIdentifier>{8b250988-c74e-4fa4-bfe2-81d1f9ad8acf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\common\kalina1-drive.settings.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1-drive.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1-drive.common.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1-drive.proto.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\actuator.templ.front.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\actuator.templ.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\actuator.templ.prepare.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\adc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\dev.front.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\enco.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\filter.templ.settings.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\led.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\lm.templ.settings.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\math.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\mexo.env.common.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\mexo.h">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\mexo.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\motion.templ.settings.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\positioner.templ.settings.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.front.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.prepare.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.settings.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\qa.templ.settings.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\regulator.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\vartree.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_flow.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_flow_id.h">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\freemaster\robosd_fm.hpp">
+      <Filter>robosd++\freemaster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\terminal\robosd_termo.hpp">
+      <Filter>robosd++\termo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_net_trafic.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_proto_switch.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_ring_buf.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_serial.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_common.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_delegat.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_devagent_common.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ini.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_lambda.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_list.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_log.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ring.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ring_buf.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_string.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system_native.hpp">
+      <Filter>robosd++\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\platform\serial\win_com.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_queue.hpp">
+      <Filter>robosd++\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\platform\im\robosd_app_tuning.hpp">
+      <Filter>source\platform/im</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\platform\im\mexo.env.tunning.hpp">
+      <Filter>source\platform/im</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\pmsm.templ.front.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\pmsm.templ.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\pmsm.templ.prepare.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\brake.templ.prepare.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\brake.templ.front.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\brake.templ.inc.hpp">
+      <Filter>mexo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1-drive-im-300.config.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1-drive-structure.config.hpp">
+      <Filter>source\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\common\kalina1-drive.cpp">
+      <Filter>source\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\math.cpp">
+      <Filter>mexo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\mexo.cpp">
+      <Filter>mexo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\vartree.cpp">
+      <Filter>mexo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_flow.cpp">
+      <Filter>robosd++\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\freemaster\robosd_fm.cpp">
+      <Filter>robosd++\freemaster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\terminal\robosd_termo.cpp">
+      <Filter>robosd++\termo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_net_trafic.cpp">
+      <Filter>robosd++\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_proto_switch.cpp">
+      <Filter>robosd++\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_serial.cpp">
+      <Filter>robosd++\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\platform\im\kalina1-drive-perephery.cpp">
+      <Filter>source\platform/im</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_log.cpp">
+      <Filter>robosd++\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_string.cpp">
+      <Filter>robosd++\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system.cpp">
+      <Filter>robosd++\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system_native.cpp">
+      <Filter>robosd++\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system_std.cpp">
+      <Filter>robosd++\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\platform\win+vs19\robosd-system-win.cpp">
+      <Filter>robosd++\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\platform\serial\win_com.cpp">
+      <Filter>robosd++\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_net_link.cpp">
+      <Filter>robosd++\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\mexo.env.cpp">
+      <Filter>mexo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\reference\robosd-ref\mexo\mexo_brake.hpp">
+      <Filter>mexo</Filter>
+    </None>
+  </ItemGroup>
+</Project>

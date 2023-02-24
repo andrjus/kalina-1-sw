@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_common.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_delegat.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_devagent_common.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ini.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_lambda.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_list.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_log.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ring.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ring_buf.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_string.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system_native.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\freemaster\robosd_fm.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\actuator.templ.front.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\actuator.templ.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\actuator.templ.prepare.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\adc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\brake.templ.front.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\brake.templ.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\brake.templ.prepare.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\dev.front.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\enco.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\filter.templ.settings.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\led.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\lm.templ.settings.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\math.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\mexo.env.common.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\mexo.h" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\mexo.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\motion.templ.settings.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\pmsm.templ.front.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\pmsm.templ.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\pmsm.templ.prepare.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\positioner.templ.settings.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.front.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.prepare.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\ps.templ.settings.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\qa.templ.settings.inc.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\regulator.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\mexo\vartree.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\platform\serial\win_com.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_flow.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_flow_id.h" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_net_trafic.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_proto_switch.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_queue.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_ring_buf.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_serial.hpp" />
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\terminal\robosd_termo.hpp" />
+    <ClInclude Include="..\..\source\common\kalina1-drive-im-300.config.hpp" />
+    <ClInclude Include="..\..\source\common\kalina1-drive-structure.config.hpp" />
+    <ClInclude Include="..\..\source\common\kalina1-drive.common.hpp" />
+    <ClInclude Include="..\..\source\common\kalina1-drive.proto.hpp" />
+    <ClInclude Include="..\..\source\common\kalina1-drive.settings.hpp" />
+    <ClInclude Include="..\..\source\common\kalina1-drive.hpp" />
+    <ClInclude Include="..\..\source\platform\im\mexo.env.tunning.hpp" />
+    <ClInclude Include="..\..\source\platform\im\robosd_app_tuning.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\platform\win+vs19\robosd-system-win.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_log.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_string.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system_native.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system_std.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\freemaster\robosd_fm.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\math.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\mexo.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\mexo.env.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\mexo\vartree.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\platform\serial\win_com.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_flow.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_net_link.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_net_trafic.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_proto_switch.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_serial.cpp" />
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\terminal\robosd_termo.cpp" />
+    <ClCompile Include="..\..\source\common\kalina1-drive.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="..\..\source\platform\im\kalina1-drive-perephery.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\reference\robosd-ref\mexo\mexo_brake.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{10FC5AF9-CEAE-4028-A4CB-D6F652832DD9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>kalina1_drive</RootNamespace>
+    <ProjectName>kalina1_drive_1800</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\..\..\reference\robosd-ref\core\platform\win+vs19;$(SolutionDir)..\..\..\..\reference\robosd-ref;..\..\source\platform\im;..\..\source\common;$(SolutionDir)..\..\..\..\reference\arma-ref;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)\bin\$(Platform)\$(Configuration)\;$(SolutionDir)..\..\..\..\reference\arma-ref\bin\Win32</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\..\..\reference\robosd-ref\core\platform\win+vs19;$(SolutionDir)..\..\..\..\reference\robosd-ref;..\..\source\platform\im;..\..\source\common;$(SolutionDir)..\..\..\..\reference\arma-ref;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(SolutionDir)\bin\$(Platform)\$(Configuration)\;$(SolutionDir)..\..\..\..\reference\arma-ref\bin\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\..\..\reference\robosd-ref\core\platform\win+vs19;$(SolutionDir)..\..\..\..\reference\robosd-ref;..\..\source\platform\im;..\..\source\common;$(SolutionDir)..\..\..\..\reference\arma-ref;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)\bin\$(Platform)\$(Configuration)\;$(SolutionDir)..\..\..\..\reference\arma-ref\bin\Win32</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\..\..\reference\robosd-ref\core\platform\win+vs19;$(SolutionDir)..\..\..\..\reference\robosd-ref;..\..\source\platform\im;..\..\source\common;$(SolutionDir)..\..\..\..\reference\arma-ref;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)</TargetName>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(SolutionDir)\bin\$(Platform)\$(Configuration)\;$(SolutionDir)..\..\..\..\reference\arma-ref\bin\x64</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>KALINA1_IM_300;ROBO_APP_MEXO_SIDE;WIN32;_DEBUG;_WINDOWS;_USRDLL;sys_EXPORTS;%(PreprocessorDefinitions);IMITATION_MODEL; MEXO_DEVICE_SIDE</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;core-weak.lib;%(AdditionalDependencies);edev.lib;emu_can.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>KALINA1_IM_300;ROBO_APP_MEXO_SIDE;WIN32;_DEBUG;_WINDOWS;_USRDLL;sys_EXPORTS;%(PreprocessorDefinitions);IMITATION_MODEL; MEXO_DEVICE_SIDE</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;core-weak.lib;%(AdditionalDependencies);edev.lib;emu_can.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>KALINA1_IM_300;ROBO_APP_MEXO_SIDE;WIN32;NDEBUG;_WINDOWS;_USRDLL;sys_EXPORTS;%(PreprocessorDefinitions);IMITATION_MODEL;MEXO_DEVICE_SIDE</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;core-weak.lib;%(AdditionalDependencies);robosd-core++.lib;edev.lib;emu_can.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>KALINA1_IM_300;ROBO_APP_MEXO_SIDE;WIN32;NDEBUG;_WINDOWS;_USRDLL;sys_EXPORTS;%(PreprocessorDefinitions);IMITATION_MODEL;MEXO_DEVICE_SIDE</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;core-weak.lib;%(AdditionalDependencies);robosd-core++.lib;edev.lib;emu_can.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

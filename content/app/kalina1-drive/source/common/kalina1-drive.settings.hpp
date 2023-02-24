@@ -1,0 +1,183 @@
+/*#if (!defined(kalina1_drive_settings_hpp)) && defined(kalina1_drive_common_hpp)
+#define kalina1_drive_settings_hpp
+#else
+#error error of using kalina1-drive.settings.hpp
+#endif*/
+
+#if KALINA1_POSITION_SENCE_ENABLED == 1
+#define pmsm_act_MOTOR_POSTITION_MEASSURY_ENABLED 1
+#define pmsm_act_MOTOR_SPEED_FILTER_ENABLED 1
+
+#define pmsm_act_SPEED_OV_CURRENT_MODE_ENABLED 1
+#define pmsm_act_POSITION_OV_CURRENT_MODE_ENABLED 1
+
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_MODE_ENABLED 1
+#define pmsm_act_POSITION_OV_VOLTAGE_CL_MODE_ENABLED 1
+
+#define ps_cross_INVERCE false
+
+#endif
+
+#define pmsm_SYNC_CURRENT_MODE_ENABLED 1
+#define pmsm_SYNC_VOLTAGE_MODE_ENABLED 1
+
+#if KALINA1_BRAKE_ENABLED == 1
+#define ps_br_INVERCE false
+
+#define ps_br_VOLTAGE_REGULATOR_ENABLED 1
+
+#if KALINA1_BRAKE_TYPE == KALINA1_BRAKE_TYPE_CURRENT
+#define ps_br_CURRENT_MEASSURY_ENABLED 1
+#define ps_br_CURRENT_DIFF_ENABLED 0
+#define	ps_br_CURRENT_DIFF_FILTER_ENABLED 0
+#define	ps_br_CURRENT_FAST_FILTER_ENABLED 1
+#define	ps_br_CURRENT_REGULATOR_ENABLED 1
+#define br_POWER_MODE current
+#else
+#if KALINA1_BRAKE_TYPE == KALINA1_BRAKE_TYPE_VOLTAGE
+#define br_POWER_MODE voltage
+#endif
+#endif
+#endif
+
+#define ps_lat_CURRENT_MEASSURY_ENABLED 1
+#define	ps_lat_CURRENT_FAST_FILTER_ENABLED 1
+#define	ps_lat_CURRENT_REGULATOR_ENABLED 1
+
+#define ps_cross_VOLTAGE_REGULATOR_ENABLED 1
+#define ps_cross_CURRENT_MEASSURY_ENABLED 1
+
+#define	ps_cross_CURRENT_FAST_FILTER_ENABLED 1
+#define	ps_cross_CURRENT_REGULATOR_ENABLED 1
+#define ps_cross_CURRENT_LIMMITER_ENABLED 1
+
+#define ps_br_VOLTAGE_RAMP_GAIN 300
+#define br_TIMEOUT_FORCE_US 200000
+#define br_TIMEOUT_RELAX_US 100000
+#define br_VOLTAGE_FORCE 32767
+#define br_VOLTAGE_NORMAL 22000
+#define br_CURRENT_FORCE 750
+#define br_CURRENT_NORMAL 250
+
+#if ps_br_CURRENT_FAST_FILTER_ENABLED ==1
+#define ps_br_CURRENT_FAST_FILTER_GAIN 7
+#define ps_br_CURRENT_FAST_FILTER_SHIFT_GAIN 3
+#define ps_br_CURRENT_FAST_FILTER_SHIFT_PRESC 0
+#define ps_br_CURRENT_FAST_FILTER_SHIFT_VALUE 0
+#endif
+
+#if ps_cross_CURRENT_REGULATOR_ENABLED == 1 || ps_cross_CURRENT_LIMMITER_ENABLED == 1
+#define ps_br_CURRENT_PROP_GAIN 20
+#define ps_br_CURRENT_MODEL_GAIN 10
+#define ps_br_CURRENT_DIFF_GAIN 0
+#define ps_br_CURRENT_CONTROL_SHIFT 0
+#define ps_br_CURRENT_MODEL_SHIFT 10
+#endif
+
+#define ps_cross_VOLTAGE_RAMP_GAIN 300
+
+#if ps_cross_CURRENT_FILTER_ENABLED ==1
+#define ps_cross_CURRENT_FILTER_GAIN 7
+#define ps_cross_CURRENT_FILTER_SHIFT_GAIN 3
+#define ps_cross_CURRENT_FILTER_SHIFT_PRESC 0
+#define ps_cross_CURRENT_FILTER_SHIFT_VALUE 0
+#endif
+
+#if ps_cross_CURRENT_FAST_FILTER_ENABLED ==1
+#define ps_cross_CURRENT_FAST_FILTER_SHIFT_VALUE 2
+#endif
+
+#if ps_cross_CURRENT_DIFF_FILTER_ENABLED ==1
+#define ps_cross_CURRENT_DIFF_FILTER_GAIN 1
+#define ps_cross_CURRENT_DIFF_FILTER_SHIFT_GAIN 1
+#define ps_cross_CURRENT_DIFF_FILTER_SHIFT_PRESC 0
+#define ps_cross_CURRENT_DIFF_FILTER_SHIFT_VALUE 0
+#endif
+
+#if ps_cross_CURRENT_REGULATOR_ENABLED == 1 || ps_cross_CURRENT_LIMMITER_ENABLED == 1
+#define ps_cross_CURRENT_PROP_GAIN 3
+#define ps_cross_CURRENT_MODEL_GAIN 24
+#define ps_cross_CURRENT_DIFF_GAIN 0
+#define ps_cross_CURRENT_CONTROL_SHIFT 0
+#define ps_cross_CURRENT_MODEL_SHIFT 10
+#endif
+
+#if ps_cross_CURRENT_LIMMITER_ENABLED == 1
+#define ps_cross_CURRENT_LIMMITER_RAMP_STEP 500
+#endif
+
+
+#if ps_lat_CURRENT_FILTER_ENABLED ==1
+#define ps_lat_CURRENT_FILTER_GAIN 7
+#define ps_lat_CURRENT_FILTER_SHIFT_GAIN 3
+#define ps_lat_CURRENT_FILTER_SHIFT_PRESC 0
+#define ps_lat_CURRENT_FILTER_SHIFT_VALUE 0
+#endif
+
+#if ps_lat_CURRENT_FAST_FILTER_ENABLED ==1
+#define ps_lat_CURRENT_FAST_FILTER_SHIFT_VALUE 2
+#endif
+
+#if ps_lat_CURRENT_DIFF_FILTER_ENABLED ==1
+#define ps_lat_CURRENT_DIFF_FILTER_GAIN 1
+#define ps_lat_CURRENT_DIFF_FILTER_SHIFT_GAIN 1
+#define ps_lat_CURRENT_DIFF_FILTER_SHIFT_PRESC 0
+#define ps_lat_CURRENT_DIFF_FILTER_SHIFT_VALUE 0
+#endif
+
+#if ps_lat_CURRENT_REGULATOR_ENABLED == 1 
+#define ps_lat_CURRENT_PROP_GAIN 3
+#define ps_lat_CURRENT_MODEL_GAIN 24
+#define ps_lat_CURRENT_DIFF_GAIN 0
+#define ps_lat_CURRENT_CONTROL_SHIFT 0
+#define ps_lat_CURRENT_MODEL_SHIFT 10
+#endif
+
+
+
+#if pmsm_act_MOTOR_SPEED_FILTER_ENABLED==1
+#define pmsm_act_SPEED_FILTER_GAIN 31
+#define pmsm_act_SPEED_FILTER_SHIFT_GAIN 5
+#define pmsm_act_SPEED_FILTER_SHIFT_PRESC 3
+#define pmsm_act_SPEED_FILTER_SHIFT_VALUE 0
+#endif
+
+#if pmsm_act_SPEED_OV_CURRENT_MODE_ENABLED == 1
+#define pmsm_act_SPEED_OV_CURRENT_PROP_GAIN 2000
+#define pmsm_act_SPEED_OV_CURRENT_MODEL_GAIN 40
+#define pmsm_act_SPEED_OV_CURRENT_CONTROL_SHIFT 7
+#define pmsm_act_SPEED_OV_CURRENT_MODEL_SHIFT 11
+#define pmsm_act_SPEED_OV_CURRENT_FORCE_GAIN 2
+#define pmsm_act_SPEED_OV_CURRENT_FORCE_LIM 50
+#define pmsm_act_SPEED_OV_CURRENT_REF_GAIN 0
+#define pmsm_act_SPEED_OV_CURRENT_REF_PRESC_SHIFT 0
+#endif
+
+#if pmsm_act_SPEED_OV_VOLTAGE_CL_MODE_ENABLED == 1
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_PROP_GAIN 20000
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_MODEL_GAIN 10
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_CONTROL_SHIFT 5
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_MODEL_SHIFT 10
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_FORCE_GAIN 50
+#define pmsm_act_SPEED_OV_VOLTAGE_CL_FORCE_LIM 7000
+#endif
+
+#if pmsm_act_POSITION_OV_CURRENT_MODE_ENABLED == 1
+#define pmsm_act_POSITIONER_OV_CURRENT_PROP_GAIN 1
+#define pmsm_act_POSITIONER_OV_CURRENT_DIFF_GAIN 0
+#define pmsm_act_POSITIONER_OV_CURRENT_CONTROL_SHIFT 7
+#define pmsm_act_POSITIONER_OV_CURRENT_DIFF_QUADR_GAIN 0
+#define pmsm_act_POSITIONER_OV_CURRENT_DIFF_QUADR_SHIFT 0
+#define pmsm_act_POSITIONER_OV_CURRENT_DEAD_ZONE 1
+#define pmsm_act_POSITIONER_OV_CURRENT_CRAWL_SPEED 1
+#endif
+
+#if pmsm_act_POSITION_OV_VOLTAGE_CL_MODE_ENABLED == 1
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_PROP_GAIN 10
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_DIFF_GAIN 0
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_CONTROL_SHIFT 5
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_DIFF_QUADR_GAIN 0
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_DIFF_QUADR_SHIFT 0
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_DEAD_ZONE 16
+#define pmsm_act_POSITIONER_OV_VOLTAGE_CL_CRAWL_SPEED 8
+#endif

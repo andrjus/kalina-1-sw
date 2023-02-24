@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="robosd">
+      <UniqueIdentifier>{50957669-522c-4054-83b6-f83953a68e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd\core">
+      <UniqueIdentifier>{36711a23-dce1-4b1e-8489-013acdb62ef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd\core\platform">
+      <UniqueIdentifier>{bff5b47d-3cf5-4119-85fb-4fdc67d75ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{5f849a2e-d620-4e87-998a-4c73a7cd3b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{97240c09-614d-4e4b-b1f2-efe0a734812b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd\net">
+      <UniqueIdentifier>{edce576f-0ae9-4ca1-a3cb-f8a836a13acd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kalina1-drive">
+      <UniqueIdentifier>{4ac05a8b-198a-48f8-82da-5b24a570cf3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="robosd\servo">
+      <UniqueIdentifier>{144902b7-6f28-4967-acf2-b8d77f842956}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_app.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_ini_parser.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_log.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_string.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system_native.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_system_std.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\platform\win+vs19\robosd-system-win.cpp">
+      <Filter>robosd\core\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\platform\win+vs19\main.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_net_trafic.cpp">
+      <Filter>robosd\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_can.cpp">
+      <Filter>robosd\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\kalina1_central_module.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_can_flow_bus.cpp">
+      <Filter>robosd\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\platform\can\emulator\emu_can_module.cpp">
+      <Filter>robosd\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\core\robosd_convert.cpp">
+      <Filter>robosd\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\servo\robosd_backend.cpp">
+      <Filter>robosd\servo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\servo\robosd_frontend.cpp">
+      <Filter>robosd\servo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\servo\mexo_backend.cpp">
+      <Filter>robosd\servo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\servo\mexo_frontend.cpp">
+      <Filter>robosd\servo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\reference\robosd-ref\net\robosd_net_link.cpp">
+      <Filter>robosd\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\kalina1_central_frontend.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_app.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_common.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_delegat.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ini.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ini_parser.h">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_lambda.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_list.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_log.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ring.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_ring_buf.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_string.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system_module_reg.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_system_native.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_tran.h">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\platform\win+vs19\robosd_target.hpp">
+      <Filter>robosd\core\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\platform\win+vs19\robosd_app_tuning.hpp">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_net_trafic.hpp">
+      <Filter>robosd\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_can.hpp">
+      <Filter>robosd\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_net_master.hpp">
+      <Filter>robosd\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\kalina1-drive\source\common\kalina1-drive.proto.hpp">
+      <Filter>kalina1-drive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_can_flow_bus.hpp">
+      <Filter>robosd\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\core\robosd_convert.hpp">
+      <Filter>robosd\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\robosd_backend.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\robosd_frontend.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\mexo_backend.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\robosd_proto.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\mexo_proto.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\mexo_frontend.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\net\robosd_net_link.hpp">
+      <Filter>robosd\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1_central_common.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\im\source\common\kalina1_shared.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\common\kalina1_central_frontend.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\reference\robosd-ref\servo\mexo_motor.inc.hpp">
+      <Filter>robosd\servo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
