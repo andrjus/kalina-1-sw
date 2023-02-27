@@ -56,3 +56,7 @@ v=So*nn/60
 tt=36/v
 % So=
 
+syms ITmin ITmax T10min T10max S K B
+s1 = -T10min*S + (ITmin-B) *K;
+s2 = -T10max*S + (ITmax-B) *K;
+r = solve(s1,s2, K,B)
