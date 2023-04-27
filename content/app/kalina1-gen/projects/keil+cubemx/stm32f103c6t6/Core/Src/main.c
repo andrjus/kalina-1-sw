@@ -55,7 +55,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-static volatile uint32_t pwm = 500;
+static volatile uint32_t pwm = 0;
 /* USER CODE END 0 */
 
 /**
@@ -95,11 +95,18 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	TIM1->CCR1 = 0;
+	TIM1->CCR2 = 0;
+	TIM1->CCR3 = 0;
+	TIM1->CCER=TIM_CCER_CC1E | TIM_CCER_CC1NE | TIM_CCER_CC2E | TIM_CCER_CC2NE | TIM_CCER_CC3E | TIM_CCER_CC3NE;
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);	
-	TIM1->CCER=TIM_CCER_CC1E | TIM_CCER_CC1NE;
+	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);	
+	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);	
+	HAL_GPIO_WritePin(SD_GPIO_Port, SD_Pin, GPIO_PIN_RESET);
   while (1)
   {
-		TIM1->CCR1 = pwm;
+		TIM1->CCR1 = 0;
+		TIM1->CCR2 = 1800-pwm;
+		TIM1->CCR3 = 1800+pwm;
 		
     /* USER CODE END WHILE */
 
