@@ -944,8 +944,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\modules\burst_inv3ph.c</PathWithFileName>
-      <FilenameWithoutPath>burst_inv3ph.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.c</PathWithFileName>
+      <FilenameWithoutPath>nikitin.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -956,8 +956,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\modules\burst_inv3ph.h</PathWithFileName>
-      <FilenameWithoutPath>burst_inv3ph.h</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.h</PathWithFileName>
+      <FilenameWithoutPath>nikitin.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -968,8 +968,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.c</PathWithFileName>
-      <FilenameWithoutPath>nikitin.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.c</PathWithFileName>
+      <FilenameWithoutPath>burst_inv3ph.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -980,8 +980,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.h</PathWithFileName>
-      <FilenameWithoutPath>nikitin.h</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.h</PathWithFileName>
+      <FilenameWithoutPath>burst_inv3ph.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

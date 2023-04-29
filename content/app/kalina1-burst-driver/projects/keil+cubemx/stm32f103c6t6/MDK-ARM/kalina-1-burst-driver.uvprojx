@@ -934,16 +934,6 @@
           <GroupName>burst/modules</GroupName>
           <Files>
             <File>
-              <FileName>burst_inv3ph.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\burst_inv3ph.c</FilePath>
-            </File>
-            <File>
-              <FileName>burst_inv3ph.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\burst_inv3ph.h</FilePath>
-            </File>
-            <File>
               <FileName>nikitin.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.c</FilePath>
@@ -952,6 +942,16 @@
               <FileName>nikitin.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.h</FilePath>
+            </File>
+            <File>
+              <FileName>burst_inv3ph.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.c</FilePath>
+            </File>
+            <File>
+              <FileName>burst_inv3ph.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.h</FilePath>
             </File>
           </Files>
         </Group>

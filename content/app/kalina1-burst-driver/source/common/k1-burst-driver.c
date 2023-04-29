@@ -96,9 +96,7 @@ void machine(void){
 			case 1:
 			actual.angle32 += requried.freq;
 			actual.angle =  actual.angle32 >> 16;
-			inverter.dq.lateral = requried.voltage.lateral;
-			inverter.dq.cross = requried.voltage.cross;
-			inv3ph_run(&inverter,actual.angle);
+			inv3ph_run(&inverter,requried.voltage.cross, requried.voltage.lateral, actual.angle);
 			break;
 			case 2:
 			{
@@ -119,7 +117,7 @@ void machine(void){
 					}				
 				} else v = 0;
 				inverter.dq.lateral = -v;
-				inv3ph_run(&inverter,hall_extra.angle32>>16);
+				//inv3ph_run(&inverter,hall_extra.angle32>>16);
 			}
 			break;
 			case 3:
@@ -141,7 +139,7 @@ void machine(void){
 				}
 				lat_current_pi.run();				
 				force_angle = (3823L* speedse.ref.value)>>5;
-				inv3ph_run(&inverter,(hall_extra.angle32>>16) + force_angle);
+				//inv3ph_run(&inverter,(hall_extra.angle32>>16) + force_angle);
 			}
 			break;
 	}
@@ -160,7 +158,7 @@ void burst_sw_begin(void){
 	power_status = clch_ps_status_off;
 	hall_extra.hall.pactual = &hall.angle;
 	hall_extra.lost = burst_true;
-	lat_current_pi.begin(
+	lat_current_pi.setup(
 	&burst_config.lat_current_pi 				//burst_pi_config_p _config
 	,	&requried.current.lateral 	//burst_signal_p				_signal_req
 	, &curse.dq.lateral 					//burst_signal_p				_signal

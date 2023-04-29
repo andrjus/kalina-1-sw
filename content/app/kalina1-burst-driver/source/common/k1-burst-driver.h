@@ -2,7 +2,7 @@
 #define fb3_burst_h
 #include "burst/burst.h"
 #include "burst/burst_serial.h"
-#include "burst/modules/burst_inv3ph.h"
+#include "burst/burst_inv3ph.h"
 #include "burst/burst_hall.h"
 #include "burst/burst_adc.h"
 #include "burst/burst_pi.h"
