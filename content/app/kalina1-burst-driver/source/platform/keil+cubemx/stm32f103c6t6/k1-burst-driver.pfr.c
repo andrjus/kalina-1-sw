@@ -4,14 +4,15 @@
 #include "usart.h"
 #include "burst/burst.h"
 #include "adc.h"
-#define K1TICK_PER_MKS ( K1CPU_FREQ_HZ / 1000000 )
+#include "burst/burst_app.h"
+#define K1_TICK_PER_MKS ( K1_CPU_FREQ_HZ / 1000000 )
 volatile unsigned int *DWT_CYCCNT = (volatile unsigned int *)0xE0001004; //address of the register
 volatile unsigned int *DWT_CONTROL = (volatile unsigned int *)0xE0001000; //address of the register
 volatile unsigned int *SCB_DEMCR = (volatile unsigned int *)0xE000EDFC; //address of the register 
 void delay_us(volatile uint32_t _us){
 	volatile unsigned int start, current; 
 	start = *DWT_CYCCNT;
-	_us *=K1TICK_PER_MKS;
+	_us *=K1_TICK_PER_MKS;
 	do{
 		current = *DWT_CYCCNT;
 	} while((current - start) < _us);
@@ -21,7 +22,7 @@ void delay_ns(volatile uint64_t _ns){
 	start = *DWT_CYCCNT;
 	do{
 		current = *DWT_CYCCNT;
-	} while((current - start)*1000 < _ns*K1TICK_PER_MKS);
+	} while((current - start)*1000 < _ns*K1_TICK_PER_MKS);
 }
 void burst_hw_begin(void){
 	SD_GPIO_Port->BSRR = SD_Pin;
@@ -46,8 +47,8 @@ void adc_start(void){
 }
 
 void burst_hw_start(void){
-	TIM1->ARR = K1PWM_MODULO;
-	TIM1->CCR4 = K1PWM_MODULO-K1ADC_DELAY;
+	TIM1->ARR = K1_PWM_MODULO;
+	TIM1->CCR4 = K1_PWM_MODULO-K1_ADC_DELAY;
 	HAL_TIM_OC_Start_IT(&htim1, TIM_CHANNEL_4);		
 	__enable_irq();	
 }
@@ -112,9 +113,9 @@ void power_boot_begin(void){
 	SD_GPIO_Port->BRR = SD_Pin;
 }
 burst_satstate_t power_do_invert(void){
-	TIM1->CCR1 = inverter.duty.A;
-	TIM1->CCR2 = inverter.duty.B;
-	TIM1->CCR3 = inverter.duty.C;
+	TIM1->CCR1 = motor.inverter.duty.C;
+	TIM1->CCR2 = motor.inverter.duty.B;
+	TIM1->CCR3 = motor.inverter.duty.A;
 	return burst_satstate_none;
 }
 
@@ -124,4 +125,40 @@ void power_shutdown_begin(void){
 	TIM1->CCR1 = 0;
 	TIM1->CCR2 = 0;
 	TIM1->CCR3 = 0;	
+}
+
+void burst_hw_on_crash(void){
+	__disable_irq();
+	power_shutdown_begin();	
+}
+
+int critical_ = 0;	
+burst_guard_op_t burst_hw_critical_enter(void){
+	critical_++;
+	return  burst_guard_op_run;
+}
+
+void burst_hw_critical_leave(void){
+	critical_ --;
+	if(critical_<=0){
+	}
+}
+
+burst_guard_op_t burst_hw_guard_enter(void){
+		uint32_t prim = __get_PRIMASK();
+	__disable_irq();
+	return prim == 0? burst_guard_op_run : burst_guard_op_skip;	
+}
+
+void burst_hw_guard_leave(void){
+	__enable_irq();
+}
+
+burst_guard_op_t burst_hw_guard_lock(void){
+		uint32_t prim = __get_PRIMASK();
+	__disable_irq();
+	return prim == 0? burst_guard_op_run : burst_guard_op_skip;	
+}
+void burst_hw_guard_unlock(void){
+	__enable_irq();
 }

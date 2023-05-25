@@ -1,76 +1,48 @@
 #include "k1-burst-driver.h"
 
-typedef struct config_s {
-	inv3ph_config_t inv3ph;
-	current3ph_config_t current3ph;
-	hall_config_t hall;
-	adc_config_t adc;
-	nikitin_config_t speedse;
-	burst_pi_config_t lat_current_pi;
-} config_t;
-config_t burst_config = {
-	{K1PWM_MODULO-K1ADC_DELAY,0} //inv3ph_config_t
-	,{ // current3ph_config_t
-		{0,1,4} //int adc_index[3];
-		,{ 
-			75358, -30028 ,-10646, 
-			-33930, 71247, -11748, 
-			-41428, -41219, 22393
-		}	//burst_signal_t deform[9];
-	}
-	,{ //hall_config_s
-		{
-			BURST_SIGNAL_T(175./180)//burst_signal_t native;
-			,0// -BURST_SIGNAL_T(30./180.)//burst_signal_t dynamic;
-		} //offset;
-		, burst_true//burst_bool_t inv;
-	}
-	,{ //adc_config_s
-		{0,1,2,3,4} // index[BURST_ADC_CHANNEL_COUNT ];
-		,{1,1,1,1,1} //burst_signal_t scale[BURST_ADC_CHANNEL_COUNT ];
-		,10 //unsigned init_count_shift;
-	}
-	,{ //nikitin_config_t
-		{}
-		, 5//int8_t shift;
-		, 5//int8_t presc_shift;
-		, 0//int8_t value_shift;
-	}
-	,{ //burst_filter_config_t
-		250//burst_parametr_t	propGain;
-		,650//burst_parametr_t	modelGain;
-		,0//burst_parametr_t	diffGain;
-		,0//burst_parametr_t	forceGain;
-		,7//uint8_t						controlShift;
-		,10//uint8_t						modelShift;
-	}
-};
+pmsm_hall_app_config_t  k1_config = PMSM_HALL_APP_CONFIG();
+
+void burst_sw_begin(void){
+	pmsm_hall_app_begin(&k1_config);
+}
 
 
-inv3ph_t inverter={};
-hall_t hall={};
-adc_t adc={};
-current3ph_t curse={};
-static volatile burst_signal_t  force_angle = 0;
-static volatile burst_long_signal_t  voltage_max = 0;
-static volatile burst_long_signal_t  voltage_min = 0;
-static volatile burst_long_signal_t  eds = 0;
 
-struct{
-	int mode;
-	dq_t voltage;
-	dq_t current;
-	burst_long_signal_t freq;
-} requried = {};
+void burst_sw_start(void){
+	adc_start();
+	while( adc.ready == burst_false ){
+		BURST_NOP();
+	}	
+	pmsm_hall_app_start();
+}
 
-struct{
-	int mode;
-	burst_signal_t angle;
-	burst_long_signal_t angle32;
-} actual = {};
+void burst_sw_realtime_loop(void){	
+	pmsm_hall_app_realtime_loop();
+}
 
-hall_extra_t hall_extra ={};
-	
+void burst_sw_backend_loop(void){		
+	pmsm_hall_app_backend_loop();
+	fm_recorder();
+	fm_poll();
+//	machine();
+}
+void burst_sw_frontend_loop(void){
+	pmsm_hall_app_frontend_loop();
+}
+void burst_sw_slot_0(void){
+	pmsm_hall_app_control_step_1();
+}
+static int presc = 0;
+void burst_sw_slot_1(void){
+	pmsm_hall_app_control_step_2();
+}
+void burst_sw_slot_2(void){
+	pmsm_hall_app_control_step_3();
+}
+
+
+
+#if 0
 void machine(void){
 	if(requried.mode != actual.mode){
 		actual.mode = requried.mode;
@@ -201,4 +173,4 @@ void burst_sw_slot_0(void){
 	speedse.ref.run();
 	hall.delta_acc = 0;
 }
-
+#endif

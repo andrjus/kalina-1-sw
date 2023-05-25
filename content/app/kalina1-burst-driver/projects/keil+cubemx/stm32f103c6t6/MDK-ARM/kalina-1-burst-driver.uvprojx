@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>footbot-3-burst\</OutputDirectory>
-          <OutputName>footbot-3-burst</OutputName>
+          <OutputName>kalina-1-burst</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -211,7 +211,7 @@
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
             <Im1Chk>1</Im1Chk>
-            <Im2Chk>1</Im2Chk>
+            <Im2Chk>0</Im2Chk>
             <OnChipMemories>
               <Ocm1>
                 <Type>0</Type>
@@ -276,7 +276,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x60000</Size>
+                <Size>0x8000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -301,7 +301,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x2800</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -314,7 +314,7 @@
           <Cads>
             <interw>1</interw>
             <Optim>1</Optim>
-            <oTime>0</oTime>
+            <oTime>1</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
             <Strict>0</Strict>
@@ -838,6 +838,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_pi.h</FilePath>
             </File>
+            <File>
+              <FileName>burst_ps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.c</FilePath>
+            </File>
+            <File>
+              <FileName>burst_ps.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -859,9 +869,9 @@
               <FilePath>..\..\..\..\source\platform\keil+cubemx\stm32f103c6t6\burst_app_tuning.h</FilePath>
             </File>
             <File>
-              <FileName>k1-burst-driver.pfr..c</FileName>
+              <FileName>k1-burst-driver.pfr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\source\platform\keil+cubemx\stm32f103c6t6\k1-burst-driver.pfr..c</FilePath>
+              <FilePath>..\..\..\..\source\platform\keil+cubemx\stm32f103c6t6\k1-burst-driver.pfr.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -952,6 +962,76 @@
               <FileName>burst_inv3ph.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.h</FilePath>
+            </File>
+            <File>
+              <FileName>pmsm_hall_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.c</FilePath>
+            </File>
+            <File>
+              <FileName>pmsm_hall_app.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.h</FilePath>
+            </File>
+            <File>
+              <FileName>pmsm_hall_app.obj.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.obj.c</FilePath>
+            </File>
+            <File>
+              <FileName>actuator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.c</FilePath>
+            </File>
+            <File>
+              <FileName>actuator.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.h</FilePath>
+            </File>
+            <File>
+              <FileName>actuator_front.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator_front.h</FilePath>
+            </File>
+            <File>
+              <FileName>acwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.c</FilePath>
+            </File>
+            <File>
+              <FileName>acwc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.h</FilePath>
+            </File>
+            <File>
+              <FileName>acwc_front.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc_front.h</FilePath>
+            </File>
+            <File>
+              <FileName>enco_abs32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\enco_abs32.c</FilePath>
+            </File>
+            <File>
+              <FileName>enco_abs32.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\enco_abs32.h</FilePath>
+            </File>
+            <File>
+              <FileName>pmsm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.c</FilePath>
+            </File>
+            <File>
+              <FileName>pmsm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.h</FilePath>
+            </File>
+            <File>
+              <FileName>pmsm_front.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_front.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2108,6 +2188,21 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>common/machines</GroupName>
+          <Files>
+            <File>
+              <FileName>k1-A60-7M.motor.config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\source\common\machines\k1-A60-7M.motor.config.h</FilePath>
+            </File>
+            <File>
+              <FileName>k1-A60-7M.pfr.config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\source\common\machines\k1-A60-7M.pfr.config.h</FilePath>
             </File>
           </Files>
         </Group>
