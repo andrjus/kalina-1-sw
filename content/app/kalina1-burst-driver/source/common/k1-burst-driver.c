@@ -1,9 +1,10 @@
 #include "k1-burst-driver.h"
 
 pmsm_hall_app_config_t  k1_config = PMSM_HALL_APP_CONFIG();
-
+pmsm_action_t pmsma = {};	
+pmsm_feedback_t feedback = {};
 void burst_sw_begin(void){
-	pmsm_hall_app_begin(&k1_config);
+	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
 
 

@@ -4,7 +4,7 @@
 #error error of using burst_app_tuning.h
 #endif
 
-#define BURST_DEV_COUNT 0
+#define BURST_DEV_COUNT 1
 
 #include "k1-burst-driver.common.h"
 
@@ -16,7 +16,6 @@
 
 #define BURST_TIMER_TICK_US K1_PWM_PERIOD_US
 
-#define BURST_APP_PMSM_HALL_TUNNING K1_PMSM_HALL_TUNNING
 /*
 
 #define HVD_TICK_PERIOD_US 50
