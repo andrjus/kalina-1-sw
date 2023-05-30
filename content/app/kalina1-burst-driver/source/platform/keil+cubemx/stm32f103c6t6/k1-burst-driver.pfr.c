@@ -51,6 +51,7 @@ void burst_hw_start(void){
 	TIM1->CCR4 = K1_PWM_MODULO-K1_ADC_DELAY;
 	HAL_TIM_OC_Start_IT(&htim1, TIM_CHANNEL_4);		
 	__enable_irq();	
+	k1_serial_start_receive();
 }
 hall_pins_t hall_pins;
 
@@ -91,19 +92,86 @@ void burst_tp_phy_off(void){
 	TP1_GPIO_Port->BRR = TP1_Pin;
 }
 
-uint8_t	fm_available(void){
-	//USART1->SR =(UART_CLEAR_OREF | UART_CLEAR_NEF | UART_CLEAR_PEF | UART_CLEAR_FEF );
-	return (USART1->SR & UART_FLAG_RXNE) == UART_FLAG_RXNE ? 1:0; 
+
+uint8_t k1_serial_rx_buffer[K1_SERIAL_SIZE];
+
+burst_bool_t serialComDone = burst_true;
+extern DMA_HandleTypeDef hdma_usart1_rx;
+
+burst_bool_t k1_serial_ready(void){
+	return serialComDone;
 }
-uint8_t	fm_space(void){
-	return (USART1->SR & UART_FLAG_TXE) == UART_FLAG_TXE?1:0; 
+void k1_serial_start_receive(void){
+	HAL_UART_DMAStop(&huart1);
+	HAL_GPIO_WritePin(RS485_DE_GPIO_Port, RS485_DE_Pin, GPIO_PIN_RESET);
+	HAL_UARTEx_ReceiveToIdle_DMA(&huart1, k1_serial_rx_buffer, K1_SERIAL_SIZE);
+	__HAL_DMA_DISABLE_IT(&hdma_usart1_rx, DMA_IT_HT);
+	//HAL_NVIC_DisableIRQ(USART1_IRQn);
 }
-uint8_t	fm_get(void){
-	return USART1->DR; 
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef* huart) {
+	if (huart->Instance == USART1) {
+		serialComDone = burst_true;
+		k1_serial_send_complete();
+		k1_serial_start_receive();
+	}
 }
-void		fm_put(uint8_t _data){
-	USART1->DR = _data;
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef* huart){
+	if (huart->Instance == USART1)
+	{
+		if(serialComDone == burst_false) {
+			serialComDone = burst_true;
+			k1_serial_send_refuse();
+		}
+		k1_serial_start_receive();
+	}
 }
+int abort_count = 0;
+void HAL_UART_AbortCpltCallback(UART_HandleTypeDef *huart){
+	if (huart->Instance == USART1)
+	{
+		abort_count++;
+		serialComDone = burst_true;
+		k1_serial_send_refuse();
+	}
+}
+void HAL_UART_AbortTransmitCpltCallback(UART_HandleTypeDef *huart){
+	if (huart->Instance == USART1)
+	{
+		abort_count++;
+		serialComDone = burst_true;
+		k1_serial_send_refuse();
+	}
+}
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+	if (huart->Instance == USART1)
+	{
+		k1_serial_receive_packet(k1_serial_rx_buffer,Size);
+		k1_serial_start_receive();
+	}
+}
+
+void k1_serial_send_packet(uint8_t * _data, uint8_t _sz){
+	//HAL_NVIC_EnableIRQ(USART1_IRQn);
+	HAL_GPIO_WritePin(RS485_DE_GPIO_Port, RS485_DE_Pin, GPIO_PIN_SET);
+	if( HAL_UART_Transmit_DMA(&huart1,_data,_sz) != HAL_OK ) {
+		HAL_GPIO_WritePin(RS485_DE_GPIO_Port, RS485_DE_Pin, GPIO_PIN_RESET);
+		serialComDone = burst_true;
+		k1_serial_send_refuse();
+	} else {
+		serialComDone = burst_false;
+	}
+}
+
+void k1_serial_aborttx(void){
+	HAL_UART_AbortTransmit(&huart1);
+	serialComDone = burst_true;
+	k1_serial_send_refuse();
+}
+
 
 void power_boot_begin(void){
 	TIM1->CCR1 = 0;

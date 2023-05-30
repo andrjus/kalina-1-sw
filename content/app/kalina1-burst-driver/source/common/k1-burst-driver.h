@@ -10,4 +10,14 @@
 
 void adc_start(void);
 
+void k1_serial_send_refuse(void);
+void k1_serial_send_complete(void);
+void k1_serial_receive_packet(const uint8_t * _data, uint8_t _sz);
+void k1_serial_send_packet(uint8_t * _data, uint8_t _sz);
+void k1_serial_aborttx(void);
+void k1_serial_pool(void);
+void k1_serial_start_receive(void);
+
+burst_bool_t k1_serial_ready(void);
+
 #endif

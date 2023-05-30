@@ -20,6 +20,7 @@
 #include "main.h"
 #include "adc.h"
 #include "crc.h"
+#include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -91,8 +92,9 @@ int main(void)
   MX_TIM1_Init();
   MX_CRC_Init();
   MX_ADC1_Init();
-  MX_ADC2_Init();
+  MX_DMA_Init();
   MX_USART1_UART_Init();
+  MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
 	burst_begin();
 	burst_start();
