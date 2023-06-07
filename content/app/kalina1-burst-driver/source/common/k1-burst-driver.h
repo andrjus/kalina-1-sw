@@ -19,5 +19,17 @@ void k1_serial_pool(void);
 void k1_serial_start_receive(void);
 
 burst_bool_t k1_serial_ready(void);
+typedef struct temper_s{
+	int16_t motor;
+	struct{
+		int16_t A;
+		int16_t B;
+		int16_t C;
+		int16_t Z;
+	} board;
+} temper_t;
+extern temper_t temper; 
 
+void k1_update_temp(void);
+	
 #endif

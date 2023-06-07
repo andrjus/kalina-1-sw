@@ -6,6 +6,10 @@
 
 #define BURST_DEV_COUNT 1
 
+#ifndef __weak
+#define __weak  __attribute__((weak))
+#endif
+
 #include "k1-burst-driver.common.h"
 
 #define BURST_DEBUG_TP_ENABLED 1
@@ -16,6 +20,7 @@
 
 #define BURST_TIMER_TICK_US K1_PWM_PERIOD_US
 
+//#define BURST_VOLATILE_STATIC_CONST_ENABLED 1
 /*
 
 #define HVD_TICK_PERIOD_US 50

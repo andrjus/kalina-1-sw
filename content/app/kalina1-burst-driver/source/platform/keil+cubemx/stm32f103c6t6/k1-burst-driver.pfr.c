@@ -5,6 +5,10 @@
 #include "burst/burst.h"
 #include "adc.h"
 #include "burst/burst_app.h"
+#include "sw_i2c.h"
+
+extern sw_i2c_t  k1_sw_i2c;
+
 #define K1_TICK_PER_MKS ( K1_CPU_FREQ_HZ / 1000000 )
 volatile unsigned int *DWT_CYCCNT = (volatile unsigned int *)0xE0001004; //address of the register
 volatile unsigned int *DWT_CONTROL = (volatile unsigned int *)0xE0001000; //address of the register
@@ -46,13 +50,43 @@ void adc_start(void){
 	HAL_NVIC_EnableIRQ(ADC1_2_IRQn);
 }
 
+burst_bool_t temp_alarm(uint8_t _addr, uint8_t _value){
+	uint8_t tmp;
+	for( int i=0;i<6;++i){
+		SW_I2C_Read_8addr( &k1_sw_i2c, K1_TM423ADDR, _addr, &tmp, 1);
+		if(tmp == _value){
+			return burst_true;
+		} 		
+		delay_us(1000);
+	}
+	return burst_false;
+}
+
 void burst_hw_start(void){
 	TIM1->ARR = K1_PWM_MODULO;
 	TIM1->CCR4 = K1_PWM_MODULO-K1_ADC_DELAY;
 	HAL_TIM_OC_Start_IT(&htim1, TIM_CHANNEL_4);		
 	__enable_irq();	
-	k1_serial_start_receive();
+	k1_serial_start_receive();	
+
+	burst_alarm( temp_alarm(0x0A,0x7C));
+	burst_alarm( temp_alarm(0xFE,0x55));
+
 }
+
+uint8_t tables[8];
+uint8_t addr[8] = {0x00,0x01,0x02,0x03,0x08,0x09,0x0B,0x10};
+
+void burst_hw_frontend_loop(void){
+	/*static uint8_t dummy = 0;
+	static uint8_t ix = 0;
+	SW_I2C_Read_8addr( &k1_sw_i2c, K1_TM423ADDR, addr[ix], tables+ix, 1);
+	ix++;
+	if(ix==8){
+		ix = 0;
+	}*/
+}
+
 hall_pins_t hall_pins;
 
 void burst_hw_realtime_loop(void){
@@ -61,6 +95,8 @@ void burst_hw_realtime_loop(void){
 	hall_pins.C = (HALL3_GPIO_Port->IDR & HALL3_Pin) != 0;
 	hall_update(&hall,&hall_pins);
 }
+
+
 
 void TIM1_CC_IRQHandler(void)
 {
@@ -229,4 +265,122 @@ burst_guard_op_t burst_hw_guard_lock(void){
 }
 void burst_hw_guard_unlock(void){
 	__enable_irq();
+}
+	
+
+
+static void sda_in_mode(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+
+    GPIO_InitStruct.Pin = SDA_Pin;
+    HAL_GPIO_Init(SDA_GPIO_Port, &GPIO_InitStruct);
+}
+
+
+static void sda_out_mode(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+
+    GPIO_InitStruct.Pin = SDA_Pin;
+    HAL_GPIO_Init(SDA_GPIO_Port, &GPIO_InitStruct);
+}
+
+
+static void scl_in_mode(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+
+    GPIO_InitStruct.Pin = SCL_Pin;
+    HAL_GPIO_Init(SCL_GPIO_Port, &GPIO_InitStruct);
+}
+
+
+static void scl_out_mode(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+
+    GPIO_InitStruct.Pin = SCL_Pin;
+    HAL_GPIO_Init(SCL_GPIO_Port, &GPIO_InitStruct);
+}
+
+static int sw_i2c_port_initial(void)
+{
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    // i2c_sw SCL
+    GPIO_InitStruct.Pin = SCL_Pin;
+    HAL_GPIO_Init(SDA_GPIO_Port, &GPIO_InitStruct);
+    // i2c_sw SDA
+    GPIO_InitStruct.Pin = SDA_Pin;
+    HAL_GPIO_Init(SCL_GPIO_Port, &GPIO_InitStruct);
+    return 0;
+}
+
+
+static int sw_i2c_port_io_ctl(hal_io_opt_e opt, void *param)
+{
+    int ret = -1;
+    switch (opt)
+    {
+    case HAL_IO_OPT_SET_SDA_HIGH:
+        HAL_GPIO_WritePin(SDA_GPIO_Port, SDA_Pin,GPIO_PIN_SET);
+        break;
+    case HAL_IO_OPT_SET_SDA_LOW:
+        HAL_GPIO_WritePin(SDA_GPIO_Port, SDA_Pin,GPIO_PIN_RESET);
+        break;
+    case HAL_IO_OPT_GET_SDA_LEVEL:
+        ret = HAL_GPIO_ReadPin(SDA_GPIO_Port, SDA_Pin);
+        break;
+    case HAL_IO_OPT_SET_SDA_INPUT:
+        sda_in_mode();
+        break;
+    case HAL_IO_OPT_SET_SDA_OUTPUT:
+        sda_out_mode();
+        break;
+    case HAL_IO_OPT_SET_SCL_HIGH:
+        HAL_GPIO_WritePin(SCL_GPIO_Port, SCL_Pin,GPIO_PIN_SET);
+        break;
+    case HAL_IO_OPT_SET_SCL_LOW:
+        HAL_GPIO_WritePin(SCL_GPIO_Port, SCL_Pin,GPIO_PIN_RESET);
+        break;
+    case HAL_IO_OPT_GET_SCL_LEVEL:
+        ret = HAL_GPIO_ReadPin(SCL_GPIO_Port, SCL_Pin);
+        break;
+    case HAL_IO_OPT_SET_SCL_INPUT:
+        scl_in_mode();
+        break;
+    case HAL_IO_OPT_SET_SCL_OUTPUT:
+        scl_out_mode();
+        break;
+    default:
+        break;
+    }
+    return ret;
+}
+
+
+
+
+sw_i2c_t  k1_sw_i2c= {
+	.hal_init = sw_i2c_port_initial,
+	.hal_io_ctl = sw_i2c_port_io_ctl,
+	.hal_delay_us = delay_us
+};
+
+void k1_update_temp(void){
+	
 }
