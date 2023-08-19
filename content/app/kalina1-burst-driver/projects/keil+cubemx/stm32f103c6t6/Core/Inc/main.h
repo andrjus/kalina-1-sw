@@ -73,6 +73,7 @@ void Error_Handler(void);
 #define RS485_DE_GPIO_Port GPIOB
 #define SD_Pin GPIO_PIN_8
 #define SD_GPIO_Port GPIOB
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

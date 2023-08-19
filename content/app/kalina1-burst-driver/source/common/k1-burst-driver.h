@@ -2,11 +2,17 @@
 #define k1_burst_driver_h
 
 #include "burst\modules\pmsm_hall_app.h"
-
 //פנטלאסעונ
 #define CLCH_NAME fm
 #define CLCH_HEADER 
 #include "burst/cliche/fm.h"
+
+#define CLCH_NAME TMP423
+#define CLCH_HEADER 
+#include "burst/cliche/net_master.h"
+
+void TMP423_read(uint8_t _addr, uint8_t * data);
+void TMP423_write(uint8_t _addr, uint8_t data);
 
 void adc_start(void);
 
@@ -31,5 +37,7 @@ typedef struct temper_s{
 extern temper_t temper; 
 
 void k1_update_temp(void);
-	
+void delay_us(volatile uint32_t _us);
+
+
 #endif

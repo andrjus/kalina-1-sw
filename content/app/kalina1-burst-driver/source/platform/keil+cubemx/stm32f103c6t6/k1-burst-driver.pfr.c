@@ -74,17 +74,8 @@ void burst_hw_start(void){
 
 }
 
-uint8_t tables[8];
-uint8_t addr[8] = {0x00,0x01,0x02,0x03,0x08,0x09,0x0B,0x10};
 
 void burst_hw_frontend_loop(void){
-	/*static uint8_t dummy = 0;
-	static uint8_t ix = 0;
-	SW_I2C_Read_8addr( &k1_sw_i2c, K1_TM423ADDR, addr[ix], tables+ix, 1);
-	ix++;
-	if(ix==8){
-		ix = 0;
-	}*/
 }
 
 hall_pins_t hall_pins;
@@ -100,9 +91,14 @@ void burst_hw_realtime_loop(void){
 
 void TIM1_CC_IRQHandler(void)
 {
+	static int presk_tick=0;
+	presk_tick++;
 	__HAL_TIM_CLEAR_IT(&htim1, TIM_IT_CC4);
-	HAL_ADCEx_InjectedStart_IT(&hadc1);
-	HAL_ADCEx_InjectedStart(&hadc2);
+	if( presk_tick == K1_PWM_TIMER_PRESC ){
+		HAL_ADCEx_InjectedStart_IT(&hadc1);
+		HAL_ADCEx_InjectedStart(&hadc2);
+		presk_tick = 0;
+	}
 }
 uint32_t adc_raw[BURST_ADC_CHANNEL_COUNT]={};
 void ADC1_2_IRQHandler(void)

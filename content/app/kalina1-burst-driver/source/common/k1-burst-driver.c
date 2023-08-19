@@ -8,14 +8,48 @@ void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
 
+uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+uint8_t addr[13] = {0x00,0x01,0x02,0x03,0x08,0x09,0xA,0x0B,0x10,0x11,0x12,0x13,0xFE};
 
 
-void burst_sw_start(void){
+int ix = 13;
+
+
+void TMP423_confirm_callback(burst_bool_t _r){
+	BURST_UNUSED(_r);
+	if(ix <13){
+		TMP423_read(addr[ix], tables+ix);
+		ix++;
+	}
+}
+	
+burst_run_t temp_poll_(void){
+	if(ix ==13){
+		if(TMP423_ready()){
+			ix = 0;
+			TMP423_read(addr[ix], tables+ix);
+			ix++;
+		}		
+	}
+	return burst_continue;
+}
+
+burst_timer_t temp_poll ={
+	0
+	,10000
+	,&temp_poll_
+	,0
+	,0
+};
+
+void burst_sw_start(void){	
 	adc_start();
 	while( adc.ready == burst_false ){
 		BURST_NOP();
 	}	
 	pmsm_hall_app_start();
+	TMP423_start();
+	burst_timer_start(&temp_poll);
 }
 
 void burst_sw_realtime_loop(void){	
@@ -31,6 +65,7 @@ void burst_sw_backend_loop(void){
 void burst_sw_frontend_loop(void){
 	pmsm_hall_app_frontend_loop();
 	k1_serial_pool();
+	//TMP423_poll();
 }
 void burst_sw_slot_0(void){
 	pmsm_hall_app_control_step_1();
@@ -128,6 +163,26 @@ void k1_serial_pool(void){
 	}
 }
 
+void TMP423_read(uint8_t _addr, uint8_t * data){
+	static uint8_t addr;
+	static TMP423_packet_t op = {&addr,1};
+	static TMP423_packet_t ip = {0,1};
+	
+	addr = _addr;
+	ip.data = data;
+	
+	TMP423_exchange(&op,&ip);
+
+}
+void TMP423_write(uint8_t _addr, uint8_t data){
+	static uint8_t outcom[2];
+	static TMP423_packet_t op = {outcom,2};
+	outcom[0] = _addr;
+	outcom[0] = data;
+
+	TMP423_exchange(&op,0);
+
+}
 
 
 #if 0
@@ -261,4 +316,7 @@ void burst_sw_slot_0(void){
 	speedse.ref.run();
 	hall.delta_acc = 0;
 }
+
+
 #endif
+

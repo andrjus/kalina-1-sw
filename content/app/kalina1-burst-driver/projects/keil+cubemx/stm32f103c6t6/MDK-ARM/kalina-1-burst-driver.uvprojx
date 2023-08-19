@@ -110,7 +110,7 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP</SimDllArguments>
+          <SimDllArguments>-REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
@@ -314,7 +314,7 @@
           <Cads>
             <interw>1</interw>
             <Optim>4</Optim>
-            <oTime>1</oTime>
+            <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
             <Strict>0</Strict>
@@ -336,7 +336,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--gnu </MiscControls>
+              <MiscControls>--gnu</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103x6,K1_TAG_MYTECH_8085_HA_CCE, K1_TAG_BOARD_ALFA</Define>
               <Undefine></Undefine>
               <IncludePath>../Core/Inc;../../../../../../reference/robosd-ref;../../../../../../reference/robosd-ref/burst/platform/keil;../../../../source/common;../../../../source/platform/keil+cubemx/stm32f103c6t6;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../../../../../../submodules/soft-i2c</IncludePath>
@@ -354,7 +354,7 @@
             <useXO>0</useXO>
             <ClangAsOpt>1</ClangAsOpt>
             <VariousControls>
-              <MiscControls>--cpu Cortex-M3 </MiscControls>
+              <MiscControls>--cpu Cortex-M3</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>

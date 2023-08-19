@@ -3,7 +3,6 @@
 #endif
 #ifdef K1_TAG_A60_7M
 #define K1_MOTOR_CONFIG "machines/k1-A60-7M.motor.config.h"
-#define K1_PFR_CONFIG "machines/k1-A60-7M.pfr.config.h"
 #endif
 
 #ifdef K1_TAG_MYTECH_8085_HA_CCE
@@ -12,6 +11,10 @@
 
 #ifdef K1_TAG_BOARD_ALFA
 #define K1_PFR_CONFIG "machines/k1-alfa.pfr.config.h"
+#endif
+
+#ifdef K1_TAG_BOARD_BETA
+#define K1_PFR_CONFIG "machines/k1-beta.pfr.config.h"
 #endif
 
 
