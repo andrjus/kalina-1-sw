@@ -80,14 +80,225 @@ void burst_hw_frontend_loop(void){
 
 hall_pins_t hall_pins;
 
+uint8_t swt_enable_prev = 0;
+uint8_t swt_enable = 0;
+uint16_t swt_value = 0;
+
+typedef struct {
+	struct{
+		int prop;
+		int model;
+	} gain;	
+}swt_config_t;
+
+typedef struct {
+	int error;
+	int model;
+	int model32;
+	int pwm;
+}swt_t;
+
+int swt_pwm = 0;
+int swt_cur_req = 0;
+
+//int swt_model_reset2(swt_config_t * _conf,  int _pwm1, int _pwm2 ){
+	//return (((_pwm1 + _pwm2) >> 1) *_conf->gain.iprop10)>>10 ;
+//}
+
+//int swt_model_reset(swt_config_t * _conf,  int _pwm){
+	//return ( _pwm *_conf->gain.iprop10 ) >> 10 ;
+//}
+
+void swt_reset(swt_t * _swt, int _pwm,int _model){
+	_swt->pwm = _pwm;
+	_swt->model = _model;
+	_swt->model32 = _swt->model >> 10;
+}
+
+void swt_run(swt_t * _swt, swt_config_t * _conf,int _requried,  int _actual){
+	int error = _requried - _actual;
+	int model;
+	if ( !( (error>0 && _swt->pwm == swt_pwm ) || (error<0 && _swt->pwm == 0))){
+		int model32 = _swt->model32 + error * _conf->gain.model;
+		model = model32 >> 10;
+		_swt->model = model;
+		_swt->model32 = model32;
+	} else{
+		model = _swt->model32 >> 10;
+	}
+	int pwm = (error * _conf->gain.prop + model - _actual) >> 7;
+	if( pwm<0) {
+		pwm = 0;
+	} if ( pwm > swt_pwm) {
+		pwm = swt_pwm;
+	}
+	_swt->pwm = pwm;	
+	_swt->error = error;
+}
+swt_t swtA={};
+swt_t swtB={};
+swt_t swtC={};
+swt_config_t swt_cfg={
+	{
+		15
+		,7000
+	}
+};
+//motor.sensor.abc.A
+int swt_pwmA = 0;
+int swt_pwmB = 0;
+int swt_pwmC = 0;
+void swt_loop(void){
+	if(swt_enable){
+		
+		switch(hall.sector){
+			case 0:
+				swt_run(&swtA,&swt_cfg, swt_cur_req>>1, motor.sensor.abc.A);
+				swt_run(&swtB,&swt_cfg, swt_cur_req>>1, motor.sensor.abc.B);
+				{
+					int pwm = (swtA.pwm + swtB.pwm) >> 1;
+					int model = (swtA.model + swtB.model) >> 1;
+					swt_reset(&swtC, pwm, model) ;
+				}
+				swt_pwmA = swtA.pwm;
+				swt_pwmB = swtB.pwm;
+				swt_pwmC = 0;
+				break;
+			case 1:
+				swt_run(&swtB,&swt_cfg, swt_cur_req, motor.sensor.abc.B);
+				swt_run(&swtA,&swt_cfg, -(swt_cur_req>>1), motor.sensor.abc.A);
+				swt_run(&swtC,&swt_cfg, -(swt_cur_req>>1), motor.sensor.abc.C);
+				{
+					//swt_reset(&swtA,swtB.pwm,swtB.model);
+					//swt_reset(&swtC,swtB.pwm,swtB.model);
+				}
+				swt_pwmA = swtA.pwm;
+				swt_pwmB = swtB.pwm;
+				swt_pwmC = swtC.pwm;
+				break;
+			case 2:
+				swt_run(&swtB,&swt_cfg, swt_cur_req>>1, motor.sensor.abc.B);
+				swt_run(&swtC,&swt_cfg, swt_cur_req>>1, motor.sensor.abc.C);
+				{
+					int pwm = (swtB.pwm + swtC.pwm) >> 1;
+					int model = (swtB.model + swtC.model) >> 1;
+					swt_reset(&swtA, pwm,model );
+				}
+				swt_pwmA = 0;
+				swt_pwmB = swtB.pwm;
+				swt_pwmC = swtC.pwm;
+				break;
+			case 3:
+				swt_run(&swtC,&swt_cfg, swt_cur_req, motor.sensor.abc.C);
+				swt_run(&swtA,&swt_cfg, -(swt_cur_req>>1), motor.sensor.abc.A);
+				swt_run(&swtB,&swt_cfg, -(swt_cur_req>>1), motor.sensor.abc.B);
+				{
+					//swt_reset(&swtA,swtC.pwm,swtC.model);
+					//swt_reset(&swtB,swtC.pwm,swtC.model);
+				}
+				swt_pwmA = swtA.pwm;
+				swt_pwmB = swtB.pwm;
+				swt_pwmC = swtC.pwm;
+				break;
+			case 4:
+				swt_run(&swtA,&swt_cfg, swt_cur_req>>1, motor.sensor.abc.A);
+				swt_run(&swtC,&swt_cfg, swt_cur_req>>1, motor.sensor.abc.C);
+				{
+					int pwm = (swtA.pwm + swtC.pwm) >> 1;
+					int model = (swtA.model + swtC.model) >> 1;
+					swt_reset(&swtB, pwm, model) ;
+				}
+				swt_pwmA = swtA.pwm;
+				swt_pwmB = 0;
+				swt_pwmC = swtC.pwm;
+				break;
+			case 5:
+				swt_run(&swtA,&swt_cfg, swt_cur_req, motor.sensor.abc.A);
+				swt_run(&swtB,&swt_cfg,  -(swt_cur_req>>1), motor.sensor.abc.B);
+				swt_run(&swtC,&swt_cfg,  -(swt_cur_req>>1), motor.sensor.abc.C);
+				{
+					//swt_reset(&swtB,swtA.pwm,swtA.model);
+					//swt_reset(&swtC,swtA.pwm,swtA.model);
+				}
+				swt_pwmA = swtA.pwm;
+				swt_pwmB = swtB.pwm;
+				swt_pwmC = swtC.pwm;
+				break;
+		}
+		
+		/*
+		int pwm = swt_value+8;
+		int pwm2 = (swt_value>>1)+8;
+
+		switch(hall.sector){
+			case 0:
+				swt_pwmA = pwm2;
+				swt_pwmB = pwm2;
+				swt_pwmC = 0;
+				//TIM1->CCER = 0x1555;
+				break;
+			case 1:
+				swt_pwmA = 0;
+				swt_pwmB = pwm2;
+				swt_pwmC = 0;
+				//TIM1->CCER = 0x1055;
+				break;
+			case 2:
+				swt_pwmA = 0;
+				swt_pwmB = pwm2;
+				swt_pwmC = pwm2;
+				//TIM1->CCER = 0x1555;
+				break;
+			case 3:
+				swt_pwmA = 0;
+				swt_pwmB = 0;
+				swt_pwmC = pwm2;
+				//TIM1->CCER = 0x1550;
+				break;
+			case 4:
+				swt_pwmA = pwm2;
+				swt_pwmB = 0;
+				swt_pwmC = pwm2;
+				//TIM1->CCER = 0x1555;
+				break;
+			case 5:
+				swt_pwmA = pwm2;
+				swt_pwmB = 0;
+				swt_pwmC = 0;
+				//TIM1->CCER = 0x1505;
+				break;
+		}*/
+		TIM1->CCR3 = swt_pwmA;
+		TIM1->CCR2 = swt_pwmB;
+		TIM1->CCR1 = swt_pwmC;
+		if(swt_enable_prev == 0){
+			TIM1->CCER = 0x1555;
+			SD_GPIO_Port->BRR = SD_Pin;
+		}
+
+	} else{
+		if(swt_enable_prev){
+			SD_GPIO_Port->BSRR = SD_Pin;
+			TIM1->CCR1 = 0;
+			TIM1->CCR2 = 0;
+			TIM1->CCR3 = 0;
+			TIM1->CCER = 0x1000;
+		}
+	}
+	swt_enable_prev = swt_enable;
+}
+
 void burst_hw_realtime_loop(void){
 	hall_pins.A = (HALL1_GPIO_Port->IDR & HALL1_Pin) != 0;
 	hall_pins.B = (HALL2_GPIO_Port->IDR & HALL2_Pin) != 0;
 	hall_pins.C = (HALL3_GPIO_Port->IDR & HALL3_Pin) != 0;
 	hall_update(&hall,&hall_pins);
+	swt_loop();
 }
 
-
+//int test_switch_enable = 0;
+//uint32_t test_switch_pwm = 0;
+//int test_switch_pwm = 0;
 
 void TIM1_CC_IRQHandler(void)
 {

@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2V8M.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -327,7 +327,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <uGnu>1</uGnu>
-            <useXO>0</useXO>
+            <useXO>1</useXO>
             <v6Lang>5</v6Lang>
             <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
@@ -822,11 +822,6 @@
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.c</FilePath>
             </File>
             <File>
-              <FileName>burst_ps.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.h</FilePath>
-            </File>
-            <File>
               <FileName>burst_ring.inc.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ring.inc.h</FilePath>
@@ -870,6 +865,21 @@
               <FileName>burst_timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>burst_ps.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.h</FilePath>
+            </File>
+            <File>
+              <FileName>burst_sqrt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_sqrt.c</FilePath>
+            </File>
+            <File>
+              <FileName>burst_sqrt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_sqrt.h</FilePath>
             </File>
           </Files>
         </Group>

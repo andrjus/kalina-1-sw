@@ -9,6 +9,12 @@
 #define K1_MOTOR_CONFIG "machines/k1-MYTECH-8085-HA-CCE.motor.config.h"
 #endif
 
+#ifdef K1_TAG_NH_MYTECH_8085_HA_CCE
+#define K1_MOTOR_CONFIG "machines/k1-nh-MYTECH-8085-HA-CCE.motor.config.h"
+#endif
+
+
+
 #ifdef K1_TAG_BOARD_ALFA
 #define K1_PFR_CONFIG "machines/k1-alfa.pfr.config.h"
 #endif
@@ -17,4 +23,7 @@
 #define K1_PFR_CONFIG "machines/k1-beta.pfr.config.h"
 #endif
 
+#ifdef K1_TAG_BOARD_NH
+#define K1_PFR_CONFIG "machines/k1-nh.pfr.config.h"
+#endif
 

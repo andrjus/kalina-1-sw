@@ -7,12 +7,13 @@
 #define CLCH_HEADER 
 #include "burst/cliche/fm.h"
 
+#if TMP423_ENABLED == 1
 #define CLCH_NAME TMP423
 #define CLCH_HEADER 
 #include "burst/cliche/net_master.h"
-
 void TMP423_read(uint8_t _addr, uint8_t * data);
 void TMP423_write(uint8_t _addr, uint8_t data);
+#endif
 
 void adc_start(void);
 

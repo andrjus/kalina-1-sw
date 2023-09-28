@@ -14,7 +14,12 @@
 #define K1_SERIAL_SIZE 255
 #endif
 
+#ifndef TMP423_ENABLED
+#define TMP423_ENABLED 0
 #endif
+
+#endif
+
 
 
 

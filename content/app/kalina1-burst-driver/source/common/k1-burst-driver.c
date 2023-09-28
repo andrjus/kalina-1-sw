@@ -1,12 +1,15 @@
 #include "k1-burst-driver.h"
 #include "burst/burst_timer.h"
 #include "burst/burst_app.h"
+#include "burst/burst_sqrt.h"
 pmsm_hall_app_config_t  k1_config = PMSM_HALL_APP_CONFIG();
 pmsm_action_t pmsma = {};	
 pmsm_feedback_t feedback = {};
 void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
+
+#if TMP423_ENABLED == 1
 
 uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
 uint8_t addr[13] = {0x00,0x01,0x02,0x03,0x08,0x09,0xA,0x0B,0x10,0x11,0x12,0x13,0xFE};
@@ -22,7 +25,8 @@ void TMP423_confirm_callback(burst_bool_t _r){
 		ix++;
 	}
 }
-	
+
+
 burst_run_t temp_poll_(void){
 	if(ix ==13){
 		if(TMP423_ready()){
@@ -41,6 +45,7 @@ burst_timer_t temp_poll ={
 	,0
 	,0
 };
+#endif
 
 void burst_sw_start(void){	
 	adc_start();
@@ -48,25 +53,61 @@ void burst_sw_start(void){
 		BURST_NOP();
 	}	
 	pmsm_hall_app_start();
+	#if TMP423_ENABLED == 1
 	TMP423_start();
 	burst_timer_start(&temp_poll);
+	#endif
+	burst_sqrt_init();
+
 }
 
 void burst_sw_realtime_loop(void){	
 	pmsm_hall_app_realtime_loop();
+	enco.ref.run();
 }
-
+static uint32_t sqrt_test_x = 0;
+static volatile uint16_t sqrt_test_y = 0;
+static uint16_t sqrt_test_y0 = 0;
 void burst_sw_backend_loop(void){		
 	pmsm_hall_app_backend_loop();
 	fm_recorder();
 	fm_poll();
 //	machine();
+	sqrt_test_y0++;
+	if(sqrt_test_y0>4095){
+		sqrt_test_y0 = 0;
+	}
+	debug_tp_on(112);
+	sqrt_test_x = sqrt_test_y0*sqrt_test_y0;
+	sqrt_test_y = burst_sqrt(sqrt_test_x);
+	debug_tp_off(112);
+	
 }
+
+int synchro_test_enable = 0;
+int synchro_test_level = 10000000;
 void burst_sw_frontend_loop(void){
 	pmsm_hall_app_frontend_loop();
 	k1_serial_pool();
-	//TMP423_poll();
+	static burst_time_us_t us = 0;
+	burst_time_us_t now = burst_time_us();
+	if(synchro_test_enable){
+		if( now - us >10000 ){
+			if(motor.synchro.freq < synchro_test_level){
+				if( motor.cross.ac.voltage.req < 30000){
+					motor.synchro.freq += 50000;
+					us = now;
+				} else {
+					synchro_test_enable = 0;
+				}
+			} else{
+				//synchro_test_enable = 0;
+			}
+		}
+	}
+	
 }
+
 void burst_sw_slot_0(void){
 	pmsm_hall_app_control_step_1();
 }
@@ -146,13 +187,13 @@ void k1_serial_pool(void){
 	burst_time_us_t d = now - tm;
 	if( k1_serial_ready() ){
 		fmserial_try_send();
-		/*
-		k1_serial_tx_buffer[0] = 'H';
-		k1_serial_tx_buffer[1] = 'E';
-		k1_serial_tx_buffer[2] = 'l';
-		serial_tx_sz = 3;
-		k1_serial_send_packet( k1_serial_tx_buffer , serial_tx_sz );
-		*/
+		
+		//k1_serial_tx_buffer[0] = 'H';
+		//k1_serial_tx_buffer[1] = 'E';
+		//k1_serial_tx_buffer[2] = 'l';
+		//serial_tx_sz = 3;
+		//k1_serial_send_packet( k1_serial_tx_buffer , serial_tx_sz );
+		
 
 		tm = now;
 	}else{
@@ -162,6 +203,8 @@ void k1_serial_pool(void){
 		}
 	}
 }
+
+#if TMP423_ENABLED == 1
 
 void TMP423_read(uint8_t _addr, uint8_t * data){
 	static uint8_t addr;
@@ -183,7 +226,7 @@ void TMP423_write(uint8_t _addr, uint8_t data){
 	TMP423_exchange(&op,0);
 
 }
-
+#endif
 
 #if 0
 void machine(void){
