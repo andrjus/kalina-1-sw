@@ -1,0 +1,12 @@
+kalina-1b\burst_inv3ph.o: ..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.c
+kalina-1b\burst_inv3ph.o: ../../../../../../reference/robosd-ref/burst/burst_inv3ph.h
+kalina-1b\burst_inv3ph.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
+kalina-1b\burst_inv3ph.o: ../../../../../../reference/robosd-ref/burst/burst_common.h
+kalina-1b\burst_inv3ph.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+kalina-1b\burst_inv3ph.o: ../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h
+kalina-1b\burst_inv3ph.o: ../../../../source/common/k1-burst-driver.common.h
+kalina-1b\burst_inv3ph.o: ../../../../source/common/k1-burst-driver.names.h
+kalina-1b\burst_inv3ph.o: ../../../../source/common/machines/k1-beta.pfr.config.h
+kalina-1b\burst_inv3ph.o: ../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h
+kalina-1b\burst_inv3ph.o: ../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h
+kalina-1b\burst_inv3ph.o: ../../../../../../reference/robosd-ref/burst/burst_front.h

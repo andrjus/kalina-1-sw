@@ -8,7 +8,8 @@ pmsm_feedback_t feedback = {};
 void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
-
+temper_t temper;
+voltage_t voltage;
 #if TMP423_ENABLED == 1
 
 uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};

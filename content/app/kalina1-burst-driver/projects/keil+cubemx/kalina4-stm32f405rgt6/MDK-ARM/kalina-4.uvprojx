@@ -819,11 +819,6 @@
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_positioner.h</FilePath>
             </File>
             <File>
-              <FileName>burst_proto.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_proto.h</FilePath>
-            </File>
-            <File>
               <FileName>burst_ps.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.c</FilePath>
@@ -982,6 +977,16 @@
               <FileName>net_master.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\cliche\net_master.h</FilePath>
+            </File>
+            <File>
+              <FileName>swt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\cliche\swt.c</FilePath>
+            </File>
+            <File>
+              <FileName>swt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\cliche\swt.h</FilePath>
             </File>
           </Files>
         </Group>

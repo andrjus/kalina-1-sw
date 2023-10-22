@@ -7,3 +7,8 @@
 #define CLCH_NAME TMP423
 #include "burst/cliche/net_master.h"
 #endif
+
+
+//swt
+#define CLCH_NAME swt
+#include "burst/cliche/swt.h"

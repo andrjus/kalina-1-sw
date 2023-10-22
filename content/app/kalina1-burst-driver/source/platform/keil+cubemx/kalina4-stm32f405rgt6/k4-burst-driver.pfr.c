@@ -71,12 +71,16 @@ void burst_hw_frontend_loop(void){
 		k1_serial_send_packet((uint8_t *)tmp,14);
 	}
 	*/
+	temper.dg.board = K1_BOARD_TEMPER_PP_TO_GRAD(temper.raw.board);
+
 }
 
 hall_pins_t hall_pins;
 
 uint8_t swt_enable_prev = 0;
 uint8_t swt_enable = 0;
+
+#if 0
 uint16_t swt_value = 0;
 
 typedef struct {
@@ -328,7 +332,7 @@ void swt_loop(void){
 	}
 	swt_enable_prev = swt_enable;
 }
-
+#endif
 
 void burst_hw_realtime_loop(void){
 }
@@ -355,10 +359,23 @@ void TIM1_CC_IRQHandler(void)
 	hall_pins.C = (HALL2_GPIO_Port->IDR & HALL2_Pin) != 0;
 	hall_pins.A = (HALL3_GPIO_Port->IDR & HALL3_Pin) != 0;
 	hall_update(&hall,&hall_pins);
-	swt_loop();
+	if(swt_enable){
+		
+		if(swt_enable_prev == 0){
+			swt_start();
+		}
+		
+		swt_pwm_run_forward();
+		
+	} else{
+		if(swt_enable_prev){
+			swt_stop();
+		}
+	}
+	swt_enable_prev = swt_enable;
 }
 uint32_t adc_raw[BURST_ADC_CHANNEL_COUNT]={};
-uint32_t temper_raw = 0;
+
 uint32_t vref_raw = 0;
 void ADC_IRQHandler(void)
 {
@@ -366,9 +383,10 @@ void ADC_IRQHandler(void)
 	__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOC);
 	//__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOS);
 	 adc_raw[1] = hadc1.Instance->JDR1;//B
-	 temper_raw = hadc1.Instance->JDR2;
+	 temper.raw.board = hadc1.Instance->JDR2;
 	 vref_raw = hadc1.Instance->JDR3;
 	 adc_raw[0] = hadc2.Instance->JDR1;//A
+		voltage.raw = hadc2.Instance->JDR2;
 	 //adc_raw[4] = hadc2.Instance->JDR3;
 	 adc_raw[2] = hadc3.Instance->JDR1;//C
 	 
@@ -446,6 +464,9 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	{
 		k1_serial_receive_packet(k1_serial_rx_buffer,Size);
 		k1_serial_start_receive();
+		#if BURST_PANICS_MASTER_LOST_ENABLED == 1
+		burst_master_alive(&motor.cross.ac.ref);
+		#endif
 	}
 }
 
@@ -538,9 +559,59 @@ void burst_hw_guard_unlock(void){
 }
 
 
-void k1_update_temp(void){
-	
+void swt_phy_B_set_pwm(uint16_t _pwm){
+	TIM1->CCR3 = _pwm;
+}
+void swt_phy_A_set_pwm(uint16_t _pwm){
+	TIM1->CCR2 = _pwm;
+}
+void swt_phy_C_set_pwm(uint16_t _pwm){
+	TIM1->CCR1 = _pwm;	
+}
+void swt_phy_B_set_lo(void){
+	TIM1->CCR3 = 0;
+	TIM1->CCER |= 0x1500;
+}
+void swt_phy_A_set_lo(void){
+	TIM1->CCR2 = 0;
+	TIM1->CCER |= 0x1050;
+}
+void swt_phy_C_set_lo(void){
+	TIM1->CCR1 = 0;	
+	TIM1->CCER |= 0x1005;
 }
 
+void swt_phy_B_off(void){
+	TIM1->CCER &= ~0x500;
+}
+void swt_phy_A_off(void){
+	TIM1->CCER &= ~0x050;
+}
+void swt_phy_C_off(void){
+	TIM1->CCER &= ~0x005;
+}
+void swt_phy_B_on(uint16_t _pwm){
+	TIM1->CCR1 = _pwm;
+	TIM1->CCER |= 0x1500;
+}
+void swt_phy_A_on(uint16_t _pwm){
+	TIM1->CCR2 = _pwm;
+	TIM1->CCER |= 0x1050;
+}
+void swt_phy_C_on(uint16_t _pwm){
+	TIM1->CCR3 = _pwm;
+	TIM1->CCER |= 0x1005;
+}
 
+uint8_t swt_phy_sector_get(void){
+	return hall.sector;
+}
+
+int burst_board_temper_get_pp(void){
+	return temper.raw.board;
+}
+
+int burst_board_voltage_get_pp(void){
+	return voltage.raw;
+}
 #endif
