@@ -12,6 +12,7 @@ kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/platform/ke
 kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/burst_front.h
 kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/burst_timer.h
 kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/burst.h
+kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
 kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/cliche/tp.h
 kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
 kalina-1b\burst_hall.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h

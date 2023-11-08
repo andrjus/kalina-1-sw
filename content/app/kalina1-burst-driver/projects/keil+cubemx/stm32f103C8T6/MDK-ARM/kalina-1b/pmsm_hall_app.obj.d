@@ -10,6 +10,7 @@ kalina-1b\pmsm_hall_app.obj.o: ../../../../source/common/machines/k1-beta.pfr.co
 kalina-1b\pmsm_hall_app.obj.o: ../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burst_front.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/tp.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h
@@ -42,3 +43,10 @@ kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burs
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burst_pi.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
 kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burst_timer.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/swt.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/swt.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
+kalina-1b\pmsm_hall_app.obj.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h

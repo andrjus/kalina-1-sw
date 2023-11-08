@@ -104,7 +104,7 @@ void TIM1_CC_IRQHandler(void)
 	hall_pins.B = (HALL2_GPIO_Port->IDR & HALL2_Pin) != 0;
 	hall_pins.A = (HALL3_GPIO_Port->IDR & HALL3_Pin) != 0;
 	hall_update(&hall,&hall_pins);
-	swt_pwm_run_forward();
+	//swt_pwm_run_forward();
 
 	static int presk_tick=0;
 	presk_tick++;
@@ -332,5 +332,72 @@ void HAL_I2C_ErrorCallback(I2C_HandleTypeDef * hi2c){
 	 TMP423_refuse();
 }
 #endif
+#define swm_pwm_Z -10
+int16_t swt_pwm_A = swm_pwm_Z;
+int16_t swt_pwm_B = swm_pwm_Z;
+int16_t swt_pwm_C = swm_pwm_Z;
+
+void swt_phy_A_set_pwm(uint16_t _pwm){
+	swt_pwm_A = (int16_t)_pwm;
+	TIM1->CCR3 = _pwm;
+}
+void swt_phy_B_set_pwm(uint16_t _pwm){
+	swt_pwm_B = (int16_t)_pwm;
+	TIM1->CCR2 = _pwm;
+}
+void swt_phy_C_set_pwm(uint16_t _pwm){
+	swt_pwm_C = (int16_t)_pwm;
+	TIM1->CCR1 = _pwm;	
+}
+void swt_phy_A_set_lo(void){
+	swt_pwm_A = 0;
+	TIM1->CCR3 = 0;
+	TIM1->CCER |= 0x1500;
+}
+void swt_phy_B_set_lo(void){
+	swt_pwm_B = 0;
+	TIM1->CCR2 = 0;
+	TIM1->CCER |= 0x1050;
+}
+void swt_phy_C_set_lo(void){
+	swt_pwm_C = 0;
+	TIM1->CCR1 = 0;	
+	TIM1->CCER |= 0x1005;
+}
+
+void swt_phy_A_off(void){
+	swt_pwm_A = swm_pwm_Z;
+	TIM1->CCER &= ~0x500;
+}
+void swt_phy_B_off(void){
+	swt_pwm_B = swm_pwm_Z;
+	TIM1->CCER &= ~0x050;
+}
+void swt_phy_C_off(void){
+	swt_pwm_C = swm_pwm_Z;
+	TIM1->CCER &= ~0x005;
+}
+
+void swt_phy_A_on(uint16_t _pwm){
+	swt_pwm_A = (int16_t)_pwm;
+	TIM1->CCR3 = _pwm;
+	TIM1->CCER |= 0x1500;
+}
+void swt_phy_B_on(uint16_t _pwm){
+	swt_pwm_B = (int16_t)_pwm;
+	TIM1->CCR2 = _pwm;
+	TIM1->CCER |= 0x1050;
+}
+void swt_phy_C_on(uint16_t _pwm){
+	swt_pwm_C = (int16_t)_pwm;
+	TIM1->CCR1 = _pwm;
+	TIM1->CCER |= 0x1005;
+}
+
+uint8_t swt_phy_sector_get(void){
+	return hall.sector;
+}
+
+
 
 #endif

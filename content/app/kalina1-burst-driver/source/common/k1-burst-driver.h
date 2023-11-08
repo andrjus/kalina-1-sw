@@ -8,12 +8,6 @@
 #define CLCH_HEADER 
 #include "burst/cliche/fm.h"
 
-//swt
-#define CLCH_NAME swt
-#define CLCH_HEADER 
-#include "burst/cliche/swt.h"
-
-
 
 #if TMP423_ENABLED == 1
 #define CLCH_NAME TMP423
@@ -39,25 +33,19 @@ typedef struct temper_raw_s{
 		int16_t motor;
 		#if TMP423_ENABLED == 1
 		struct{
-			int16_t A;
-			int16_t B;
-			int16_t C;
-			int16_t Z;
+			burst_signal_t A;
+			burst_signal_t B;
+			burst_signal_t C;
+			burst_signal_t Z;
+			burst_signal_t mean;
 		} board;
 		#else
-		int16_t board;
+		burst_signal_t board;
 		#endif
 	} dg;
 	struct{
 		uint16_t motor;
-		#if TMP423_ENABLED == 1
-		struct{
-			uint16_t A;
-			uint16_t B;
-			uint16_t C;
-			uint16_t Z;
-		} board;
-		#else
+		#if TMP423_ENABLED == 0
 		uint16_t board;
 		#endif
 	} raw;

@@ -77,8 +77,6 @@ void burst_hw_frontend_loop(void){
 
 hall_pins_t hall_pins;
 
-uint8_t swt_enable_prev = 0;
-uint8_t swt_enable = 0;
 
 #if 0
 uint16_t swt_value = 0;
@@ -339,6 +337,7 @@ void burst_hw_realtime_loop(void){
 
 
 
+
 void TIM1_CC_IRQHandler(void)
 {
 	static int presk_tick=0;
@@ -347,32 +346,18 @@ void TIM1_CC_IRQHandler(void)
 	if( presk_tick == K1_PWM_TIMER_PRESC ){
 		debug_tp_on(111);
 		//HAL_ADCEx_InjectedStart_IT(&hadc1);
+		hadc3.Instance->CR2=(0x401 | ADC_CR2_JSWSTART);
+		hadc2.Instance->CR2=(0x401 | ADC_CR2_JSWSTART);
 		hadc1.Instance->CR1=0x180;
 		hadc1.Instance->CR2=(0x401 | ADC_CR2_JSWSTART);
-		hadc2.Instance->CR2=(0x401 | ADC_CR2_JSWSTART);
-		hadc3.Instance->CR2=(0x401 | ADC_CR2_JSWSTART);
 		//HAL_ADCEx_InjectedStart(&hadc2);
 		//HAL_ADCEx_InjectedStart(&hadc3);
 		presk_tick = 0;
 	}
-	hall_pins.B = (HALL1_GPIO_Port->IDR & HALL1_Pin) != 0;
-	hall_pins.C = (HALL2_GPIO_Port->IDR & HALL2_Pin) != 0;
-	hall_pins.A = (HALL3_GPIO_Port->IDR & HALL3_Pin) != 0;
+	hall_pins.A = (HALL3_GPIO_Port->IDR & HALL1_Pin) != 0;
+	hall_pins.B = (HALL1_GPIO_Port->IDR & HALL2_Pin) != 0;
+	hall_pins.C = (HALL2_GPIO_Port->IDR & HALL3_Pin) != 0;
 	hall_update(&hall,&hall_pins);
-	if(swt_enable){
-		
-		if(swt_enable_prev == 0){
-			swt_start();
-		}
-		
-		swt_pwm_run_forward();
-		
-	} else{
-		if(swt_enable_prev){
-			swt_stop();
-		}
-	}
-	swt_enable_prev = swt_enable;
 }
 uint32_t adc_raw[BURST_ADC_CHANNEL_COUNT]={};
 
@@ -559,47 +544,51 @@ void burst_hw_guard_unlock(void){
 }
 
 
-void swt_phy_B_set_pwm(uint16_t _pwm){
-	TIM1->CCR3 = _pwm;
-}
 void swt_phy_A_set_pwm(uint16_t _pwm){
 	TIM1->CCR2 = _pwm;
+}
+void swt_phy_B_set_pwm(uint16_t _pwm){
+	TIM1->CCR3 = _pwm;
 }
 void swt_phy_C_set_pwm(uint16_t _pwm){
 	TIM1->CCR1 = _pwm;	
 }
-void swt_phy_B_set_lo(void){
-	TIM1->CCR3 = 0;
-	TIM1->CCER |= 0x1500;
-}
 void swt_phy_A_set_lo(void){
 	TIM1->CCR2 = 0;
 	TIM1->CCER |= 0x1050;
+}
+void swt_phy_B_set_lo(void){
+	TIM1->CCR3 = 0;
+	TIM1->CCER |= 0x1500;
 }
 void swt_phy_C_set_lo(void){
 	TIM1->CCR1 = 0;	
 	TIM1->CCER |= 0x1005;
 }
 
-void swt_phy_B_off(void){
-	TIM1->CCER &= ~0x500;
-}
 void swt_phy_A_off(void){
+	TIM1->CCR2 = 0;	
 	TIM1->CCER &= ~0x050;
 }
+void swt_phy_B_off(void){
+	TIM1->CCR3 = 0;	
+	TIM1->CCER &= ~0x500;
+}
 void swt_phy_C_off(void){
+	TIM1->CCR1 = 0;	
 	TIM1->CCER &= ~0x005;
 }
-void swt_phy_B_on(uint16_t _pwm){
-	TIM1->CCR1 = _pwm;
-	TIM1->CCER |= 0x1500;
-}
+
 void swt_phy_A_on(uint16_t _pwm){
 	TIM1->CCR2 = _pwm;
 	TIM1->CCER |= 0x1050;
 }
-void swt_phy_C_on(uint16_t _pwm){
+void swt_phy_B_on(uint16_t _pwm){
 	TIM1->CCR3 = _pwm;
+	TIM1->CCER |= 0x1500;
+}
+void swt_phy_C_on(uint16_t _pwm){
+	TIM1->CCR1 = _pwm;
 	TIM1->CCER |= 0x1005;
 }
 

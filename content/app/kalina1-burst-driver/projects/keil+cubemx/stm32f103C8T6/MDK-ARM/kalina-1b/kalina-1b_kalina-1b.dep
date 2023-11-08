@@ -39,15 +39,16 @@ I (../Core/Inc/i2c.h)(0x64C4A225)
 I (../Core/Inc/tim.h)(0x64C695E7)
 I (../Core/Inc/usart.h)(0x64BAB13D)
 I (../Core/Inc/gpio.h)(0x64BAA5ED)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -872,118 +873,121 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst.c)(0x650197E7)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst.o --omf_browse kalina-1b\burst.crf --depend kalina-1b\burst.d)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst.c)(0x6541726F)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst.o --omf_browse kalina-1b\burst.crf --depend kalina-1b\burst.d)
 I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst.h)(0x6501985F)()
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst.h)(0x65369A79)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_adc.c)(0x646E5183)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_adc.o --omf_browse kalina-1b\burst_adc.crf --depend kalina-1b\burst_adc.d)
 I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x6501E34C)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_adc.h)(0x6501E34C)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_app.h)(0x646E0915)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_button.c)(0x635AFB47)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_button.o --omf_browse kalina-1b\burst_button.crf --depend kalina-1b\burst_button.d)
 I (../../../../../../reference/robosd-ref/burst/burst_button.h)(0x635AF537)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_button.h)(0x635AF537)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_common.h)(0x651D0224)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_common.h)(0x653816E9)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_enco.h)(0x646E5C0A)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_filter.h)(0x646E5314)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_fm.c)(0x63024E6B)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_fm.o --omf_browse kalina-1b\burst_fm.crf --depend kalina-1b\burst_fm.d)
 I (../../../../../../reference/robosd-ref/burst/burst_fm.h)(0x6302988D)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_fm.h)(0x6302988D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_front.h)(0x62477C4F)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_front.h)(0x653829CA)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_hall.c)(0x65154639)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_hall.o --omf_browse kalina-1b\burst_hall.crf --depend kalina-1b\burst_hall.d)
 I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_hall.h)(0x647F1129)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.c)(0x6501F578)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_inv3ph.o --omf_browse kalina-1b\burst_inv3ph.crf --depend kalina-1b\burst_inv3ph.d)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.c)(0x6530572A)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_inv3ph.o --omf_browse kalina-1b\burst_inv3ph.crf --depend kalina-1b\burst_inv3ph.d)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.h)(0x6501F16F)()
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.h)(0x6530371D)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_motion.c)(0x64F82D87)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_motion.o --omf_browse kalina-1b\burst_motion.crf --depend kalina-1b\burst_motion.d)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -991,16 +995,16 @@ F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_motion.h)(0x64760315)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_pi.c)(0x650D49A3)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_pi.o --omf_browse kalina-1b\burst_pi.crf --depend kalina-1b\burst_pi.d)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -1008,50 +1012,50 @@ F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_pi.h)(0x646F0364)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_positioner.c)(0x6457BBE2)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_positioner.o --omf_browse kalina-1b\burst_positioner.crf --depend kalina-1b\burst_positioner.d)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_positioner.h)(0x646F1C1F)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_proto.h)(0x00000000)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.c)(0x6426603C)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_ps.o --omf_browse kalina-1b\burst_ps.crf --depend kalina-1b\burst_ps.d)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_ring.inc.h)(0x651D0249)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_serial.c)(0x630278F7)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_serial.o --omf_browse kalina-1b\burst_serial.crf --depend kalina-1b\burst_serial.d)
 I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -1059,71 +1063,72 @@ F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_serial.h)(0x63028E51)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_signal.c)(0x650181D2)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_signal.o --omf_browse kalina-1b\burst_signal.crf --depend kalina-1b\burst_signal.d)
 I (../../../../../../reference/robosd-ref/burst/burst_sin.h)(0x63029940)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_signal.h)(0x646F04BE)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sin.c)(0x630299A2)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_sin.o --omf_browse kalina-1b\burst_sin.crf --depend kalina-1b\burst_sin.d)
 I (../../../../../../reference/robosd-ref/burst/burst_sin.h)(0x63029940)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sin.h)(0x63029940)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_timer.c)(0x64760315)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_timer.o --omf_browse kalina-1b\burst_timer.crf --depend kalina-1b\burst_timer.d)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_timer.h)(0x651D0249)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_timer.h)(0x65345C9C)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.h)(0x6426602D)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sqrt.c)(0x6501F968)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_sqrt.o --omf_browse kalina-1b\burst_sqrt.crf --depend kalina-1b\burst_sqrt.d)
 I (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sqrt.h)(0x650183E7)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sqrt.h)(0x650183E7)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\platform\keil\burst_target.h)(0x644CD1E4)()
-F (..\..\..\..\source\common\k1-burst-driver.c)(0x65154788)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.o --omf_browse kalina-1b\k1-burst-driver.crf --depend kalina-1b\k1-burst-driver.d)
-I (..\..\..\..\source\common\k1-burst-driver.h)(0x6516EE14)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x6501E6DD)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+F (..\..\..\..\source\common\k1-burst-driver.c)(0x65437F64)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.o --omf_browse kalina-1b\k1-burst-driver.crf --depend kalina-1b\k1-burst-driver.d)
+I (..\..\..\..\source\common\k1-burst-driver.h)(0x65437F64)
+I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
 I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
 I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x6501E34C)
 I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
@@ -1131,42 +1136,44 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
 I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x6501E5FC)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x65381C34)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/cliche/swt.h)(0x65437B12)
 I (../../../../../../reference/robosd-ref/burst/cliche/fm.h)(0x641AEE51)
+I (../../../../../../reference/robosd-ref/burst/cliche/net_master.h)(0x64C4F4D4)
 I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
 I (../../../../../../reference/robosd-ref/burst/burst_sqrt.h)(0x650183E7)
 I (../../../../../../reference/robosd-ref/burst/burst_ring.inc.h)(0x651D0249)
-F (..\..\..\..\source\common\k1-burst-driver.common.h)(0x65007E50)()
-F (..\..\..\..\source\common\k1-burst-driver.h)(0x6516EE14)()
-F (..\..\..\..\source\common\k1-burst-driver.names.h)(0x64FD6E20)()
-F (..\..\..\..\source\common\k1-burst-driver.obj.c)(0x64FD8FB0)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.obj.o --omf_browse kalina-1b\k1-burst-driver.obj.crf --depend kalina-1b\k1-burst-driver.obj.d)
-I (..\..\..\..\source\common\k1-burst-driver.h)(0x6516EE14)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x6501E6DD)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+F (..\..\..\..\source\common\k1-burst-driver.common.h)(0x65437231)()
+F (..\..\..\..\source\common\k1-burst-driver.h)(0x65437F64)()
+F (..\..\..\..\source\common\k1-burst-driver.names.h)(0x653B528F)()
+F (..\..\..\..\source\common\k1-burst-driver.obj.c)(0x653A8D9C)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.obj.o --omf_browse kalina-1b\k1-burst-driver.obj.crf --depend kalina-1b\k1-burst-driver.obj.d)
+I (..\..\..\..\source\common\k1-burst-driver.h)(0x65437F64)
+I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
 I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
 I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x6501E34C)
 I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
@@ -1174,17 +1181,20 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
 I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x6501E5FC)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x65381C34)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/cliche/swt.h)(0x65437B12)
 I (../../../../../../reference/robosd-ref/burst/cliche/fm.h)(0x641AEE51)
+I (../../../../../../reference/robosd-ref/burst/cliche/net_master.h)(0x64C4F4D4)
+I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
 I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster.h)(0x602AA544)
 I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_cfg.h)(0x61367285)
 I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_tsa.h)(0x602AA544)
@@ -1202,25 +1212,25 @@ I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_driver.h)(0x6
 I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_sfio.c)(0x602AA544)
 I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_tsa.c)(0x602AA544)
 F (..\..\..\..\source\platform\keil+cubemx\stm32f103CBt6\burst_app_tuning.h)(0x64B985C5)()
-F (..\..\..\..\source\platform\keil+cubemx\stm32f103CBt6\k1-burst-driver.pfr.c)(0x6513CF56)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.pfr.o --omf_browse kalina-1b\k1-burst-driver.pfr.crf --depend kalina-1b\k1-burst-driver.pfr.d)
-I (../../../../source/common/k1-burst-driver.h)(0x6516EE14)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x6501E6DD)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+F (..\..\..\..\source\platform\keil+cubemx\stm32f103CBt6\k1-burst-driver.pfr.c)(0x65437F96)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.pfr.o --omf_browse kalina-1b\k1-burst-driver.pfr.crf --depend kalina-1b\k1-burst-driver.pfr.d)
+I (../../../../source/common/k1-burst-driver.h)(0x65437F64)
+I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
 I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
 I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x6501E34C)
 I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
@@ -1228,17 +1238,20 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
 I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x6501E5FC)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x65381C34)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/cliche/swt.h)(0x65437B12)
 I (../../../../../../reference/robosd-ref/burst/cliche/fm.h)(0x641AEE51)
+I (../../../../../../reference/robosd-ref/burst/cliche/net_master.h)(0x64C4F4D4)
+I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
 I (../Core/Inc/tim.h)(0x64C695E7)
 I (../Core/Inc/main.h)(0x64C019E0)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
@@ -1273,20 +1286,19 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
 I (../Core/Inc/i2c.h)(0x64C4A225)
 I (../Core/Inc/usart.h)(0x64BAB13D)
 I (../Core/Inc/adc.h)(0x64BAA5EE)
-I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\_begin.h)(0x641A8C49)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\_end.h)(0x641A933A)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\clch_test.c)(0x641AEE07)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\clch_test.o --omf_browse kalina-1b\clch_test.crf --depend kalina-1b\clch_test.d)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/cliche/drv8301.h)(0x65154D37)
@@ -1296,19 +1308,19 @@ F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\fm.h)(0x641AEE51)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\ps.h)(0x644D0E33)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\tp.h)(0x641AE8D2)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\net_master.h)(0x64C4F4D4)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.c)(0x65019E7D)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\actuator.o --omf_browse kalina-1b\actuator.crf --depend kalina-1b\actuator.d)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.c)(0x6536A1FC)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\actuator.o --omf_browse kalina-1b\actuator.crf --depend kalina-1b\actuator.d)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -1317,23 +1329,23 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.h)(0x646F268D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator_front.h)(0x644CBDB7)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.c)(0x64578129)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\acwc.o --omf_browse kalina-1b\acwc.crf --depend kalina-1b\acwc.d)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.h)(0x65369A79)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator_front.h)(0x65369F17)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.c)(0x65382128)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\acwc.o --omf_browse kalina-1b\acwc.crf --depend kalina-1b\acwc.d)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -1342,57 +1354,58 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.h)(0x646F212B)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc_front.h)(0x64524EBC)()
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.h)(0x65397B2B)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc_front.h)(0x65369E94)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\enco_abs32.c)(0x646E5C17)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\enco_abs32.o --omf_browse kalina-1b\enco_abs32.crf --depend kalina-1b\enco_abs32.d)
 I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\enco_abs32.h)(0x64760315)()
 F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.c)(0x644D1BC8)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\nikitin.o --omf_browse kalina-1b\nikitin.crf --depend kalina-1b\nikitin.d)
 I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
 I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.h)(0x646E54DF)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.c)(0x65154D08)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm.o --omf_browse kalina-1b\pmsm.crf --depend kalina-1b\pmsm.d)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x6501E5FC)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.c)(0x653A8D9C)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm.o --omf_browse kalina-1b\pmsm.crf --depend kalina-1b\pmsm.d)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x65381C34)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
+I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
+I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
@@ -1402,29 +1415,29 @@ I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
 I (../../../../../../reference/robosd-ref/burst/burst_sqrt.h)(0x650183E7)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.h)(0x6501E5FC)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_front.h)(0x64524EBC)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.c)(0x65154D57)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm_hall_app.o --omf_browse kalina-1b\pmsm_hall_app.crf --depend kalina-1b\pmsm_hall_app.d)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x6501E6DD)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.h)(0x65381C34)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_front.h)(0x653A8D9C)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.c)(0x653A9505)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm_hall_app.o --omf_browse kalina-1b\pmsm_hall_app.crf --depend kalina-1b\pmsm_hall_app.d)
+I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
 I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
 I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x6501E34C)
 I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
@@ -1432,35 +1445,36 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
 I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x6501E5FC)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x65381C34)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.h)(0x6501E6DD)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.obj.c)(0x646F42E6)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm_hall_app.obj.o --omf_browse kalina-1b\pmsm_hall_app.obj.crf --depend kalina-1b\pmsm_hall_app.obj.d)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x6501E6DD)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/cliche/swt.h)(0x65437B12)
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.h)(0x653A8D9C)()
+F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.obj.c)(0x653A9B60)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm_hall_app.obj.o --omf_browse kalina-1b\pmsm_hall_app.obj.crf --depend kalina-1b\pmsm_hall_app.obj.d)
+I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
 I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6501F16F)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
+I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x6530371D)
 I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
 I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x6501E34C)
 I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
@@ -1468,34 +1482,35 @@ I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
 I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x6501E5FC)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x65381C34)
+I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x653A8D9C)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x65369E94)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x65369F17)
+I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x65397B2B)
+I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x65369A79)
 I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
 I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
 I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x651D0249)
+I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x65345C9C)
+I (../../../../../../reference/robosd-ref/burst/cliche/swt.h)(0x65437B12)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\ps_dc.c)(0x6426614B)(--c99 --gnu --execute_only -c --cpu Cortex-M3 -g -O3 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_kalina-1b-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\ps_dc.o --omf_browse kalina-1b\ps_dc.crf --depend kalina-1b\ps_dc.d)
 I (../../../../../../reference/robosd-ref/burst/modules/ps_dc.h)(0x649031FC)
 I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x6501985F)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x651D0224)
+I (../../../../../../reference/robosd-ref/burst/burst.h)(0x65369A79)
+I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x653816E9)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
 I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x65007E50)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64FD6E20)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65022E17)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)
+I (../../../../source/common/k1-burst-driver.common.h)(0x65437231)
+I (../../../../source/common/k1-burst-driver.names.h)(0x653B528F)
+I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x65437231)
+I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)
 I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
+I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x653829CA)
+I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
 I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
 I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
 F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\ps_dc.h)(0x649031FC)()
 F (..\..\..\..\source\common\machines\k1-A60-7M.motor.config.h)(0x64766F8C)()
-F (..\..\..\..\source\common\machines\k1-beta.pfr.config.h)(0x65022E17)()
-F (..\..\..\..\source\common\machines\k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64ECC3F9)()
+F (..\..\..\..\source\common\machines\k1-beta.pfr.config.h)(0x65437231)()
+F (..\..\..\..\source\common\machines\k1-MYTECH-8085-HA-CCE.motor.config.h)(0x65415410)()

@@ -1,4 +1,4 @@
-#if !  defined(fb3_burst_common_h)  
+#if !  defined(k1_burst_common_h)  
 #error error of using k1-burst-driver.names.h
 #endif
 #ifdef K1_TAG_A60_7M
@@ -27,3 +27,10 @@
 #define K1_PFR_CONFIG "machines/k1-nh.pfr.config.h"
 #endif
 
+#ifdef K1_TAG_BOARD_KIPARIS_2
+#define K1_PFR_CONFIG "machines/k1-kiparis2.pfr.config.h"
+#endif
+
+#ifdef K1_TAG_KIPARIS_2_AT_38_12
+#define K1_MOTOR_CONFIG "machines/k1-kiparis2-AT38-12.motor.config.h"
+#endif

@@ -9,6 +9,4 @@
 #endif
 
 
-//swt
-#define CLCH_NAME swt
-#include "burst/cliche/swt.h"
+

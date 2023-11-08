@@ -11,6 +11,7 @@ kalina-1b\k1-burst-driver.pfr.o: ../../../../source/common/machines/k1-beta.pfr.
 kalina-1b\k1-burst-driver.pfr.o: ../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_front.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/tp.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h
@@ -43,7 +44,15 @@ kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/bu
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_pi.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_timer.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/swt.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/fm.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/net_master.h
+kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_app.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
 kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h
 kalina-1b\k1-burst-driver.pfr.o: ../Core/Inc/tim.h
@@ -81,4 +90,3 @@ kalina-1b\k1-burst-driver.pfr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_h
 kalina-1b\k1-burst-driver.pfr.o: ../Core/Inc/i2c.h
 kalina-1b\k1-burst-driver.pfr.o: ../Core/Inc/usart.h
 kalina-1b\k1-burst-driver.pfr.o: ../Core/Inc/adc.h
-kalina-1b\k1-burst-driver.pfr.o: ../../../../../../reference/robosd-ref/burst/burst_app.h

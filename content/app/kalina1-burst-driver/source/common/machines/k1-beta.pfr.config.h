@@ -1,5 +1,5 @@
-#if (!defined(fb3_burst_prf_config_hpp)) && defined(fb3_burst_common_h)
-#define fb3_burst_prf_config_hpp
+#if (!defined(k1_burst_prf_config_hpp)) && defined(k1_burst_common_h)
+#define k1_burst_prf_config_hpp
 #else
 #error error of using k1-burst-driver.prf.config.hpp
 #endif
@@ -30,3 +30,17 @@
 #define motor_CURRENT3PH_ADC_INDEX {0,1,2}
 
 #define K1_TM423ADDR 0x98
+#define TMP423_ENABLED 1
+
+
+
+#define BURST_PROTECTION_ENABLED 1
+#define BURST_PANICS_BOARD_TEMPER_ENABLED 1
+#if BURST_PANICS_BOARD_TEMPER_ENABLED == 1
+#define K1_BOARD_TEMPER_PP_TO_GRAD( pp ) ((burst_signal_t)(pp))
+#define K1_BOARD_TEMPER_GRAD_TO_PP( gr ) ((burst_signal_t)(gr))
+#define BURST_PANICS_BOARD_TEMPER_OVERHI_PP K1_BOARD_TEMPER_GRAD_TO_PP(100)
+#define BURST_PANICS_BOARD_TEMPER_HI_PP K1_BOARD_TEMPER_GRAD_TO_PP(70)
+#define BURST_PANICS_BOARD_TEMPER_LO_PP K1_BOARD_TEMPER_GRAD_TO_PP(-15)
+#define BURST_PANICS_BOARD_TEMPER_ULTRALO_PP K1_BOARD_TEMPER_GRAD_TO_PP(-20)
+#endif

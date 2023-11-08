@@ -8,19 +8,30 @@ pmsm_feedback_t feedback = {};
 void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
-temper_t temper;
+temper_t temper={};
 voltage_t voltage;
 #if TMP423_ENABLED == 1
 
 uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
 uint8_t addr[13] = {0x00,0x01,0x02,0x03,0x08,0x09,0xA,0x0B,0x10,0x11,0x12,0x13,0xFE};
 
+int burst_board_temper_get_pp(void){
+	burst_signal_t s =  temper.dg.board.A +  temper.dg.board.B +  temper.dg.board.C;
+	temper.dg.board.mean = s_mult(s, BURST_SIGNAL_T(1.0/3));
+	return temper.dg.board.mean;
+}
 
 int ix = 13;
 
 
 void TMP423_confirm_callback(burst_bool_t _r){
 	BURST_UNUSED(_r);
+	switch(ix){
+		case 1: temper.dg.board.Z = (int8_t)tables[0]; break;
+		case 2: temper.dg.board.A = (int8_t)tables[1]; break;
+		case 3: temper.dg.board.B = (int8_t)tables[2]; break;
+		case 4: temper.dg.board.C = (int8_t)tables[3]; break;
+	}
 	if(ix <13){
 		TMP423_read(addr[ix], tables+ix);
 		ix++;
@@ -66,14 +77,17 @@ void burst_sw_realtime_loop(void){
 	pmsm_hall_app_realtime_loop();
 	enco.ref.run();
 }
+#if 0
 static uint32_t sqrt_test_x = 0;
 static volatile uint16_t sqrt_test_y = 0;
 static uint16_t sqrt_test_y0 = 0;
+#endif
 void burst_sw_backend_loop(void){		
 	pmsm_hall_app_backend_loop();
 	fm_recorder();
 	fm_poll();
 //	machine();
+	#if 0
 	sqrt_test_y0++;
 	if(sqrt_test_y0>4095){
 		sqrt_test_y0 = 0;
@@ -82,7 +96,7 @@ void burst_sw_backend_loop(void){
 	sqrt_test_x = sqrt_test_y0*sqrt_test_y0;
 	sqrt_test_y = burst_sqrt(sqrt_test_x);
 	debug_tp_off(112);
-	
+	#endif
 }
 
 int synchro_test_enable = 0;

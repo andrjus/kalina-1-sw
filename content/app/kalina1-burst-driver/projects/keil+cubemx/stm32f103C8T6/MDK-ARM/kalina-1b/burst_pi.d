@@ -11,6 +11,7 @@ kalina-1b\burst_pi.o: ../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.m
 kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h
 kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/burst_front.h
 kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/burst.h
+kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/burst_signal.h
 kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/cliche/tp.h
 kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/cliche/_begin.h
 kalina-1b\burst_pi.o: ../../../../../../reference/robosd-ref/burst/cliche/_end.h

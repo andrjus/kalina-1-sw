@@ -812,11 +812,6 @@
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_positioner.h</FilePath>
             </File>
             <File>
-              <FileName>burst_proto.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_proto.h</FilePath>
-            </File>
-            <File>
               <FileName>burst_ps.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.c</FilePath>

@@ -1,7 +1,7 @@
-#if (!defined(fb3_ecmax_motor_config_h)) && defined(fb3_burst_common_h)
-#define fb3_ecmax_motor_config_h
+#if (!defined(k1_ecmax_motor_config_h)) && defined(k1_burst_common_h)
+#define k1_ecmax_motor_config_h
 #else
-#error error of using fb3-ecmax.motor.config.h
+#error error of using k1-ecmax.motor.config.h
 #endif
 
 #define K1_PWM_PERIOD_US 25L
@@ -15,8 +15,8 @@
 #define c_lat_flt_PRESC_SHIFT										2
 #define c_lat_flt_VALUE_SHIFT										2
 
-#define motor_LATERAL_CURRENT_PI_PROP_GAIN			10
-#define motor_LATERAL_CURRENT_PI_MODEL_GAIN			30
+#define motor_LATERAL_CURRENT_PI_PROP_GAIN			800
+#define motor_LATERAL_CURRENT_PI_MODEL_GAIN			300
 #define motor_LATERAL_CURRENT_PI_DIFF_GAIN			0
 #define motor_LATERAL_CURRENT_PI_FORCE_GAIN			0
 #define motor_LATERAL_CURRENT_PI_CONTROL_SHIFT	7
@@ -25,8 +25,8 @@
 #define motor_LATERAL_CURRENT_RANGE_LO					-500
 #define motor_LATERAL_CURRENT_RANGE_HI					500
 
-#define motor_CROSS_CURRENT_PI_PROP_GAIN				250
-#define motor_CROSS_CURRENT_PI_MODEL_GAIN				70
+#define motor_CROSS_CURRENT_PI_PROP_GAIN				800
+#define motor_CROSS_CURRENT_PI_MODEL_GAIN				300
 #define motor_CROSS_CURRENT_PI_DIFF_GAIN				0
 #define motor_CROSS_CURRENT_PI_FORCE_GAIN				0
 #define motor_CROSS_CURRENT_PI_CONTROL_SHIFT		7
@@ -40,3 +40,22 @@
 
 #define PMSM_HALL_APP_EXTRA_TYPE PMSM_HALL_APP_EXTRA_TYPE_NONE
 #define motor_CONTROL_PRESC 1
+
+#define BURST_PANICS_ACTUATOR_TEMPER_ENABLED 0
+#if BURST_PANICS_ACTUATOR_TEMPER_ENABLED == 1
+#define K1_ACCTUATOR_TEMPER_GRAD_TO_PP(x) ((burst_signal_t)((x+100)>>4))
+#define motor_PANICS_ACTUATOR_TEMPER_OVERHI_PP K1_ACCTUATOR_TEMPER_GRAD_TO_PP(110)
+#define motor_PANICS_ACTUATOR_TEMPER_HI_PP K1_ACCTUATOR_TEMPER_GRAD_TO_PP(85)
+#define motor_PANICS_ACTUATOR_TEMPER_LO_PP K1_ACCTUATOR_TEMPER_GRAD_TO_PP(-15)
+#define motor_PANICS_ACTUATOR_TEMPER_ULTRALO_PP K1_ACCTUATOR_TEMPER_GRAD_TO_PP(-20)
+#endif
+
+#define BURST_PANICS_ACWC_OVERCURRENT_ENABLED 1
+#if BURST_PANICS_ACWC_OVERCURRENT_ENABLED == 1
+#define motor_PANICS_ACWC_OWERCURRENT_PP FB3_MOTOR_CURRENT_A_TO_PP(50)
+#define motor_PANICS_ACWC_OWERPOWER_PP FB3_MOTOR_CURRENT_A_TO_PP(25)
+#define motor_PANICS_ACWC_OWERPOWER_TM_US 3000000
+#endif
+
+#define BURST_PANICS_PMSM_MISSALIGMENT_ENABLED 0
+#define motor_PANICS_PMSM_CURRENT_MISSALIGMENT_PP FB3_MOTOR_CURRENT_A_TO_PP(2)
