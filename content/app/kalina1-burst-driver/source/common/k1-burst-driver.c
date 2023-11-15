@@ -8,17 +8,17 @@ pmsm_feedback_t feedback = {};
 void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
-temper_t temper={};
-voltage_t voltage;
+board_t board = {};
+	
 #if TMP423_ENABLED == 1
 
 uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
 uint8_t addr[13] = {0x00,0x01,0x02,0x03,0x08,0x09,0xA,0x0B,0x10,0x11,0x12,0x13,0xFE};
 
 int burst_board_temper_get_pp(void){
-	burst_signal_t s =  temper.dg.board.A +  temper.dg.board.B +  temper.dg.board.C;
-	temper.dg.board.mean = s_mult(s, BURST_SIGNAL_T(1.0/3));
-	return temper.dg.board.mean;
+	burst_signal_t s =  board.temper.A +  board.temper.B +  board.temper.C;
+	board.temper.mean = s_mult(s, BURST_SIGNAL_T(1.0/3));
+	return board.temper.mean;
 }
 
 int ix = 13;
@@ -27,10 +27,10 @@ int ix = 13;
 void TMP423_confirm_callback(burst_bool_t _r){
 	BURST_UNUSED(_r);
 	switch(ix){
-		case 1: temper.dg.board.Z = (int8_t)tables[0]; break;
-		case 2: temper.dg.board.A = (int8_t)tables[1]; break;
-		case 3: temper.dg.board.B = (int8_t)tables[2]; break;
-		case 4: temper.dg.board.C = (int8_t)tables[3]; break;
+		case 1: board.temper.Z = (int8_t)tables[0]; break;
+		case 2: board.temper.A = (int8_t)tables[1]; break;
+		case 3: board.temper.B = (int8_t)tables[2]; break;
+		case 4: board.temper.C = (int8_t)tables[3]; break;
 	}
 	if(ix <13){
 		TMP423_read(addr[ix], tables+ix);
@@ -120,7 +120,14 @@ void burst_sw_frontend_loop(void){
 			}
 		}
 	}
-	
+	#if BURST_PANICS_BOARD_VOLTAGE_ENABLED == 1
+	board.voltage.mVolt = K1_BOARD_VOLTAGE_PP_TO_MVOLT(board.voltage.raw);
+	#endif
+
+	#if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
+	board.current.mA = K1_BOARD_CURRENT_PP_TO_MAMPER(board.current.raw);
+	#endif
+
 }
 
 void burst_sw_slot_0(void){
@@ -240,6 +247,18 @@ void TMP423_write(uint8_t _addr, uint8_t data){
 
 	TMP423_exchange(&op,0);
 
+}
+#endif
+
+#if BURST_PANICS_BOARD_VOLTAGE_ENABLED == 1
+int burst_board_voltage_get_pp(void){
+	return board.voltage.raw;
+}
+#endif
+
+#if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
+int burst_board_current_get_pp(void){
+	return board.current.raw;
 }
 #endif
 

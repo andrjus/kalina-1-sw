@@ -120,13 +120,19 @@ void ADC1_2_IRQHandler(void)
 {
 	__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOC);
 	//__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOS);
-	 adc_raw[0] = hadc1.Instance->JDR1;
-	 adc_raw[1] = hadc1.Instance->JDR2;
-	 adc_raw[2] = hadc1.Instance->JDR3;
-	 adc_raw[3] = hadc1.Instance->JDR4;
-	 adc_raw[4] = hadc2.Instance->JDR1;
-	 adc_raw[5] = hadc2.Instance->JDR2;
-	 adc_raw[6] = hadc2.Instance->JDR3;
+	adc_raw[0] = hadc1.Instance->JDR1;
+	adc_raw[1] = hadc1.Instance->JDR2;
+	adc_raw[2] = hadc1.Instance->JDR3;
+	adc_raw[3] = hadc1.Instance->JDR4;
+	adc_raw[4] = hadc2.Instance->JDR1;
+	#if BURST_PANICS_BOARD_VOLTAGE_ENABLED == 1
+	board.voltage.raw = 
+	#endif 
+	adc_raw[5] = hadc2.Instance->JDR2;
+	#if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
+	board.current.raw = 
+	#endif 
+	adc_raw[6] = hadc2.Instance->JDR3;
 
 	adc_update(&adc,adc_raw);
 	burst_realtime_loop();
@@ -397,7 +403,6 @@ void swt_phy_C_on(uint16_t _pwm){
 uint8_t swt_phy_sector_get(void){
 	return hall.sector;
 }
-
 
 
 #endif

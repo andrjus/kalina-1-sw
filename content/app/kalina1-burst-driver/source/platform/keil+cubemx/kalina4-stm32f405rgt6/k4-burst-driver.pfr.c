@@ -66,11 +66,12 @@ void burst_hw_start(void){
 
 burst_bool_t serialComDone = burst_true;
 void burst_hw_frontend_loop(void){
-/*	if(serialComDone == burst_true){
+	#if 0
+	if(serialComDone == burst_true){
 		static const char tmp[] = "Hello world!\n\r";
 		k1_serial_send_packet((uint8_t *)tmp,14);
 	}
-	*/
+	#endif
 	temper.dg.board = K1_BOARD_TEMPER_PP_TO_GRAD(temper.raw.board);
 
 }
@@ -361,7 +362,6 @@ void TIM1_CC_IRQHandler(void)
 }
 uint32_t adc_raw[BURST_ADC_CHANNEL_COUNT]={};
 
-uint32_t vref_raw = 0;
 void ADC_IRQHandler(void)
 {
 	debug_tp_off(111);
@@ -369,7 +369,7 @@ void ADC_IRQHandler(void)
 	//__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOS);
 	 adc_raw[1] = hadc1.Instance->JDR1;//B
 	 temper.raw.board = hadc1.Instance->JDR2;
-	 vref_raw = hadc1.Instance->JDR3;
+	 voltage.raw = hadc1.Instance->JDR3;
 	 adc_raw[0] = hadc2.Instance->JDR1;//A
 		voltage.raw = hadc2.Instance->JDR2;
 	 //adc_raw[4] = hadc2.Instance->JDR3;
@@ -544,14 +544,27 @@ void burst_hw_guard_unlock(void){
 }
 
 
-void swt_phy_A_set_pwm(uint16_t _pwm){
-	TIM1->CCR2 = _pwm;
+void swt_phy_A_set_pwm(int16_t _pwm){
+	if(_pwm>=0){
+		TIM1->CCR2 = _pwm;
+	} else{
+		TIM1->CCR2 =  K1_PWM_MODULO-1 + _pwm;
+	}
 }
-void swt_phy_B_set_pwm(uint16_t _pwm){
-	TIM1->CCR3 = _pwm;
+
+void swt_phy_B_set_pwm(int16_t _pwm){
+	if(_pwm>=0){
+		TIM1->CCR3 = _pwm;
+	} else {
+		TIM1->CCR3 = K1_PWM_MODULO-1 + _pwm;
+	}
 }
-void swt_phy_C_set_pwm(uint16_t _pwm){
-	TIM1->CCR1 = _pwm;	
+void swt_phy_C_set_pwm(int16_t _pwm){
+	if(_pwm>=0){
+		TIM1->CCR1 = _pwm;	
+	} else{
+		TIM1->CCR1 = K1_PWM_MODULO-1 + _pwm;	
+	}
 }
 void swt_phy_A_set_lo(void){
 	TIM1->CCR2 = 0;
@@ -563,6 +576,18 @@ void swt_phy_B_set_lo(void){
 }
 void swt_phy_C_set_lo(void){
 	TIM1->CCR1 = 0;	
+	TIM1->CCER |= 0x1005;
+}
+void swt_phy_A_set_hi(void){
+	TIM1->CCR2 = K1_PWM_MODULO-1;
+	TIM1->CCER |= 0x1050;
+}
+void swt_phy_B_set_hi(void){
+	TIM1->CCR3 = K1_PWM_MODULO-1;
+	TIM1->CCER |= 0x1500;
+}
+void swt_phy_C_set_hi(void){
+	TIM1->CCR1 = K1_PWM_MODULO-1;	
 	TIM1->CCER |= 0x1005;
 }
 
@@ -579,16 +604,28 @@ void swt_phy_C_off(void){
 	TIM1->CCER &= ~0x005;
 }
 
-void swt_phy_A_on(uint16_t _pwm){
-	TIM1->CCR2 = _pwm;
+void swt_phy_A_on(int16_t _pwm){
+	if(_pwm>=0){
+		TIM1->CCR2 = _pwm;
+	} else {
+		TIM1->CCR2 = K1_PWM_MODULO-1 +_pwm;
+	}
 	TIM1->CCER |= 0x1050;
 }
-void swt_phy_B_on(uint16_t _pwm){
-	TIM1->CCR3 = _pwm;
+void swt_phy_B_on(int16_t _pwm){
+	if(_pwm>=0){
+		TIM1->CCR3 = _pwm;
+	} else {
+		TIM1->CCR3 = K1_PWM_MODULO-1 +_pwm;
+	}
 	TIM1->CCER |= 0x1500;
 }
-void swt_phy_C_on(uint16_t _pwm){
-	TIM1->CCR1 = _pwm;
+void swt_phy_C_on(int16_t _pwm){
+	if(_pwm>=0){
+		TIM1->CCR1 = _pwm;
+	} else{
+		TIM1->CCR1 = K1_PWM_MODULO-1 +_pwm;
+	}
 	TIM1->CCER |= 0x1005;
 }
 

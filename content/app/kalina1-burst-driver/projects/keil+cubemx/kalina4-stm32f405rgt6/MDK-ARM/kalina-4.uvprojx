@@ -313,8 +313,8 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
-            <oTime>0</oTime>
+            <Optim>4</Optim>
+            <oTime>1</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
             <Strict>0</Strict>
@@ -327,7 +327,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <uGnu>1</uGnu>
-            <useXO>0</useXO>
+            <useXO>1</useXO>
             <v6Lang>5</v6Lang>
             <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
@@ -1082,11 +1082,6 @@
               <FileName>ps_dc.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\modules\ps_dc.h</FilePath>
-            </File>
-            <File>
-              <FileName>swt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\reference\robosd-ref\burst\cliche\swt.c</FilePath>
             </File>
             <File>
               <FileName>swt.h</FileName>

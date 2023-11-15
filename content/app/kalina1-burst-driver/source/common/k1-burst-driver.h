@@ -31,17 +31,7 @@ burst_bool_t k1_serial_ready(void);
 typedef struct temper_raw_s{
 	struct{
 		int16_t motor;
-		#if TMP423_ENABLED == 1
-		struct{
-			burst_signal_t A;
-			burst_signal_t B;
-			burst_signal_t C;
-			burst_signal_t Z;
-			burst_signal_t mean;
-		} board;
-		#else
-		burst_signal_t board;
-		#endif
+
 	} dg;
 	struct{
 		uint16_t motor;
@@ -50,14 +40,36 @@ typedef struct temper_raw_s{
 		#endif
 	} raw;
 } temper_t;
-extern temper_t temper;
+//extern temper_t temper;
 
-typedef  struct voltage_s{
-	uint16_t raw;
-	int16_t mVolt;
-} voltage_t;
+typedef  struct board_s{
+	struct {
+		uint16_t raw;
+		int16_t mVolt;
+	} voltage;
+	struct {
+		uint16_t raw;
+		int32_t mA;
+	} current;
+	#if TMP423_ENABLED == 1
+	struct{
+		burst_signal_t A;
+		burst_signal_t B;
+		burst_signal_t C;
+		burst_signal_t Z;
+		burst_signal_t mean;
+	} temper;
+	#else
+	struct{
+		uint16_t raw;
+		burst_signal_t dg;
+	} temper;
+	
+	#endif
+} board_t;
 
-extern voltage_t voltage;
+
+extern board_t board;
 
 
 void delay_us(volatile uint32_t _us);

@@ -1,1431 +1,0 @@
-Dependencies for Project 'kalina-1b', Target 'KALINA-1-BETA-MYTECH-8085-HA-CCE': (DO NOT MODIFY !)
-CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (startup_stm32f103xb.s)(0x64BB1909)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xb.lst --xref -o kalina-1b\startup_stm32f103xb.o --depend kalina-1b\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x64BB0FA6)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\main.o --omf_browse kalina-1b\main.crf --depend kalina-1b\main.d)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-I (../Core/Inc/adc.h)(0x64BAA5EE)
-I (../Core/Inc/dma.h)(0x64BABA40)
-I (../Core/Inc/i2c.h)(0x64BAB13C)
-I (../Core/Inc/tim.h)(0x64BAB13D)
-I (../Core/Inc/usart.h)(0x64BAB13D)
-I (../Core/Inc/gpio.h)(0x64BAA5ED)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (../Core/Src/gpio.c)(0x64BAB13C)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\gpio.o --omf_browse kalina-1b\gpio.crf --depend kalina-1b\gpio.d)
-I (../Core/Inc/gpio.h)(0x64BAA5ED)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/adc.c)(0x64BB1904)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\adc.o --omf_browse kalina-1b\adc.crf --depend kalina-1b\adc.d)
-I (../Core/Inc/adc.h)(0x64BAA5EE)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/dma.c)(0x64BABA40)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\dma.o --omf_browse kalina-1b\dma.crf --depend kalina-1b\dma.d)
-I (../Core/Inc/dma.h)(0x64BABA40)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/i2c.c)(0x64BAB13C)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\i2c.o --omf_browse kalina-1b\i2c.crf --depend kalina-1b\i2c.d)
-I (../Core/Inc/i2c.h)(0x64BAB13C)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/tim.c)(0x64BEF108)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\tim.o --omf_browse kalina-1b\tim.crf --depend kalina-1b\tim.d)
-I (../Core/Inc/tim.h)(0x64BAB13D)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/usart.c)(0x64BABA40)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\usart.o --omf_browse kalina-1b\usart.crf --depend kalina-1b\usart.d)
-I (../Core/Inc/usart.h)(0x64BAB13D)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/stm32f1xx_it.c)(0x64BABA40)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_it.o --omf_browse kalina-1b\stm32f1xx_it.crf --depend kalina-1b\stm32f1xx_it.d)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_it.h)(0x64BABA40)
-F (../Core/Src/stm32f1xx_hal_msp.c)(0x64BAA5EF)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_msp.o --omf_browse kalina-1b\stm32f1xx_hal_msp.crf --depend kalina-1b\stm32f1xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_gpio_ex.o --omf_browse kalina-1b\stm32f1xx_hal_gpio_ex.crf --depend kalina-1b\stm32f1xx_hal_gpio_ex.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_adc.o --omf_browse kalina-1b\stm32f1xx_hal_adc.crf --depend kalina-1b\stm32f1xx_hal_adc.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_adc_ex.o --omf_browse kalina-1b\stm32f1xx_hal_adc_ex.crf --depend kalina-1b\stm32f1xx_hal_adc_ex.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal.o --omf_browse kalina-1b\stm32f1xx_hal.crf --depend kalina-1b\stm32f1xx_hal.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_rcc.o --omf_browse kalina-1b\stm32f1xx_hal_rcc.crf --depend kalina-1b\stm32f1xx_hal_rcc.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_rcc_ex.o --omf_browse kalina-1b\stm32f1xx_hal_rcc_ex.crf --depend kalina-1b\stm32f1xx_hal_rcc_ex.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_gpio.o --omf_browse kalina-1b\stm32f1xx_hal_gpio.crf --depend kalina-1b\stm32f1xx_hal_gpio.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_dma.o --omf_browse kalina-1b\stm32f1xx_hal_dma.crf --depend kalina-1b\stm32f1xx_hal_dma.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_cortex.o --omf_browse kalina-1b\stm32f1xx_hal_cortex.crf --depend kalina-1b\stm32f1xx_hal_cortex.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_pwr.o --omf_browse kalina-1b\stm32f1xx_hal_pwr.crf --depend kalina-1b\stm32f1xx_hal_pwr.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_flash.o --omf_browse kalina-1b\stm32f1xx_hal_flash.crf --depend kalina-1b\stm32f1xx_hal_flash.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_flash_ex.o --omf_browse kalina-1b\stm32f1xx_hal_flash_ex.crf --depend kalina-1b\stm32f1xx_hal_flash_ex.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_exti.o --omf_browse kalina-1b\stm32f1xx_hal_exti.crf --depend kalina-1b\stm32f1xx_hal_exti.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_tim.o --omf_browse kalina-1b\stm32f1xx_hal_tim.crf --depend kalina-1b\stm32f1xx_hal_tim.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_tim_ex.o --omf_browse kalina-1b\stm32f1xx_hal_tim_ex.crf --depend kalina-1b\stm32f1xx_hal_tim_ex.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\stm32f1xx_hal_uart.o --omf_browse kalina-1b\stm32f1xx_hal_uart.crf --depend kalina-1b\stm32f1xx_hal_uart.d)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (../Core/Src/system_stm32f1xx.c)(0x6479AF4F)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\system_stm32f1xx.o --omf_browse kalina-1b\system_stm32f1xx.crf --depend kalina-1b\system_stm32f1xx.d)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst.c)(0x646E0915)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst.o --omf_browse kalina-1b\burst.crf --depend kalina-1b\burst.d)
-I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x64760315)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst.h)(0x646F2369)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_adc.c)(0x646E5183)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_adc.o --omf_browse kalina-1b\burst_adc.crf --depend kalina-1b\burst_adc.d)
-I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x646E52A4)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_adc.h)(0x646E52A4)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_app.h)(0x646E0915)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_button.c)(0x635AFB47)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_button.o --omf_browse kalina-1b\burst_button.crf --depend kalina-1b\burst_button.d)
-I (../../../../../../reference/robosd-ref/burst/burst_button.h)(0x635AF537)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_button.h)(0x635AF537)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_common.h)(0x64805B85)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_enco.h)(0x646E5C0A)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_filter.h)(0x646E5314)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_fm.c)(0x63024E6B)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_fm.o --omf_browse kalina-1b\burst_fm.crf --depend kalina-1b\burst_fm.d)
-I (../../../../../../reference/robosd-ref/burst/burst_fm.h)(0x6302988D)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_fm.h)(0x6302988D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_front.h)(0x62477C4F)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_hall.c)(0x647F10E0)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_hall.o --omf_browse kalina-1b\burst_hall.crf --depend kalina-1b\burst_hall.d)
-I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_hall.h)(0x647F1129)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.c)(0x64805B9D)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_inv3ph.o --omf_browse kalina-1b\burst_inv3ph.crf --depend kalina-1b\burst_inv3ph.d)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_inv3ph.h)(0x646F1840)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_motion.c)(0x644A6C30)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_motion.o --omf_browse kalina-1b\burst_motion.crf --depend kalina-1b\burst_motion.d)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_motion.h)(0x64760315)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_pi.c)(0x64524097)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_pi.o --omf_browse kalina-1b\burst_pi.crf --depend kalina-1b\burst_pi.d)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_pi.h)(0x646F0364)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_positioner.c)(0x6457BBE2)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_positioner.o --omf_browse kalina-1b\burst_positioner.crf --depend kalina-1b\burst_positioner.d)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_positioner.h)(0x646F1C1F)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_proto.h)(0x63C7AF4D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.c)(0x6426603C)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_ps.o --omf_browse kalina-1b\burst_ps.crf --depend kalina-1b\burst_ps.d)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_ps.h)(0x6426602D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_ring.inc.h)(0x63C7AF4D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_serial.c)(0x630278F7)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_serial.o --omf_browse kalina-1b\burst_serial.crf --depend kalina-1b\burst_serial.d)
-I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_serial.h)(0x63028E51)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_signal.c)(0x646E0915)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_signal.o --omf_browse kalina-1b\burst_signal.crf --depend kalina-1b\burst_signal.d)
-I (../../../../../../reference/robosd-ref/burst/burst_sin.h)(0x63029940)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_signal.h)(0x646F04BE)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sin.c)(0x630299A2)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_sin.o --omf_browse kalina-1b\burst_sin.crf --depend kalina-1b\burst_sin.d)
-I (../../../../../../reference/robosd-ref/burst/burst_sin.h)(0x63029940)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_sin.h)(0x63029940)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_timer.c)(0x64760315)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\burst_timer.o --omf_browse kalina-1b\burst_timer.crf --depend kalina-1b\burst_timer.d)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\burst_timer.h)(0x64760315)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\platform\keil\burst_target.h)(0x644CD1E4)()
-F (..\..\..\..\source\common\k1-burst-driver.c)(0x64BB0719)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.o --omf_browse kalina-1b\k1-burst-driver.crf --depend kalina-1b\k1-burst-driver.d)
-I (..\..\..\..\source\common\k1-burst-driver.h)(0x647737D1)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x649A3619)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
-I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x646E52A4)
-I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x646F34A4)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/cliche/fm.h)(0x641AEE51)
-I (../../../../../../reference/robosd-ref/burst/burst_timer.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
-I (../../../../../../reference/robosd-ref/burst/burst_ring.inc.h)(0x63C7AF4D)
-F (..\..\..\..\source\common\k1-burst-driver.common.h)(0x64B985C5)()
-F (..\..\..\..\source\common\k1-burst-driver.h)(0x647737D1)()
-F (..\..\..\..\source\common\k1-burst-driver.names.h)(0x64BAB577)()
-F (..\..\..\..\source\common\k1-burst-driver.obj.c)(0x646F9AF1)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.obj.o --omf_browse kalina-1b\k1-burst-driver.obj.crf --depend kalina-1b\k1-burst-driver.obj.d)
-I (..\..\..\..\source\common\k1-burst-driver.h)(0x647737D1)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x649A3619)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
-I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x646E52A4)
-I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x646F34A4)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/cliche/fm.h)(0x641AEE51)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster.h)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_cfg.h)(0x61367285)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_tsa.h)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_default.c)(0x61098631)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_private.h)(0x61367009)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_default.h)(0x613C6796)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_fastrec.c)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_protocol.c)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_protocol.h)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_rec.c)(0x61098631)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_rec.h)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_scope.c)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_serial.c)(0x61098631)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_driver.h)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_sfio.c)(0x602AA544)
-I (../../../../../../reference/robosd-ref/freemaster/PE_freemaster_tsa.c)(0x602AA544)
-F (..\..\..\..\source\platform\keil+cubemx\stm32f103CBt6\burst_app_tuning.h)(0x64B985C5)()
-F (..\..\..\..\source\platform\keil+cubemx\stm32f103CBt6\k1-burst-driver.pfr.c)(0x64BB1386)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\k1-burst-driver.pfr.o --omf_browse kalina-1b\k1-burst-driver.pfr.crf --depend kalina-1b\k1-burst-driver.pfr.d)
-I (../../../../source/common/k1-burst-driver.h)(0x647737D1)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x649A3619)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
-I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x646E52A4)
-I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x646F34A4)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/cliche/fm.h)(0x641AEE51)
-I (../Core/Inc/tim.h)(0x64BAB13D)
-I (../Core/Inc/main.h)(0x64BAB13E)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6479AF4F)
-I (../Core/Inc/stm32f1xx_hal_conf.h)(0x64BABA41)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6479AF4F)
-I (../Drivers/CMSIS/Include/core_cm3.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6479AF45)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6479AF45)
-I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6479AF4F)
-I (E:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602569CE)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6479AF4F)
-I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6479AF4F)
-I (../Core/Inc/usart.h)(0x64BAB13D)
-I (../Core/Inc/adc.h)(0x64BAA5EE)
-I (../../../../../../reference/robosd-ref/burst/burst_app.h)(0x646E0915)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\_begin.h)(0x641A8C49)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\_end.h)(0x641A933A)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\clch_test.c)(0x641AEE07)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\clch_test.o --omf_browse kalina-1b\clch_test.crf --depend kalina-1b\clch_test.d)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/cliche/drv8301.h)(0x641AE921)
-I (../../../../../../reference/robosd-ref/burst/modules/drv8301_reg.h)(0x641A9B1B)
-I (../../../../../../reference/robosd-ref/burst/cliche/ps.h)(0x644D0E33)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\fm.h)(0x641AEE51)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\ps.h)(0x644D0E33)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\cliche\tp.h)(0x641AE8D2)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.c)(0x649A3619)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\actuator.o --omf_browse kalina-1b\actuator.crf --depend kalina-1b\actuator.d)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator.h)(0x646F268D)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\actuator_front.h)(0x644CBDB7)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.c)(0x64578129)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\acwc.o --omf_browse kalina-1b\acwc.crf --depend kalina-1b\acwc.d)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc.h)(0x646F212B)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\acwc_front.h)(0x64524EBC)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\enco_abs32.c)(0x646E5C17)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\enco_abs32.o --omf_browse kalina-1b\enco_abs32.crf --depend kalina-1b\enco_abs32.d)
-I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\enco_abs32.h)(0x64760315)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.c)(0x644D1BC8)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\nikitin.o --omf_browse kalina-1b\nikitin.crf --depend kalina-1b\nikitin.d)
-I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\nikitin.h)(0x646E54DF)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.c)(0x64805BB3)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm.o --omf_browse kalina-1b\pmsm.crf --depend kalina-1b\pmsm.d)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x646F34A4)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm.h)(0x646F34A4)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_front.h)(0x64524EBC)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.c)(0x649A3619)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm_hall_app.o --omf_browse kalina-1b\pmsm_hall_app.crf --depend kalina-1b\pmsm_hall_app.d)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x649A3619)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
-I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x646E52A4)
-I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x646F34A4)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-I (../../../../../../reference/robosd-ref/burst\burst_timer.h)(0x64760315)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.h)(0x649A3619)()
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\pmsm_hall_app.obj.c)(0x646F42E6)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\pmsm_hall_app.obj.o --omf_browse kalina-1b\pmsm_hall_app.obj.crf --depend kalina-1b\pmsm_hall_app.obj.d)
-I (../../../../../../reference/robosd-ref/burst\modules\pmsm_hall_app.h)(0x649A3619)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_serial.h)(0x63028E51)
-I (../../../../../../reference/robosd-ref/burst/burst_inv3ph.h)(0x646F1840)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-I (../../../../../../reference/robosd-ref/burst/burst_hall.h)(0x647F1129)
-I (../../../../../../reference/robosd-ref/burst/burst_adc.h)(0x646E52A4)
-I (../../../../../../reference/robosd-ref/burst/modules/nikitin.h)(0x646E54DF)
-I (../../../../../../reference/robosd-ref/burst/burst_filter.h)(0x646E5314)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/modules/enco_abs32.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_enco.h)(0x646E5C0A)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm.h)(0x646F34A4)
-I (../../../../../../reference/robosd-ref/burst/modules/pmsm_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc_front.h)(0x64524EBC)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator_front.h)(0x644CBDB7)
-I (../../../../../../reference/robosd-ref/burst/modules/acwc.h)(0x646F212B)
-I (../../../../../../reference/robosd-ref/burst/modules/actuator.h)(0x646F268D)
-I (../../../../../../reference/robosd-ref/burst/burst_motion.h)(0x64760315)
-I (../../../../../../reference/robosd-ref/burst/burst_positioner.h)(0x646F1C1F)
-I (../../../../../../reference/robosd-ref/burst/burst_pi.h)(0x646F0364)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\ps_dc.c)(0x6426614B)(--c99 --gnu -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../../../../../../reference/robosd-ref -I ../../../../../../reference/robosd-ref/burst/platform/keil -I ../../../../source/common -I ../../../../source/platform/keil+cubemx/stm32f103CBt6-I.\RTE\_KALINA-1-BETA-MYTECH-8085-HA-CCE-IE:\Keil_v5\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB -DK1_TAG_BOARD_BETA -DK1_TAG_MYTECH_8085_HA_CCE-o kalina-1b\ps_dc.o --omf_browse kalina-1b\ps_dc.crf --depend kalina-1b\ps_dc.d)
-I (../../../../../../reference/robosd-ref/burst/modules/ps_dc.h)(0x649031FC)
-I (../../../../../../reference/robosd-ref/burst/burst_ps.h)(0x6426602D)
-I (../../../../../../reference/robosd-ref/burst/burst.h)(0x646F2369)
-I (../../../../../../reference/robosd-ref/burst/burst_common.h)(0x64805B85)
-I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602569CE)
-I (../../../../source/platform/keil+cubemx/stm32f103CBt6/burst_app_tuning.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.common.h)(0x64B985C5)
-I (../../../../source/common/k1-burst-driver.names.h)(0x64BAB577)
-I (../../../../source/common/machines/k1-beta.pfr.config.h)(0x64BEF02C)
-I (../../../../source/common/machines/k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)
-I (../../../../../../reference/robosd-ref/burst/platform/keil/burst_target.h)(0x644CD1E4)
-I (../../../../../../reference/robosd-ref/burst/burst_front.h)(0x62477C4F)
-I (../../../../../../reference/robosd-ref/burst/cliche/tp.h)(0x641AE8D2)
-I (../../../../../../reference/robosd-ref/burst/cliche/_begin.h)(0x641A8C49)
-I (../../../../../../reference/robosd-ref/burst/cliche/_end.h)(0x641A933A)
-I (../../../../../../reference/robosd-ref/burst/burst_signal.h)(0x646F04BE)
-F (..\..\..\..\..\..\reference\robosd-ref\burst\modules\ps_dc.h)(0x649031FC)()
-F (..\..\..\..\source\common\machines\k1-A60-7M.motor.config.h)(0x64766F8C)()
-F (..\..\..\..\source\common\machines\k1-beta.pfr.config.h)(0x64BEF02C)()
-F (..\..\..\..\source\common\machines\k1-MYTECH-8085-HA-CCE.motor.config.h)(0x64B98160)()
