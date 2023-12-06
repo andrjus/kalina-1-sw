@@ -4,10 +4,11 @@
 #error error of using k1-ecmax.motor.config.h
 #endif
 
-#define K1_PWM_PERIOD_US 25L
+#define K1_PWM_PERIOD_US 50L
 #define K1_PWM_TIMER_PRESC 1
-#define PMSM_HALL_RPM_FILTER_VALUE_PRESC 3
-
+//#define PMSM_HALL_RPM_FILTER_VALUE_PRESC 0
+//#define PMSM_HALL_RPM_FILTER_GAIN_PRESC 5
+//#define PMSM_HALL_RPM_VALUE_TOTAL_PRESC 5
 #define c_cross_flt_SHIFT												2
 #define c_cross_flt_PRESC_SHIFT									2
 #define c_cross_flt_VALUE_SHIFT									2
@@ -37,9 +38,9 @@
 #define motor_CROSS_CURRENT_RANGE_HI 						BURST_SIGNAL_MAX
 
 #define hall_INV burst_false //burst_true
-#define hall_OFFSET_NATIVE 0// (-BURST_SIGNAL_T(75./180))
+#define hall_OFFSET_NATIVE  (-BURST_SIGNAL_T(148./180))
 
-#define PMSM_HALL_APP_EXTRA_TYPE PMSM_HALL_APP_EXTRA_TYPE_NONE
+#define PMSM_HALL_APP_EXTRA_TYPE PMSM_HALL_APP_EXTRA_TYPE_REGRESS
 #define motor_CONTROL_PRESC 1
 
 #define BURST_PANICS_ACTUATOR_TEMPER_ENABLED 0
@@ -60,3 +61,11 @@
 
 #define BURST_PANICS_PMSM_MISSALIGMENT_ENABLED 0
 #define motor_PANICS_PMSM_CURRENT_MISSALIGMENT_PP FB3_MOTOR_CURRENT_A_TO_PP(2)
+
+#define motor_RANGE_SPEED_LO -300
+#define motor_RANGE_SPEED_HI 300
+#define motor_MOTION_OV_CURRENT_PROP_GAIN 500
+#define motor_MOTION_OV_CURRENT_DIFF_GAIN 0
+#define motor_MOTION_OV_CURRENT_MODEL_GAIN 17
+#define motor_MOTION_OV_CURRENT_CONTROL_SHIFT 7
+#define motor_MOTION_OV_CURRENT_MODEL_SHIFT 10

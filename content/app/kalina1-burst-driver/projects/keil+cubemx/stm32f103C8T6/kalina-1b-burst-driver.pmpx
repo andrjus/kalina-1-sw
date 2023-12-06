@@ -19,8 +19,8 @@
 			<member name="comm_params_saved" type="sint32">1</member>
 			<member name="comm_state_saved" type="sint32">0</member>
 			<member name="comm_state_enabled" type="sint32">1</member>
-			<member name="comm_port" type="sint32">18</member>
-			<member name="comm_port_hint" type="string">COM19</member>
+			<member name="comm_port" type="sint32">24</member>
+			<member name="comm_port_hint" type="string">COM25</member>
 			<member name="comm_speed" type="sint32">38400</member>
 			<member name="comm_plugin_use" type="sint32">0</member>
 			<member name="comm_plugin_id" type="string"/>
@@ -7999,9 +7999,9 @@
 			<member name="size_shift_right" type="sint32">0</member>
 		</object>
 		<object name="ObjId0016" type="CObList">
-			<member name="item0" type="CObject_ptr">ObjId2415</member>
+			<member name="item0" type="CObject_ptr">ObjId2455</member>
 		</object>
-		<object name="ObjId2415" type="CPrjDoc_MapFileInfo">
+		<object name="ObjId2455" type="CPrjDoc_MapFileInfo">
 			<member name="file_name" type="string">.\MDK-ARM\kalina-1b\KALINA-1-BETA-MYTECH-8085-HA-CCE.axf</member>
 			<member name="file_type" type="CObject_ptr">ObjId0006</member>
 		</object>

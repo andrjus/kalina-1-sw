@@ -11,15 +11,22 @@ void burst_sw_begin(void){
 board_t board = {};
 	
 #if TMP423_ENABLED == 1
-
-uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
-uint8_t addr[13] = {0x00,0x01,0x02,0x03,0x08,0x09,0xA,0x0B,0x10,0x11,0x12,0x13,0xFE};
-
 int burst_board_temper_get_pp(void){
 	burst_signal_t s =  board.temper.A +  board.temper.B +  board.temper.C;
 	board.temper.mean = s_mult(s, BURST_SIGNAL_T(1.0/3));
 	return board.temper.mean;
 }
+#else
+int burst_board_temper_get_pp(void){
+	return board.temper.raw;
+}
+#endif
+	
+#if TMP423_ENABLED == 1
+
+uint8_t tables[13] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+uint8_t addr[13] = {0x00,0x01,0x02,0x03,0x08,0x09,0xA,0x0B,0x10,0x11,0x12,0x13,0xFE};
+
 
 int ix = 13;
 
@@ -120,6 +127,12 @@ void burst_sw_frontend_loop(void){
 			}
 		}
 	}
+	#if BURST_PANICS_BOARD_TEMPER_ENABLED == 1
+	#if TMP423_ENABLED  == 0
+	board.temper.dg= K1_BOARD_TEMPER_PP_TO_GRAD(board.temper.raw);
+	#endif
+	#endif
+
 	#if BURST_PANICS_BOARD_VOLTAGE_ENABLED == 1
 	board.voltage.mVolt = K1_BOARD_VOLTAGE_PP_TO_MVOLT(board.voltage.raw);
 	#endif
@@ -255,6 +268,21 @@ int burst_board_voltage_get_pp(void){
 	return board.voltage.raw;
 }
 #endif
+
+uint8_t swt_phy_sector_get(void){	
+	burst_signal_t angle ;
+	if(angle_forcer.ref.electro.speed>1 && angle_forcer.ref.electro.speed<-1){
+		angle = angle_forcer.ref.electro.angle;
+	} else{
+		angle = hall.angle;		
+	}
+	if(angle>0){
+		return ((6L * angle+32768)>>16) ;
+	} else {
+		return 6-((-6L * angle+32768)>>16) ;
+	}
+}
+
 
 #if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
 int burst_board_current_get_pp(void){

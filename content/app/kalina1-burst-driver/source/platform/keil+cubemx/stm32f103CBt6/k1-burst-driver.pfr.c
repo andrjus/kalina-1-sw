@@ -399,10 +399,11 @@ void swt_phy_C_on(uint16_t _pwm){
 	TIM1->CCR1 = _pwm;
 	TIM1->CCER |= 0x1005;
 }
-
+/*
 uint8_t swt_phy_sector_get(void){
 	return hall.sector;
 }
+*/
 
 
 #endif

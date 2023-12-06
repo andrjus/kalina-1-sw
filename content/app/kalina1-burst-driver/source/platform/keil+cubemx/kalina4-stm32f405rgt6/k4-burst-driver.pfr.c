@@ -72,7 +72,8 @@ void burst_hw_frontend_loop(void){
 		k1_serial_send_packet((uint8_t *)tmp,14);
 	}
 	#endif
-	temper.dg.board = K1_BOARD_TEMPER_PP_TO_GRAD(temper.raw.board);
+	
+	//temper.dg.board = K1_BOARD_TEMPER_PP_TO_GRAD(temper.raw.board);
 
 }
 
@@ -368,10 +369,10 @@ void ADC_IRQHandler(void)
 	__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOC);
 	//__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOS);
 	 adc_raw[1] = hadc1.Instance->JDR1;//B
-	 temper.raw.board = hadc1.Instance->JDR2;
-	 voltage.raw = hadc1.Instance->JDR3;
+	board.temper.raw = hadc1.Instance->JDR2;
+//	voltage.raw = hadc1.Instance->JDR3;
 	 adc_raw[0] = hadc2.Instance->JDR1;//A
-		voltage.raw = hadc2.Instance->JDR2;
+	board.voltage.raw = hadc2.Instance->JDR2;
 	 //adc_raw[4] = hadc2.Instance->JDR3;
 	 adc_raw[2] = hadc3.Instance->JDR1;//C
 	 
@@ -515,13 +516,14 @@ void burst_hw_on_crash(void){
 int critical_ = 0;	
 burst_guard_op_t burst_hw_critical_enter(void){
 	critical_++;
-	return  burst_guard_op_run;
+		uint32_t prim = __get_PRIMASK();
+	__disable_irq();
+	return prim == 0? burst_guard_op_run : burst_guard_op_skip;	
 }
 
 void burst_hw_critical_leave(void){
 	critical_ --;
-	if(critical_<=0){
-	}
+	__enable_irq();
 }
 
 burst_guard_op_t burst_hw_guard_enter(void){
@@ -543,101 +545,72 @@ void burst_hw_guard_unlock(void){
 	__enable_irq();
 }
 
+volatile struct{
+	int16_t A;
+	int16_t B;
+	int16_t C;
+} swt_pwm;
 
-void swt_phy_A_set_pwm(int16_t _pwm){
-	if(_pwm>=0){
-		TIM1->CCR2 = _pwm;
-	} else{
-		TIM1->CCR2 =  K1_PWM_MODULO-1 + _pwm;
-	}
+void swt_phy_A_set_pwm(uint16_t _pwm){
+	TIM1->CCR2 = _pwm;
+	swt_pwm.A = _pwm;
 }
 
-void swt_phy_B_set_pwm(int16_t _pwm){
-	if(_pwm>=0){
-		TIM1->CCR3 = _pwm;
-	} else {
-		TIM1->CCR3 = K1_PWM_MODULO-1 + _pwm;
-	}
+void swt_phy_B_set_pwm(uint16_t _pwm){
+	TIM1->CCR3 = _pwm;
+	swt_pwm.B = _pwm;
 }
-void swt_phy_C_set_pwm(int16_t _pwm){
-	if(_pwm>=0){
-		TIM1->CCR1 = _pwm;	
-	} else{
-		TIM1->CCR1 = K1_PWM_MODULO-1 + _pwm;	
-	}
+void swt_phy_C_set_pwm(uint16_t _pwm){
+	TIM1->CCR1 = _pwm;	
+	swt_pwm.C = _pwm;
 }
 void swt_phy_A_set_lo(void){
 	TIM1->CCR2 = 0;
 	TIM1->CCER |= 0x1050;
+	swt_pwm.A = 0;
 }
 void swt_phy_B_set_lo(void){
 	TIM1->CCR3 = 0;
 	TIM1->CCER |= 0x1500;
+	swt_pwm.B = 0;
 }
 void swt_phy_C_set_lo(void){
 	TIM1->CCR1 = 0;	
 	TIM1->CCER |= 0x1005;
-}
-void swt_phy_A_set_hi(void){
-	TIM1->CCR2 = K1_PWM_MODULO-1;
-	TIM1->CCER |= 0x1050;
-}
-void swt_phy_B_set_hi(void){
-	TIM1->CCR3 = K1_PWM_MODULO-1;
-	TIM1->CCER |= 0x1500;
-}
-void swt_phy_C_set_hi(void){
-	TIM1->CCR1 = K1_PWM_MODULO-1;	
-	TIM1->CCER |= 0x1005;
+	swt_pwm.C = 0;
 }
 
 void swt_phy_A_off(void){
 	TIM1->CCR2 = 0;	
 	TIM1->CCER &= ~0x050;
+	swt_pwm.A = -100;
 }
 void swt_phy_B_off(void){
 	TIM1->CCR3 = 0;	
 	TIM1->CCER &= ~0x500;
+	swt_pwm.B = -100;
 }
 void swt_phy_C_off(void){
 	TIM1->CCR1 = 0;	
 	TIM1->CCER &= ~0x005;
+	swt_pwm.C = -100;
 }
 
-void swt_phy_A_on(int16_t _pwm){
-	if(_pwm>=0){
-		TIM1->CCR2 = _pwm;
-	} else {
-		TIM1->CCR2 = K1_PWM_MODULO-1 +_pwm;
-	}
+void swt_phy_A_on(uint16_t _pwm){
+	TIM1->CCR2 = _pwm;
 	TIM1->CCER |= 0x1050;
+	swt_pwm.A = _pwm;
 }
-void swt_phy_B_on(int16_t _pwm){
-	if(_pwm>=0){
-		TIM1->CCR3 = _pwm;
-	} else {
-		TIM1->CCR3 = K1_PWM_MODULO-1 +_pwm;
-	}
+void swt_phy_B_on(uint16_t _pwm){
+	TIM1->CCR3 = _pwm;
 	TIM1->CCER |= 0x1500;
+	swt_pwm.B = _pwm;
 }
-void swt_phy_C_on(int16_t _pwm){
-	if(_pwm>=0){
-		TIM1->CCR1 = _pwm;
-	} else{
-		TIM1->CCR1 = K1_PWM_MODULO-1 +_pwm;
-	}
+void swt_phy_C_on(uint16_t _pwm){
+	TIM1->CCR1 = _pwm;
 	TIM1->CCER |= 0x1005;
+	swt_pwm.C = _pwm;
 }
 
-uint8_t swt_phy_sector_get(void){
-	return hall.sector;
-}
 
-int burst_board_temper_get_pp(void){
-	return temper.raw.board;
-}
-
-int burst_board_voltage_get_pp(void){
-	return voltage.raw;
-}
 #endif

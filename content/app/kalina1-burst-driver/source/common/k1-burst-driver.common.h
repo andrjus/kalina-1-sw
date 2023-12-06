@@ -19,9 +19,11 @@
 #endif
 
 
-#define K1_MOTOR_CURRENT_PP_TO_MAMPER(pp) ((burst_signal_t)(((burst_long_signal_t)(K1_MOTOR_CURRENT_PP_TO_MAMPER_GAIN_15*pp))>>15))
-#define K1_MOTOR_CURRENT_MAMPER_TO_PP(ma) ((burst_signal_t)(((burst_long_signal_t)(K1_MOTOR_CURRENT_MAMPER_TO_PP_GAIN_15*ma))>>15))
+#define K1_MOTOR_CURRENT_PP_TO_A(pp) ((burst_signal_t)(((burst_long_signal_t)(K1_MOTOR_CURRENT_PP_TO_A_GAIN_15*pp))>>15))
+#define K1_MOTOR_CURRENT_A_TO_PP(a) ((burst_signal_t)(((burst_long_signal_t)(K1_MOTOR_CURRENT_A_TO_PP_GAIN_15*a))>>15))
 
+#define K1_MOTOR_CURRENT_PP_TO_MA(pp) ((burst_signal_t)(((burst_long_signal_t)(K1_MOTOR_CURRENT_PP_TO_MA_GAIN_10*pp))>>10))
+#define K1_MOTOR_CURRENT_MA_TO_PP(ma) ((burst_signal_t)(((burst_long_signal_t)(K1_MOTOR_CURRENT_MA_TO_PP_GAIN_10*ma))>>10))
 
 #ifndef K1_BOARD_TEMPER_PP_TO_GRAD
 #define K1_BOARD_TEMPER_PP_TO_GRAD( pp )\
