@@ -97,13 +97,12 @@ void HardFault_Handler(void)
     /* USER CODE END W1_HardFault_IRQn 0 */
   }
 }
-static volatile int tut = 0;
+
 /**
   * @brief This function handles Memory management fault.
   */
 void MemManage_Handler(void)
 {
-	tut = 777;
   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
 	burst_crash();
   /* USER CODE END MemoryManagement_IRQn 0 */

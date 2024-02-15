@@ -4,7 +4,7 @@
 #error error of using k1-nh.prf.config.hpp
 #endif
 
-#define K1_CPU_FREQ_HZ 168000000LL
+#define K1_CPU_FREQ_HZ 72000000LL
 #define K1_ADC_CURRENT_SENCE_TIME_US 2
 #define K1_DEAD_TIME 64
 //#define K1_CURRENT_SENCE_ENABLED 0

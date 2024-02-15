@@ -175,12 +175,12 @@ uint8_t  fm_space(void){
 }
 
 uint8_t fm_get(void){ 
-	return fmincom_get();
+	return fmincom_get_();
 }
 
 
 void fm_put(uint8_t _data){
-	fmoutcom_put(_data);
+	fmoutcom_put_(_data);
 }
 
 burst_size_t fm_getb(uint8_t* _buf, burst_size_t _max_sz){

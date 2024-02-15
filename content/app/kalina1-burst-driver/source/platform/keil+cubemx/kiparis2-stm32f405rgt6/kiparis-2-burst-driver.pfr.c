@@ -63,7 +63,7 @@ void burst_hw_start(void){
 
 burst_bool_t serialComDone = burst_true;
 void burst_hw_frontend_loop(void){
-	temper.dg.board = K1_BOARD_TEMPER_PP_TO_GRAD(temper.raw.board);
+	board.temper.dg = K1_BOARD_TEMPER_PP_TO_GRAD(board.temper.raw);
 }
 
 hall_pins_t hall_pins;
@@ -101,10 +101,10 @@ void ADC_IRQHandler(void)
 	__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOC);
 	//__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOS);
 	 adc_raw[1] = hadc1.Instance->JDR1;//B
-	 temper.raw.board = hadc1.Instance->JDR2;
+	 board.temper.raw = hadc1.Instance->JDR2;
 	 vref_raw = hadc1.Instance->JDR3;
 	 //adc_raw[2] = hadc2.Instance->JDR1;//C
-	 voltage.raw = hadc2.Instance->JDR2;
+	 board.voltage.raw = hadc2.Instance->JDR2;
 	 adc_raw[0] = hadc3.Instance->JDR1;//A
 	 adc_raw[2] = 2048*3 - adc_raw[1] - adc_raw[0];
 	 
@@ -325,15 +325,6 @@ void swt_phy_C_on(uint16_t _pwm){
 	TIM1->CCER |= 0x1500;
 }
 
-uint8_t swt_phy_sector_get(void){
-	return hall.sector;
-}
 
-int burst_board_temper_get_pp(void){
-	return temper.raw.board;
-}
 
-int burst_board_voltage_get_pp(void){
-	return voltage.raw;
-}
 #endif
