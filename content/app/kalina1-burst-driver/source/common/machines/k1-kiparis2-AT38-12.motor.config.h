@@ -4,8 +4,8 @@
 #error error of using k1-kiparis2-AT38-12.motor.config.h
 #endif
 
-#define K1_PWM_PERIOD_US 25L
-#define K1_PWM_TIMER_PRESC 1
+#define K1_PWM_PERIOD_US 12L
+#define K1_PWM_TIMER_PRESC 2
 
 #define c_cross_flt_SHIFT												5
 #define c_cross_flt_PRESC_SHIFT									5
@@ -59,3 +59,5 @@
 #endif
  
 #define  BURST_APP_PMSM_BLDC_ENABLED 1
+
+//#define  hall_EXTRA_MODE hall_extra_mode_regress
