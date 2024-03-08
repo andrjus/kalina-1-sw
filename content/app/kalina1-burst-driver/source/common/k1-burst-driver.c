@@ -9,7 +9,7 @@ void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
 board_t board = {};
-	
+#if K1_BOARD_COMMON_VER <2
 #if TMP423_ENABLED == 1
 int burst_board_temper_get_pp(void){
 	burst_signal_t s =  board.temper.A +  board.temper.B +  board.temper.C;
@@ -45,7 +45,6 @@ void TMP423_confirm_callback(burst_bool_t _r){
 	}
 }
 
-
 burst_run_t temp_poll_(void){
 	if(ix ==13){
 		if(TMP423_ready()){
@@ -64,6 +63,7 @@ burst_timer_t temp_poll ={
 	,0
 	,0
 };
+#endif
 #endif
 
 void burst_sw_start(void){	
@@ -92,7 +92,6 @@ static uint16_t sqrt_test_y0 = 0;
 void burst_sw_backend_loop(void){		
 	pmsm_hall_app_backend_loop();
 	fm_recorder();
-	fm_poll();
 //	machine();
 	#if 0
 	sqrt_test_y0++;
@@ -109,8 +108,11 @@ void burst_sw_backend_loop(void){
 int synchro_test_enable = 0;
 int synchro_test_level = 10000000;
 void burst_sw_frontend_loop(void){
+	fm_poll();
 	pmsm_hall_app_frontend_loop();
+	#if K1_BOARD_SERIAL_ENABLED
 	k1_serial_pool();
+	#endif
 	static burst_time_us_t us = 0;
 	burst_time_us_t now = burst_time_us();
 	if(synchro_test_enable){
@@ -127,6 +129,8 @@ void burst_sw_frontend_loop(void){
 			}
 		}
 	}
+	
+	#if K1_BOARD_COMMON_VER <2
 	#if BURST_PANICS_BOARD_TEMPER_ENABLED == 1
 	#if TMP423_ENABLED  == 0
 	board.temper.dg= K1_BOARD_TEMPER_PP_TO_GRAD(board.temper.raw);
@@ -139,6 +143,7 @@ void burst_sw_frontend_loop(void){
 
 	#if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
 	board.current.mA = K1_BOARD_CURRENT_PP_TO_MAMPER(board.current.raw);
+	#endif
 	#endif
 
 }
@@ -154,6 +159,7 @@ void burst_sw_slot_2(void){
 	pmsm_hall_app_control_step_3();
 }
 
+#if K1_BOARD_SERIAL_ENABLED
 #define RING_PREFIX_NAME fmincom
 #define RING_SIZE_BITS 7
 #define RING_LOCK() uint32_t context = burst_guard_enter();
@@ -200,12 +206,14 @@ void k1_serial_receive_packet(const uint8_t * _data, uint8_t _sz){
 
 uint8_t k1_serial_tx_buffer[K1_SERIAL_SIZE];
 burst_bool_t sending=burst_false;
-uint32_t serial_tx_sz=0;
+uint32_t k1_serial_tx_sz;
+burst_time_us_t k1_serial_timeout_tx;
+
 void fmserial_try_send(void){
-	serial_tx_sz = fmoutcom_buf_get(k1_serial_tx_buffer,K1_SERIAL_SIZE);
-	if(serial_tx_sz){
+	k1_serial_tx_sz = fmoutcom_buf_get(k1_serial_tx_buffer,K1_SERIAL_SIZE);
+	if(k1_serial_tx_sz){
 		sending=burst_true;
-		k1_serial_send_packet( k1_serial_tx_buffer , serial_tx_sz );			
+		k1_serial_timeout_tx = k1_serial_send_packet( k1_serial_tx_buffer , k1_serial_tx_sz );			
 	} 
 }
 
@@ -232,12 +240,13 @@ void k1_serial_pool(void){
 
 		tm = now;
 	}else{
-		if( d> serial_tx_sz*3400 ){
+		if( d> k1_serial_timeout_tx ){
 			k1_serial_aborttx();
 			tm = now;
 		}
 	}
 }
+#endif
 
 #if TMP423_ENABLED == 1
 

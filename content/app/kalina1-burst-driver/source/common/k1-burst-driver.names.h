@@ -34,3 +34,12 @@
 #ifdef K1_TAG_KIPARIS_2_AT_38_12
 #define K1_MOTOR_CONFIG "machines/k1-kiparis2-AT38-12.motor.config.h"
 #endif
+
+
+#ifdef K1_TAG_BOARD_KALINA_V
+#define K1_PFR_CONFIG "machines/k1-kalina-v.pfr.config.h"
+#endif
+
+#ifdef K1_TAG_KALINA_V_MYTECH_8085_HA_CCE
+#define K1_MOTOR_CONFIG "machines/k1-kalina-v-MYTECH-8085-HA-CCE.motor.config.h"
+#endif
