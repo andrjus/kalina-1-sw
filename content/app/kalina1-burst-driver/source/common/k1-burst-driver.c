@@ -9,6 +9,17 @@ void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
 board_t board = {};
+int burst_board_temper_get_hi_pp(void){
+	return board.temper.hi;
+}
+int burst_board_temper_get_lo_pp(void){
+	return board.temper.lo;
+}
+
+int burst_board_voltage_get_pp(void){
+	return (655L * board.voltage.in.cVolt + 32767)>>16; //деление на 100 с окуруглением
+}
+
 #if K1_BOARD_COMMON_VER <2
 #if TMP423_ENABLED == 1
 int burst_board_temper_get_pp(void){
@@ -66,18 +77,55 @@ burst_timer_t temp_poll ={
 #endif
 #endif
 
+#if K1_BOARD_COMMON_VER == 2
+burst_serial_p fm_serial_ = 
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_1
+&serial1.serial
+#endif
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_2
+&serial2.serial
+#endif
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_3
+&serial3.serial
+#endif
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_OV_FLOW_PROTO
+&burst_net_flow_serial
+#endif
+;
+uint8_t	fm_available(void){
+	return fm_serial_->available() ? 1:0; 
+}
+uint8_t	fm_space(void){
+	return  fm_serial_->space()?1:0; 
+}
+uint8_t	fm_get(void){
+	return  fm_serial_->get(); 
+}
+void		fm_put(uint8_t _data){
+	fm_serial_->put(_data);
+}
+#endif
+
 void burst_sw_start(void){	
 	adc_start();
 	while( adc.ready == burst_false ){
 		BURST_NOP();
 	}	
+	adc_tot_offset = adc.offset[0]+adc.offset[1]+adc.offset[2];
+	if( motor.cross.ac.ref.panic == 2){
+		if( burst_core_panics() == 1<<4 ){
+			burst_core_reset_panics();
+		}
+	}
 	pmsm_hall_app_start();
 	#if TMP423_ENABLED == 1
 	TMP423_start();
 	burst_timer_start(&temp_poll);
 	#endif
 	burst_sqrt_init();
-
+	#if K1_BOARD_NET_FLOW_ENABLED
+	k1_proto_servo_begin();
+	#endif
 }
 
 void burst_sw_realtime_loop(void){	
@@ -89,9 +137,17 @@ static uint32_t sqrt_test_x = 0;
 static volatile uint16_t sqrt_test_y = 0;
 static uint16_t sqrt_test_y0 = 0;
 #endif
+#if 1
+static uint16_t temper_test_pp = 0;
+static volatile burst_signal_t temper_test_dg = 0;
+#endif
+#define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
+#define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
+
 void burst_sw_backend_loop(void){		
 	pmsm_hall_app_backend_loop();
 	fm_recorder();
+	fm_poll();
 //	machine();
 	#if 0
 	sqrt_test_y0++;
@@ -103,15 +159,56 @@ void burst_sw_backend_loop(void){
 	sqrt_test_y = burst_sqrt(sqrt_test_x);
 	debug_tp_off(112);
 	#endif
+	#if 1
+	temper_test_pp++;
+	if(temper_test_pp>4100){
+		temper_test_pp = 0;
+	}
+	temper_test_dg = temper_ABC_from_pp((burst_signal_t)temper_test_pp);
+	#endif
+	board.temper.lo = +32767;
+	board.temper.hi = -32767;
+	#if BOARD_TEMPER_SENCE_ABC_ENABLED		
+	board.temper.ps.A.dgC = temper_ABC_from_pp((burst_signal_t)board.temper.ps.A.raw);
+	board.temper.ps.B.dgC = temper_ABC_from_pp((burst_signal_t)board.temper.ps.B.raw);
+	board.temper.ps.C.dgC = temper_ABC_from_pp((burst_signal_t)board.temper.ps.C.raw);
+	board.temper.hi = MAX(
+		MAX(board.temper.ps.A.dgC,board.temper.ps.B.dgC)
+		,MAX(board.temper.ps.C.dgC,board.temper.hi)
+	);
+	board.temper.lo = MIN(
+		MIN(board.temper.ps.A.dgC,board.temper.ps.B.dgC)
+		,MIN(board.temper.ps.C.dgC,board.temper.lo)
+	);
+	#endif
+	#if BOARD_TEMPER_SENCE_MK_ENABLED		
+	board.temper.mk.dgC = temper_MK_from_pp((burst_signal_t)board.temper.mk.raw);
+	if(board.temper.hi<board.temper.mk.dgC){
+		board.temper.hi = board.temper.mk.dgC;
+	}
+	if(board.temper.lo > board.temper.mk.dgC){
+		board.temper.lo = board.temper.mk.dgC;
+	}
+	#endif
+	#if BOARD_TEMPER_SENCE_Z_ENABLED		
+	if(board.temper.max<board.temper.Z.dgC){
+		board.temper.max = board.temper.Z.dgC;
+	}
+	if(board.temper.min > board.temper.Z.dgC){
+		board.temper.min = board.temper.Z.dgC;
+	}
+	#endif
+	#if BOARD_VOLTAGE_SENCE_ENABLED
+	 board.voltage.in.cVolt = K1_BOARD_VOLTAGE_PP_TO_CVOLT( board.voltage.in.raw);
+	#endif  
 }
 
 int synchro_test_enable = 0;
 int synchro_test_level = 10000000;
 void burst_sw_frontend_loop(void){
-	fm_poll();
 	pmsm_hall_app_frontend_loop();
-	#if K1_BOARD_SERIAL_ENABLED
-	k1_serial_pool();
+	#if K1_BOARD_SERIAL_1_ENABLED
+	serial1.pool();
 	#endif
 	static burst_time_us_t us = 0;
 	burst_time_us_t now = burst_time_us();
@@ -138,7 +235,7 @@ void burst_sw_frontend_loop(void){
 	#endif
 
 	#if BURST_PANICS_BOARD_VOLTAGE_ENABLED == 1
-	board.voltage.mVolt = K1_BOARD_VOLTAGE_PP_TO_MVOLT(board.voltage.raw);
+	board.voltage.mVolt = K1_BOARD_VOLTAGE_PP_TO_CVOLT(board.voltage.raw);
 	#endif
 
 	#if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
@@ -147,6 +244,42 @@ void burst_sw_frontend_loop(void){
 	#endif
 
 }
+
+#if K1_BOARD_NET_FLOW_ENABLED
+#include "k1-burst-servo.proto.h"
+#include "burst/net/flow_serial.h"
+
+void burst_net_flow_sended(uint8_t _suba){
+	switch(_suba){
+		case k1_proto_cmd_serial:
+		{
+			uint8_t * outcom = burst_net_flow_outcom_get(k1_proto_cmd_serial,8);
+			if(outcom){
+				uint8_t tmp = burst_net_flow_serial_execute(0,0, outcom,8);
+				if(tmp>0){
+					burst_net_flow_outcom_post(k1_proto_cmd_serial,tmp);
+				}
+			}			
+		} break;	
+	}
+}
+
+void burst_net_flow_perform(uint8_t _suba,const uint8_t * _data, uint8_t _sz){
+	switch(_suba){		
+		case k1_proto_cmd_serial:
+		{
+			uint8_t * outcom = burst_net_flow_outcom_get(k1_proto_cmd_serial,8);
+			if(outcom){
+				uint8_t tmp = burst_net_flow_serial_execute(_data,_sz, outcom,8);
+				if(tmp>0){
+					burst_net_flow_outcom_post(k1_proto_cmd_serial,tmp);
+				}
+			}			
+		} break;	
+	}
+}
+
+#endif
 
 void burst_sw_slot_0(void){
 	pmsm_hall_app_control_step_1();
@@ -159,7 +292,28 @@ void burst_sw_slot_2(void){
 	pmsm_hall_app_control_step_3();
 }
 
-#if K1_BOARD_SERIAL_ENABLED
+uint8_t swt_phy_sector_get(void){	
+	/*
+	burst_signal_t angle ;
+	if(angle_forcer.ref.electro.speed>1 || angle_forcer.ref.electro.speed<-1){
+		angle = angle_forcer.ref.electro.angle;
+	} else{
+		angle = hall.angle;		
+	}
+	if(angle>0){
+		return ((6L * angle+32768)>>16) ;
+	} else {
+		return 6-((-6L * angle+32768)>>16) ;
+	}
+	*/
+	return hall.sector;
+}
+
+
+#if K1_BOARD_COMMON_VER >=2
+
+#else
+#if K1_BOARD_SERIAL_1_ENABLED
 #define RING_PREFIX_NAME fmincom
 #define RING_SIZE_BITS 7
 #define RING_LOCK() uint32_t context = burst_guard_enter();
@@ -278,25 +432,13 @@ int burst_board_voltage_get_pp(void){
 }
 #endif
 
-uint8_t swt_phy_sector_get(void){	
-	burst_signal_t angle ;
-	if(angle_forcer.ref.electro.speed>1 && angle_forcer.ref.electro.speed<-1){
-		angle = angle_forcer.ref.electro.angle;
-	} else{
-		angle = hall.angle;		
-	}
-	if(angle>0){
-		return ((6L * angle+32768)>>16) ;
-	} else {
-		return 6-((-6L * angle+32768)>>16) ;
-	}
-}
 
 
 #if BURST_PANICS_BOARD_CURRENT_ENABLED == 1
 int burst_board_current_get_pp(void){
 	return board.current.raw;
 }
+#endif
 #endif
 
 #if 0

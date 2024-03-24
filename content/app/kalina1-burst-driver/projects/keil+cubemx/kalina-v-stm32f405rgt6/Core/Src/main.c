@@ -19,6 +19,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "can.h"
+#include "dma.h"
 #include "tim.h"
 #include "gpio.h"
 
@@ -87,10 +89,13 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM1_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_ADC3_Init();
+  MX_CAN1_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 	burst_begin();
 	burst_start();
@@ -100,6 +105,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		burst_frontend_loop();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
