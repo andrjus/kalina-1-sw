@@ -59,5 +59,5 @@
 #endif
  
 #define  BURST_APP_PMSM_BLDC_ENABLED 1
-
+#define  BURST_PANICS_BOARD_RESET_TIMEOUT_PP 0
 //#define  hall_EXTRA_MODE hall_extra_mode_regress

@@ -1,5 +1,5 @@
 #include "k1-burst-driver.h"
-#ifdef K1_TAG_BOARD_NH
+#if defined( K1_TAG_BOARD_NH) || defined( K1_TAG_AT)
 //#include "k1-burst-driver.h"
 #include "tim.h"
 #include "usart.h"
@@ -375,7 +375,7 @@ void ADC_IRQHandler(void)
 	board.voltage.raw = hadc2.Instance->JDR2;
 	 //adc_raw[4] = hadc2.Instance->JDR3;
 	 adc_raw[2] = hadc3.Instance->JDR1;//C
-	 
+	 //adc_raw[2] = 4096 -   hadc2.Instance->JDR1 - hadc1.Instance->JDR1;
 
 	adc_update(&adc,adc_raw);
 	burst_realtime_loop();
@@ -455,15 +455,17 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 		#endif
 	}
 }
-
-void k1_serial_send_packet(uint8_t * _data, uint8_t _sz){
+uint32_t adc_tot_offset = 0;
+burst_time_us_t k1_serial_send_packet(uint8_t * _data, uint8_t _sz){
 	ON(RS485_REDE);
 	if( HAL_UART_Transmit_DMA(&huart3,_data,_sz) != HAL_OK ) {
 		OFF(RS485_REDE);
 		serialComDone = burst_true;
 		k1_serial_send_refuse();
+		return 0;
 	} else {
 		serialComDone = burst_false;
+		return 200*_sz;
 	}
 }
 
@@ -471,6 +473,7 @@ void k1_serial_aborttx(void){
 	HAL_UART_AbortTransmit(&huart3);
 	serialComDone = burst_true;
 	k1_serial_send_refuse();
+	k1_serial_start_receive();
 }
 
 

@@ -188,14 +188,16 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	}
 }
 
-void k1_serial_send_packet(uint8_t * _data, uint8_t _sz){
+burst_time_us_t k1_serial_send_packet(uint8_t * _data, uint8_t _sz){
 	ON(DE);
 	if( HAL_UART_Transmit_DMA(&huart3,_data,_sz) != HAL_OK ) {
 		OFF(DE);
 		serialComDone = burst_true;
 		k1_serial_send_refuse();
+		return 0;
 	} else {
 		serialComDone = burst_false;
+		return 200*_sz;
 	}
 }
 
@@ -203,6 +205,7 @@ void k1_serial_aborttx(void){
 	HAL_UART_AbortTransmit(&huart3);
 	serialComDone = burst_true;
 	k1_serial_send_refuse();
+	k1_serial_start_receive();
 }
 
 
@@ -225,7 +228,7 @@ burst_satstate_t power_do_invert(void){
 	TIM1->CCR3 = motor.inverter.duty.C;
 	return burst_satstate_none;
 }
-
+uint32_t adc_tot_offset = 0;
 void power_shutdown_begin(void){
 	TIM1->CCER = 0x1000;
 	//					HAL_TIM_PWM_Stop(&htim1,TIM_CHANNEL_1);

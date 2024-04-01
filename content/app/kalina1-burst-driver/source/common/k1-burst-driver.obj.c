@@ -7,7 +7,7 @@
 #define CLCH_NAME TMP423
 #include "burst/cliche/net_master.h"
 #endif
-
+#if K1_BOARD_COMMON_VER >=2
 #if K1_BOARD_SERIAL_1_ENABLED
 #define CLCH_NAME serial1
 #include "burst/cliche/net_serial_servo.h"
@@ -32,3 +32,4 @@
 #include "burst/cliche/lookuptable.h"
 #endif
 
+#endif

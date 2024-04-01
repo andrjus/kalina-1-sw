@@ -9,6 +9,8 @@ void burst_sw_begin(void){
 	pmsm_hall_app_begin(&k1_config, &pmsma, &feedback);
 }
 board_t board = {};
+#if K1_BOARD_COMMON_VER >=2
+
 int burst_board_temper_get_hi_pp(void){
 	return board.temper.hi;
 }
@@ -19,6 +21,18 @@ int burst_board_temper_get_lo_pp(void){
 int burst_board_voltage_get_pp(void){
 	return (655L * board.voltage.in.cVolt + 32767)>>16; //деление на 100 с окуруглением
 }
+#else
+	int burst_board_temper_get_hi_pp(void){
+	return board.temper.dg;
+}
+int burst_board_temper_get_lo_pp(void){
+	return board.temper.dg;
+}
+
+int burst_board_voltage_get_pp(void){
+	return (66L * board.voltage.mVolt + 32767)>>16; //деление на 1000 с окуруглением
+}
+#endif
 
 #if K1_BOARD_COMMON_VER <2
 #if TMP423_ENABLED == 1
@@ -77,7 +91,7 @@ burst_timer_t temp_poll ={
 #endif
 #endif
 
-#if K1_BOARD_COMMON_VER == 2
+#if K1_BOARD_COMMON_VER >= 2
 burst_serial_p fm_serial_ = 
 #if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_1
 &serial1.serial
@@ -137,10 +151,6 @@ static uint32_t sqrt_test_x = 0;
 static volatile uint16_t sqrt_test_y = 0;
 static uint16_t sqrt_test_y0 = 0;
 #endif
-#if 1
-static uint16_t temper_test_pp = 0;
-static volatile burst_signal_t temper_test_dg = 0;
-#endif
 #define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 #define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
 
@@ -159,7 +169,10 @@ void burst_sw_backend_loop(void){
 	sqrt_test_y = burst_sqrt(sqrt_test_x);
 	debug_tp_off(112);
 	#endif
+	#if K1_BOARD_COMMON_VER >= 2
 	#if 1
+	static uint16_t temper_test_pp = 0;
+	static volatile burst_signal_t temper_test_dg = 0;
 	temper_test_pp++;
 	if(temper_test_pp>4100){
 		temper_test_pp = 0;
@@ -201,14 +214,19 @@ void burst_sw_backend_loop(void){
 	#if BOARD_VOLTAGE_SENCE_ENABLED
 	 board.voltage.in.cVolt = K1_BOARD_VOLTAGE_PP_TO_CVOLT( board.voltage.in.raw);
 	#endif  
+	#endif
 }
 
 int synchro_test_enable = 0;
 int synchro_test_level = 10000000;
 void burst_sw_frontend_loop(void){
 	pmsm_hall_app_frontend_loop();
+	#if K1_BOARD_COMMON_VER >= 2
 	#if K1_BOARD_SERIAL_1_ENABLED
 	serial1.pool();
+	#endif
+	#else
+	k1_serial_pool();
 	#endif
 	static burst_time_us_t us = 0;
 	burst_time_us_t now = burst_time_us();

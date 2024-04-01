@@ -43,3 +43,11 @@
 #ifdef K1_TAG_KALINA_V_MYTECH_8085_HA_CCE
 #define K1_MOTOR_CONFIG "machines/k1-kalina-v-MYTECH-8085-HA-CCE.motor.config.h"
 #endif
+
+#ifdef K1_TAG_AT
+#define K1_PFR_CONFIG "machines/k1-AT.pfr.config.h"
+#endif
+
+#ifdef K1_TAG_AT
+#define K1_MOTOR_CONFIG "machines/k1-AT.motor.config.h"
+#endif
