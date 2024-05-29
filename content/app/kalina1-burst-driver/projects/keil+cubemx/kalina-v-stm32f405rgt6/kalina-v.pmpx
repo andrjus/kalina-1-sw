@@ -5278,13 +5278,13 @@
 			<member name="type_fmt" type="string">Fixed point number</member>
 			<member name="bit_shift" type="sint32">0</member>
 			<member name="bit_mask" type="string">no mask (-1)</member>
-			<member name="value_trf" type="CObject_ptr">NULL</member>
+			<member name="value_trf" type="CObject_ptr">ObjId2833</member>
 			<member name="enum_enabled" type="sint32">0</member>
 			<member name="enum_num_always" type="sint32">0</member>
 			<member name="enum_default_val" type="string">unknown</member>
 			<member name="enum_num_with_default" type="sint32">1</member>
 			<member name="enum_list" type="CEnumDoubleToString">ObjId2101</member>
-			<member name="show_as" type="sint32">0</member>
+			<member name="show_as" type="sint32">4</member>
 			<member name="show_val" type="sint32">1</member>
 			<member name="show_max" type="sint32">0</member>
 			<member name="show_min" type="sint32">0</member>
@@ -5311,6 +5311,12 @@
 			<member name="modif_set_step" type="string"/>
 			<member name="modif_address" type="string"/>
 			<member name="modif_last_addr" type="uint32">0x0</member>
+		</object>
+		<object name="ObjId2833" type="CNumTrfLinAB">
+			<member name="a" type="string">0.2219</member>
+			<member name="b" type="string">0</member>
+			<member name="var_a" type="CObject_ptr">NULL</member>
+			<member name="var_b" type="CObject_ptr">NULL</member>
 		</object>
 		<object name="ObjId2101" type="CEnumDoubleToString">
 			<member name="enum_items" type="CObList">ObjId2102</member>
@@ -10809,7 +10815,7 @@
 			<member name="parent_item" type="CObject_ptr">ObjId0702</member>
 			<member name="name" type="string">temper</member>
 			<member name="href" type="string"/>
-			<member name="graph_buffer" type="sint32">1000</member>
+			<member name="graph_buffer" type="sint32">10000</member>
 			<member name="graph_type" type="sint32">0</member>
 			<member name="graph_x_units" type="sint32">2</member>
 			<member name="graph_x_label" type="string">Time</member>
@@ -10846,7 +10852,7 @@
 			<member name="yblock5_info" type="CPrjItemRS_YBlockInfo">ObjId1973</member>
 			<member name="scope_period" type="real64">1.00000000000000000000e-002</member>
 			<member name="scope_x_autoscale" type="sint32">1</member>
-			<member name="scope_x_width" type="real64">1.00000000000000000000e+001</member>
+			<member name="scope_x_width" type="real64">1.00000000000000000000e+003</member>
 		</object>
 		<object name="ObjId1960" type="CPrjItemRS_VarInfo">
 			<member name="variable" type="CObject_ptr">ObjId2100</member>
@@ -10859,7 +10865,7 @@
 			<member name="y_block" type="sint32">2</member>
 		</object>
 		<object name="ObjId1962" type="CPrjItemRS_VarInfo">
-			<member name="variable" type="CObject_ptr">NULL</member>
+			<member name="variable" type="CObject_ptr">ObjId2661</member>
 			<member name="visible" type="sint32">1</member>
 			<member name="y_block" type="sint32">3</member>
 		</object>

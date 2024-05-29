@@ -19,8 +19,8 @@
 			<member name="comm_params_saved" type="sint32">1</member>
 			<member name="comm_state_saved" type="sint32">0</member>
 			<member name="comm_state_enabled" type="sint32">1</member>
-			<member name="comm_port" type="sint32">34</member>
-			<member name="comm_port_hint" type="string">COM35</member>
+			<member name="comm_port" type="sint32">35</member>
+			<member name="comm_port_hint" type="string">COM36</member>
 			<member name="comm_speed" type="sint32">115200</member>
 			<member name="comm_plugin_use" type="sint32">0</member>
 			<member name="comm_plugin_id" type="string"/>
@@ -1090,7 +1090,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.duty.A</member>
-			<member name="last_addr" type="uint32">0x200025EC</member>
+			<member name="last_addr" type="uint32">0x200025F0</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">0</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1139,7 +1139,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.duty.B</member>
-			<member name="last_addr" type="uint32">0x200025EE</member>
+			<member name="last_addr" type="uint32">0x200025F2</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">0</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1188,7 +1188,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.duty.C</member>
-			<member name="last_addr" type="uint32">0x200025F0</member>
+			<member name="last_addr" type="uint32">0x200025F4</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">0</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1237,7 +1237,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.pwm.A</member>
-			<member name="last_addr" type="uint32">0x200025F2</member>
+			<member name="last_addr" type="uint32">0x200025F6</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1286,7 +1286,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.pwm.B</member>
-			<member name="last_addr" type="uint32">0x200025F4</member>
+			<member name="last_addr" type="uint32">0x200025F8</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1335,7 +1335,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.pwm.C</member>
-			<member name="last_addr" type="uint32">0x200025F6</member>
+			<member name="last_addr" type="uint32">0x200025FA</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1384,7 +1384,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.sensor.abc.A</member>
-			<member name="last_addr" type="uint32">0x20002620</member>
+			<member name="last_addr" type="uint32">0x20002624</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1433,7 +1433,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.sensor.abc.B</member>
-			<member name="last_addr" type="uint32">0x20002622</member>
+			<member name="last_addr" type="uint32">0x20002626</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1482,7 +1482,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.sensor.abc.C</member>
-			<member name="last_addr" type="uint32">0x20002624</member>
+			<member name="last_addr" type="uint32">0x20002628</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -1531,7 +1531,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.angle</member>
-			<member name="last_addr" type="uint32">0x2000260A</member>
+			<member name="last_addr" type="uint32">0x2000260E</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2237,7 +2237,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.sensor.dq.cross</member>
-			<member name="last_addr" type="uint32">0x20002632</member>
+			<member name="last_addr" type="uint32">0x20002636</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2286,7 +2286,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.sensor.dq.lateral</member>
-			<member name="last_addr" type="uint32">0x20002630</member>
+			<member name="last_addr" type="uint32">0x20002634</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2335,7 +2335,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.dq.cross</member>
-			<member name="last_addr" type="uint32">0x20002606</member>
+			<member name="last_addr" type="uint32">0x2000260A</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2384,7 +2384,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.dq.lateral</member>
-			<member name="last_addr" type="uint32">0x20002604</member>
+			<member name="last_addr" type="uint32">0x20002608</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2433,7 +2433,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.lateral.voltage.req</member>
-			<member name="last_addr" type="uint32">0x200025DC</member>
+			<member name="last_addr" type="uint32">0x200025E0</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2482,7 +2482,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.lateral.voltage.range.hi</member>
-			<member name="last_addr" type="uint32">0x200025E0</member>
+			<member name="last_addr" type="uint32">0x200025E4</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2531,7 +2531,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.lateral.voltage.range.lo</member>
-			<member name="last_addr" type="uint32">0x200025DE</member>
+			<member name="last_addr" type="uint32">0x200025E2</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2580,7 +2580,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.lateral.current.req</member>
-			<member name="last_addr" type="uint32">0x200025C8</member>
+			<member name="last_addr" type="uint32">0x200025CC</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2629,7 +2629,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.ac.voltage.req</member>
-			<member name="last_addr" type="uint32">0x2000254A</member>
+			<member name="last_addr" type="uint32">0x2000254E</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2678,7 +2678,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.ac.voltage.range.hi</member>
-			<member name="last_addr" type="uint32">0x2000254E</member>
+			<member name="last_addr" type="uint32">0x20002552</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2727,7 +2727,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.ac.voltage.range.lo</member>
-			<member name="last_addr" type="uint32">0x2000254C</member>
+			<member name="last_addr" type="uint32">0x20002550</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -2874,7 +2874,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.req</member>
-			<member name="last_addr" type="uint32">0x20002568</member>
+			<member name="last_addr" type="uint32">0x2000256C</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -3070,7 +3070,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.range.hi</member>
-			<member name="last_addr" type="uint32">0x2000256C</member>
+			<member name="last_addr" type="uint32">0x20002570</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -3119,7 +3119,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.range.lo</member>
-			<member name="last_addr" type="uint32">0x2000256A</member>
+			<member name="last_addr" type="uint32">0x2000256E</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -3168,7 +3168,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.lateral.current.range.hi</member>
-			<member name="last_addr" type="uint32">0x200025CC</member>
+			<member name="last_addr" type="uint32">0x200025D0</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -3217,7 +3217,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.lateral.current.range.lo</member>
-			<member name="last_addr" type="uint32">0x200025CA</member>
+			<member name="last_addr" type="uint32">0x200025CE</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -3266,7 +3266,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.ac.speed.req</member>
-			<member name="last_addr" type="uint32">0x20002550</member>
+			<member name="last_addr" type="uint32">0x20002554</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -4246,7 +4246,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.ac.position.req</member>
-			<member name="last_addr" type="uint32">0x2000255C</member>
+			<member name="last_addr" type="uint32">0x20002560</member>
 			<member name="byte_size" type="sint32">4</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -4295,7 +4295,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.ac.voltage.des</member>
-			<member name="last_addr" type="uint32">0x20002548</member>
+			<member name="last_addr" type="uint32">0x2000254C</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -4736,7 +4736,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.synchro.freq</member>
-			<member name="last_addr" type="uint32">0x200025E4</member>
+			<member name="last_addr" type="uint32">0x200025E8</member>
 			<member name="byte_size" type="sint32">4</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -5052,7 +5052,7 @@
 			<member name="type_fmt" type="string">Fixed point number</member>
 			<member name="bit_shift" type="sint32">0</member>
 			<member name="bit_mask" type="string">no mask (-1)</member>
-			<member name="value_trf" type="CObject_ptr">ObjId1862</member>
+			<member name="value_trf" type="CObject_ptr">ObjId2523</member>
 			<member name="enum_enabled" type="sint32">0</member>
 			<member name="enum_num_always" type="sint32">0</member>
 			<member name="enum_default_val" type="string">unknown</member>
@@ -5086,7 +5086,7 @@
 			<member name="modif_address" type="string"/>
 			<member name="modif_last_addr" type="uint32">0x0</member>
 		</object>
-		<object name="ObjId1862" type="CNumTrfLin2P">
+		<object name="ObjId2523" type="CNumTrfLin2P">
 			<member name="x1" type="string">0</member>
 			<member name="y1" type="string">0</member>
 			<member name="x2" type="string">32767</member>
@@ -5497,7 +5497,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.magnitude.us</member>
-			<member name="last_addr" type="uint32">0x200025C4</member>
+			<member name="last_addr" type="uint32">0x200025C8</member>
 			<member name="byte_size" type="sint32">4</member>
 			<member name="treat_as" type="sint32">0</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -5546,7 +5546,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.magnitude.delta</member>
-			<member name="last_addr" type="uint32">0x200025C2</member>
+			<member name="last_addr" type="uint32">0x200025C6</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -5595,7 +5595,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.magnitude.actual</member>
-			<member name="last_addr" type="uint32">0x200025C0</member>
+			<member name="last_addr" type="uint32">0x200025C4</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -5693,7 +5693,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.inverter.pwm_force</member>
-			<member name="last_addr" type="uint32">0x20002618</member>
+			<member name="last_addr" type="uint32">0x2000261C</member>
 			<member name="byte_size" type="sint32">4</member>
 			<member name="treat_as" type="sint32">0</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -5791,7 +5791,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.sensor.abc.B</member>
-			<member name="last_addr" type="uint32">0x20002622</member>
+			<member name="last_addr" type="uint32">0x20002626</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -5954,7 +5954,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">motor.cross.current.flt</member>
-			<member name="last_addr" type="uint32">0x200025B4</member>
+			<member name="last_addr" type="uint32">0x200025B8</member>
 			<member name="byte_size" type="sint32">4</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -6346,7 +6346,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">swt.pwm.requried</member>
-			<member name="last_addr" type="uint32">0x20002700</member>
+			<member name="last_addr" type="uint32">0x20002704</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -6542,7 +6542,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">swt.pwm.actual</member>
-			<member name="last_addr" type="uint32">0x20002702</member>
+			<member name="last_addr" type="uint32">0x20002706</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -6640,7 +6640,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">swt.pwm.actual32</member>
-			<member name="last_addr" type="uint32">0x20002704</member>
+			<member name="last_addr" type="uint32">0x20002708</member>
 			<member name="byte_size" type="sint32">4</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -7081,7 +7081,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">swt.current.requried</member>
-			<member name="last_addr" type="uint32">0x2000270A</member>
+			<member name="last_addr" type="uint32">0x2000270E</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -7130,7 +7130,7 @@
 			<member name="unit" type="string">unit</member>
 			<member name="period" type="sint32">1000</member>
 			<member name="address" type="string">swt.current.deseired</member>
-			<member name="last_addr" type="uint32">0x20002708</member>
+			<member name="last_addr" type="uint32">0x2000270C</member>
 			<member name="byte_size" type="sint32">2</member>
 			<member name="treat_as" type="sint32">1</member>
 			<member name="type_fmt" type="string">Fixed point number</member>
@@ -7445,9 +7445,9 @@
 			<member name="size_shift_right" type="sint32">0</member>
 		</object>
 		<object name="ObjId0016" type="CObList">
-			<member name="item0" type="CObject_ptr">ObjId2522</member>
+			<member name="item0" type="CObject_ptr">ObjId2524</member>
 		</object>
-		<object name="ObjId2522" type="CPrjDoc_MapFileInfo">
+		<object name="ObjId2524" type="CPrjDoc_MapFileInfo">
 			<member name="file_name" type="string">.\MDK-ARM\kiparis-2\kparys-2-AT38-12.axf</member>
 			<member name="file_type" type="CObject_ptr">ObjId0006</member>
 		</object>
@@ -8529,7 +8529,7 @@
 			<member name="var1_info" type="CPrjItemRS_VarInfo">ObjId0880</member>
 			<member name="var1_color" type="uint32">0x478C00</member>
 			<member name="var2_info" type="CPrjItemRS_VarInfo">ObjId0881</member>
-			<member name="var2_color" type="uint32">0xA95918</member>
+			<member name="var2_color" type="uint32">0xFF0000</member>
 			<member name="var3_info" type="CPrjItemRS_VarInfo">ObjId0882</member>
 			<member name="var3_color" type="uint32">0xFF</member>
 			<member name="var4_info" type="CPrjItemRS_VarInfo">ObjId0883</member>

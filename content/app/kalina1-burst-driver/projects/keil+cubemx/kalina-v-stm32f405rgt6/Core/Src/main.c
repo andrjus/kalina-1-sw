@@ -22,6 +22,7 @@
 #include "can.h"
 #include "dma.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -96,6 +97,7 @@ int main(void)
   MX_ADC3_Init();
   MX_CAN1_Init();
   MX_TIM3_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
 	burst_begin();
 	burst_start();

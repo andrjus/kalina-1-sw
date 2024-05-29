@@ -1,5 +1,5 @@
 #include "k1-burst-driver.h"
-#ifdef K1_TAG_BOARD_KALINA_V
+#if defined( K1_TAG_BOARD_KALINA_V ) || defined( K1_TAG_BOARD_KALINA_2C )
 #include "main.h"
 #include "tim.h"
 #include "adc.h"
@@ -187,10 +187,12 @@ void burst_hw_guard_leave(void){
 }
 
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan) {
+	#if K1_BOARD_NET_FLOW_ENABLED
 	uint8_t data[8];
 	CAN_RxHeaderTypeDef rcvHeader;      /* identifier of the received message */
 	HAL_CAN_GetRxMessage(hcan,CAN_RX_FIFO0,&rcvHeader,data);
 	burst_net_flow_receive(rcvHeader.StdId, data, rcvHeader.DLC);
+	#endif
 }
 
 void burst_net_flow_prf_sent(uint16_t _id, const uint8_t * _data, uint8_t _sz) {
@@ -210,7 +212,11 @@ void k1_proto_servo_begin(void){
 
 	FilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
 	FilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+	#if K1_BOARD_NET_FLOW_ENABLED
 	FilterConfig.FilterIdHigh = K1_BOARD_ADDRESS<<4<<5;
+	#else
+	FilterConfig.FilterIdHigh = 0xA<<4<<5;
+	#endif
 	FilterConfig.FilterIdLow = 0x0;
 	FilterConfig.FilterMaskIdHigh = 0xDF0<<5;
 	FilterConfig.FilterMaskIdLow = 0x0;
@@ -366,6 +372,26 @@ void swt_phy_C_on(uint16_t _pwm){
 	TIM1->CCR3 = _pwm;
 	TIM1->CCER |= 0x1500;
 }
+
+#if  K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_DIRRECT
+uint8_t	fm_available(void){
+	USART3 -> SR =( UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_PE | UART_FLAG_FE );
+	return (USART3->SR & UART_FLAG_RXNE) == UART_FLAG_RXNE ? 1:0; 
+}
+uint8_t	fm_space(void){
+	return (USART1->SR & UART_FLAG_TXE) == UART_FLAG_TXE?1:0; 
+}
+uint8_t	fm_get(void){
+	return USART1->DR; 
+}
+void		fm_put(uint8_t _data){
+		USART1->DR = _data;
+}
+#endif
+
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_OV_SERIAL_2
+
+#endif
 
 /*
 burst_guard_op_t burst_hw_guard_lock(void){

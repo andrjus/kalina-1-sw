@@ -92,11 +92,12 @@ burst_timer_t temp_poll ={
 #endif
 
 #if K1_BOARD_COMMON_VER >= 2
+#if  K1_FREEMASTER_TYPE != K1_FREEMASTER_TYPE_DIRRECT
 burst_serial_p fm_serial_ = 
-#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_1
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_OV_SERIAL_1
 &serial1.serial
 #endif
-#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_2
+#if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_OV_SERIAL_2
 &serial2.serial
 #endif
 #if K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_SERIAL_3
@@ -119,7 +120,7 @@ void		fm_put(uint8_t _data){
 	fm_serial_->put(_data);
 }
 #endif
-
+#endif
 void burst_sw_start(void){	
 	adc_start();
 	while( adc.ready == burst_false ){

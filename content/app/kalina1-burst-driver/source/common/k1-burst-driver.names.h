@@ -31,6 +31,9 @@
 #define K1_PFR_CONFIG "machines/k1-kiparis2.pfr.config.h"
 #endif
 
+#ifdef K1_TAG_BOARD_KIPARIS_2A
+#define K1_PFR_CONFIG "machines/k1-kiparis2.pfr.config.h"
+#endif
 #ifdef K1_TAG_KIPARIS_2_AT_38_12
 #define K1_MOTOR_CONFIG "machines/k1-kiparis2-AT38-12.motor.config.h"
 #endif
@@ -50,4 +53,8 @@
 
 #ifdef K1_TAG_AT
 #define K1_MOTOR_CONFIG "machines/k1-AT.motor.config.h"
+#endif
+
+#ifdef K1_TAG_BOARD_KALINA_2C
+#define K1_PFR_CONFIG "machines/k1-kalina-2C.pfr.config.h"
 #endif

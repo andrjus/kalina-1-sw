@@ -1,5 +1,5 @@
 #include "k1-burst-driver.h"
-#ifdef K1_TAG_BOARD_KIPARIS_2
+#if defined(K1_TAG_BOARD_KIPARIS_2 ) ||  defined(K1_TAG_BOARD_KIPARIS_2A )
 //#include "k1-burst-driver.h"
 #include "tim.h"
 #include "usart.h"
@@ -100,14 +100,20 @@ void ADC_IRQHandler(void)
 	debug_tp_off(111);
 	__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOC);
 	//__HAL_ADC_DISABLE_IT(&hadc1, ADC_IT_JEOS);
-	 adc_raw[1] = hadc1.Instance->JDR1;//B
 	 board.temper.raw = hadc1.Instance->JDR2;
 	 vref_raw = hadc1.Instance->JDR3;
-	 //adc_raw[2] = hadc2.Instance->JDR1;//C
 	 board.voltage.raw = hadc2.Instance->JDR2;
+	#ifdef K1_TAG_BOARD_KIPARIS_2A
+	 adc_raw[1] = hadc1.Instance->JDR1;//B
+	 adc_raw[2] = hadc2.Instance->JDR1;//C
 	 adc_raw[0] = hadc3.Instance->JDR1;//A
+	#else
+	 adc_raw[1] = hadc1.Instance->JDR1;//B
+	 //adc_raw[2] = hadc2.Instance->JDR1;//C
+	 adc_raw[0] = hadc3.Instance->JDR1;//A
+	
 	 adc_raw[2] = 2048*3 - adc_raw[1] - adc_raw[0];
-	 
+	#endif
 
 	adc_update(&adc,adc_raw);
 	burst_realtime_loop();

@@ -27,7 +27,9 @@
 #define motor_LATERAL_VOLTAGE_RANGE_LO					BURST_SIGNAL_MIN
 #define motor_LATERAL_VOLTAGE_RANGE_HI					BURST_SIGNAL_MAX
 #define BURST_ADC_CHANNEL_COUNT 3
-#define adc_INDEX {0,1,2}
+
+#define adc_INDEX {0,2,1}
+
 #define adc_SCALE {1,1,1}
 
 #define swt_CONFIG_PWM_MIN 0
