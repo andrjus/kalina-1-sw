@@ -309,7 +309,8 @@ void adc2_query(void)
 
 void burst_hw_frontend_loop(void){
 	static int counter;
-	
+	//fm_put('A');
+	//delay_us(100);
 	if(adc2_dma_start == burst_true){
 		counter++;
 		if(counter>1){			
@@ -375,17 +376,18 @@ void swt_phy_C_on(uint16_t _pwm){
 
 #if  K1_FREEMASTER_TYPE == K1_FREEMASTER_TYPE_DIRRECT
 uint8_t	fm_available(void){
+	uint32_t tmp = USART3 -> SR;
 	USART3 -> SR =( UART_FLAG_ORE | UART_FLAG_NE | UART_FLAG_PE | UART_FLAG_FE );
-	return (USART3->SR & UART_FLAG_RXNE) == UART_FLAG_RXNE ? 1:0; 
+	return (tmp & UART_FLAG_RXNE) == UART_FLAG_RXNE ? 1:0; 
 }
 uint8_t	fm_space(void){
-	return (USART1->SR & UART_FLAG_TXE) == UART_FLAG_TXE?1:0; 
+	return (USART3->SR & UART_FLAG_TXE) == UART_FLAG_TXE?1:0; 
 }
 uint8_t	fm_get(void){
-	return USART1->DR; 
+	return USART3->DR; 
 }
 void		fm_put(uint8_t _data){
-		USART1->DR = _data;
+		USART3->DR = _data;
 }
 #endif
 

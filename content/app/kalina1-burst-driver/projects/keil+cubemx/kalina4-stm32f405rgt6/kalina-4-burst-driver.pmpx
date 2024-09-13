@@ -19,8 +19,8 @@
 			<member name="comm_params_saved" type="sint32">1</member>
 			<member name="comm_state_saved" type="sint32">0</member>
 			<member name="comm_state_enabled" type="sint32">1</member>
-			<member name="comm_port" type="sint32">35</member>
-			<member name="comm_port_hint" type="string">COM36</member>
+			<member name="comm_port" type="sint32">33</member>
+			<member name="comm_port_hint" type="string">COM34</member>
 			<member name="comm_speed" type="sint32">115200</member>
 			<member name="comm_plugin_use" type="sint32">0</member>
 			<member name="comm_plugin_id" type="string"/>
@@ -9625,9 +9625,9 @@
 			<member name="size_shift_right" type="sint32">0</member>
 		</object>
 		<object name="ObjId0016" type="CObList">
-			<member name="item0" type="CObject_ptr">ObjId2897</member>
+			<member name="item0" type="CObject_ptr">ObjId2921</member>
 		</object>
-		<object name="ObjId2897" type="CPrjDoc_MapFileInfo">
+		<object name="ObjId2921" type="CPrjDoc_MapFileInfo">
 			<member name="file_name" type="string">.\MDK-ARM\kalina-4\K4-AT.axf</member>
 			<member name="file_type" type="CObject_ptr">ObjId0006</member>
 		</object>
@@ -11643,8 +11643,8 @@
 			<member name="yblock3_info" type="CPrjItemRS_YBlockInfo">ObjId1875</member>
 			<member name="yblock4_info" type="CPrjItemRS_YBlockInfo">ObjId1876</member>
 			<member name="yblock5_info" type="CPrjItemRS_YBlockInfo">ObjId1877</member>
-			<member name="rec_time_base" type="sint32">0</member>
-			<member name="rec_total_samples" type="sint32">333</member>
+			<member name="rec_time_base" type="sint32">159</member>
+			<member name="rec_total_samples" type="sint32">250</member>
 			<member name="trig_variable" type="CObject_ptr">ObjId1227</member>
 			<member name="trig_pretrigger" type="sint32">20</member>
 			<member name="trig_back_raw" type="sint32">1</member>
@@ -11690,8 +11690,8 @@
 			<member name="y_block" type="sint32">2</member>
 		</object>
 		<object name="ObjId1870" type="CPrjItemRS_VarInfo">
-			<member name="variable" type="CObject_ptr">NULL</member>
-			<member name="visible" type="sint32">0</member>
+			<member name="variable" type="CObject_ptr">ObjId0864</member>
+			<member name="visible" type="sint32">1</member>
 			<member name="y_block" type="sint32">3</member>
 		</object>
 		<object name="ObjId1871" type="CPrjItemRS_VarInfo">
